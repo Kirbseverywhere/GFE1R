@@ -17,8 +17,8 @@ void TacticianScreenSetup(TacticianProc *CurrentProc) {
 	CurrentProc->ClassIndex = 0;
 	CurrentProc->CurrentDef = &MUMenuDefinition;
 	sMU->Gender = 0;
-	sMU->Boon = 1; //S/M
-	sMU->Bane = 4; //Luck
+	sMU->Boon = 0; //S/M
+	sMU->Bane = 3; //Luck
 	DrawBase(CurrentProc);
 }
 
@@ -68,6 +68,7 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	PrintInline(0, BGLoc(BG0Buffer, BaseVarX, 14), 0, 0, 4, Buffer);
 	if (sMU->Gender == 0) UncompTID(((ClassData *)GetClassOffset(MaleClassList[CurrentProc->ClassIndex]))->nameTextId, Buffer); else UncompTID(((ClassData *)GetClassOffset(FemaleClassList[CurrentProc->ClassIndex]))->nameTextId, Buffer); 
 	PrintInline(0, BGLoc(BG0Buffer, BaseVarX, 16), 0, 0, 10, Buffer);
+	if (sMU->Gender == 0) sMU->Class = MaleClassList[CurrentProc->ClassIndex]; else sMU->Class = FemaleClassList[CurrentProc->ClassIndex];
 	
 	if ((sInput->newPress & InputUp) != 0) {
 		if (CurrentProc->CurrentDef->UpDef != 0) CurrentProc->CurrentDef = ((MenuDefinition *)CurrentProc->CurrentDef->UpDef);
@@ -99,15 +100,26 @@ void GenderButtonEffect() {
 }
 
 void BoonButtonEffect() {
-	if (sMU->Boon < 6) sMU->Boon++; else sMU->Boon = 0;
+	if (sMU->Boon < 5) sMU->Boon++; else sMU->Boon = 0;
 }
 
 void BaneButtonEffect() {
-	if (sMU->Bane < 6) sMU->Bane++; else sMU->Bane = 0;
+	if (sMU->Bane < 5) sMU->Bane++; else sMU->Bane = 0;
 }
 
 void ClassButtonEffect(TacticianProc *CurrentProc) {
 	if (CurrentProc->ClassIndex < 3) CurrentProc->ClassIndex++; else CurrentProc->ClassIndex = 0;
+}
+
+void ApplyMUDataChange() {
+	((UnitStruct*)0x202C0D4)->classDataPtr = (ClassData *)GetClassOffset(sMU->Class);
+	((UnitStruct2*)0x202C0D4)->stats[sMU->Boon] = (((UnitStruct2*)0x202C0D4)->stats[sMU->Boon]) + 2;
+	((UnitStruct2*)0x202C0D4)->stats[sMU->Bane] = (((UnitStruct2*)0x202C0D4)->stats[sMU->Bane]) - 2;
+}
+
+void ApplyMUCharacterChange() {
+	#define GetCharOffset ((u32 (*)(u32 ID))(0x8019464+1))
+	((UnitStruct*)0x202C0D4)->unitDataPtr = (UnitData *)GetCharOffset(8 + (sMU->Gender));
 }
 
 const _ProcCode TacticianProcCode[] = {

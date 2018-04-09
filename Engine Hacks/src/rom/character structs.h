@@ -87,6 +87,44 @@ typedef struct {
 	u8 u47;
 } UnitStruct;
 
+typedef struct {
+	UnitData* unitDataPtr;
+	ClassData* classDataPtr;
+	u8 level;
+	u8 exp;
+	u8 u0A_saved;
+	u8 index;
+	StateFlags stateflags;
+	u8 xPos;
+	u8 yPos;
+	u8 maxHP;
+	u8 curHP;
+	u8 stats[6];
+	u8 conBonus;
+	u8 rescueAll;
+	u8 ballistaIndex;
+	u8 movBonus;
+	u16 items[5];
+	u8 ranks[8];
+	u8 status:4;    
+	u8 statusDuration:4;
+	u8 torchDuration:4;
+    u8 barrierDuration:4;
+	u8 supports[6];
+	u8 unitLeader;
+	u8 supportBits;
+	u8 u3A;
+	u8 u3B;
+	void* BWLPointer;
+	u16 ai3And4;
+	u8 ai1;
+	u8 ai1data;
+	u8 ai2;
+	u8 ai2data;
+	u8 u46_saved;
+	u8 u47;
+} UnitStruct2;
+
 #define sPlayerUnits ((UnitStruct*)0x202BE4C)
 #define sEnemyUnits ((UnitStruct*)0x202CFBC)
 #define sCurrentUnit ((UnitStruct**)0x3004E50)

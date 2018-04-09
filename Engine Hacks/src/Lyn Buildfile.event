@@ -46,7 +46,7 @@ ClassDef:
 KirbMenuDefinition(0, 8*8, 16*8, ClassButtonEffect, 0, BaneDef, 0, 0, NameDef)
 
 StatTextIdList:
-SHORT 0x4E9 0x4EB 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x00 //0 Terminating not needed but I know I fucked something up so might as well
+SHORT 0x4EB 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x00 //0 Terminating not needed but why not
 
 MaleClassList:
 BYTE Mercenary Cavalier Knight Mage

@@ -200,7 +200,7 @@
 #define SD_HeroesDeathBlow 0x9ea
 #define TacticianCreationText 0x9eb
 #define PrologueIntro 0x9ec
-#define NorneRecruitementText 0x9ed
+#define NorneAndMURecruitementText 0x9ed
 #define WrysRecruitmentText 0x9ee
 #define PrologueOutro 0x9ef
 #define Chapter1Intro 0x9f0

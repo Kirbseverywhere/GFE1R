@@ -24,7 +24,7 @@ are inside this fortress.[N]
 We won't lose to a gang of pirates.[....][AN]
 Now, come with me to Talys Castle![A][X]
 
-##NorneRecruitementText
+##NorneAndMURecruitementText
 [X]
 
 ##WrysRecruitmentText
