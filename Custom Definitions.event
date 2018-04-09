@@ -1,0 +1,90 @@
+#define FreeSpace 0xb2a610
+#define FreeSpaceBLRange 0x1c1ec0
+
+#define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
+#define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
+
+#ifndef ItemTable
+  #define ItemTable 0x809B10
+#endif
+#ifndef DebuffTable
+    #define DebuffTable 0x203F100
+#endif
+
+#define LunarBrace MoonBracelet
+#define SolarBrace SunBracelet
+
+#define Marth 1
+#define Jagen 2
+#define Caeda 3
+#define Cain 4
+#define Abel 5
+#define Gordin 6
+#define Draug 7
+#define MyUnitMale 8
+#define MyUnitFemale 9
+#define Frey 10
+#define Norne 11
+#define Wrys 12
+#define Ogma 13
+#define Barst 14
+#define Bord 15
+#define Cord 16
+#define Darros 17
+#define Castor 18
+#define Julian 19
+#define Lena 20
+#define Navarre 21
+#define Merric 22
+#define Matthis 23
+#define Hardin 24
+#define Sedgar 25
+#define Wolf 26
+#define Vyland 27
+#define Roshea 28
+#define Wendell 29
+#define Ricard 30
+#define Athena 31
+#define Bantu 32
+#define Caesar 33
+#define Radd 34
+#define Roger 35
+#define Jeorge 36
+#define Maria 37
+#define Minerva 38
+#define Linde 39
+#define Jake 40
+#define Midia 41
+#define Tomas 42
+#define Boah 43
+#define Macellan 44
+#define Dolph 45
+#define Horace 46
+#define Astram 47
+#define Beck 48
+#define Palla 49
+#define Catria 50
+#define Xane 51
+#define Samson 52
+#define Arran 53
+#define Etzel 54
+#define Est 55
+#define Tiki 56
+#define Lorenz 57
+#define Ymir 58
+#define Elice 59
+#define Nagi 60
+#define Gotoh 61
+
+#define Galder 0x80
+
+#define Srank 251
+#define Arank 181
+#define Brank 121
+#define Crank 71
+#define Drank 31
+#define Erank 1
+
+#include "Engine Hacks/Asm Hacks/Skill System/Skill System/skill_definitions.event"
+
+// #define __DEBUG__ // Uncomment to get the Debug startup menu :p

@@ -1,0 +1,200 @@
+##MarthDesc
+The Prince of Altea. Young,[NL]
+and Full of Potential.[X]
+
+##JagenDesc
+A veteran knight who served Marth's father[NL]
+Old and wise.[X]
+
+##CaedaDesc
+[X]
+
+##CainDesc
+An Altean knight serving under prince Marth.[NL]
+Loyal, but reckless.[X]
+
+##AbelDesc
+An Altean knight serving under prince Marth.[NL]
+Secretly wishes for a quiet life.[X]
+
+##GordinDesc
+An untested archer from Altea.[NL]
+Wishes to prove himself useful.[X]
+
+##DraugDesc
+[X]
+
+##MyUnitMaleDesc
+[X]
+
+##MyUnitFemaleDesc
+[X]
+
+##FreyDesc
+[X]
+
+##NorneDesc
+A cheerful Altean archer.[NL]
+Reliant on others and inexperienced.[X]
+
+##WrysDesc
+A humble and kind curate. Learned[NL]
+in the art of healing wounds.[X]
+
+##OgmaDesc
+[X]
+
+##BarstDesc
+[X]
+
+##BordDesc
+[X]
+
+##CordDesc
+[X]
+
+##DarrosDesc
+[X]
+
+##CastorDesc
+[X]
+
+##JulianDesc
+Former Soothsire bandit and "Ally of[NL]
+Justice", he left his thieving ways[NL] 
+for Lena.[X]
+
+##LenaDesc
+[X]
+
+##NavarreDesc
+[X]
+
+##MerricDesc
+[X]
+
+##MatthisDesc
+A man who was forced into the Macedonian army[NL]
+Cowardly, but cares deeply for his sister[X]
+
+##HardinDesc
+[X]
+
+##SedgarDesc
+Wolf's deputy. Respects his[NL]
+comrades and leader greatly.[X]
+
+##WolfDesc
+An Aurelian knight serving under Hardin.[NL]
+Fiercely loyal to his liege.[X]
+
+##VylandDesc
+A member of the Wolfguard.[NL]
+Proud to a fault.[X]
+
+##RosheaDesc
+A slave freed by Hardin, who[NL]
+later swore him fealty.[X]
+
+##WendellDesc
+A wise sage who values peace.[NL]
+Fled Khadein as Gharnef took control.[X]
+
+##RicardDesc
+Julian's apprentice.[NL]
+A skilled thief with few scruples.[X]
+
+##AthenaDesc
+A sword wielder from a far-off land.[NL]
+Her sword is as deadly as her accent is strange.[X]
+
+##BantuDesc
+[X]
+
+##CaesarDesc
+[X]
+
+##RaddDesc
+A sellsword and Caesar's partner.[NL]
+On a quest for his one true love.[X]
+
+##RogerDesc
+A Grustian Knight. Has been[NL][X]
+
+##JeorgeDesc
+[X]
+
+##MariaDesc
+[X]
+
+##MinervaDesc
+[X]
+
+##LindeDesc
+[X]
+
+##JakeDesc
+[X]
+
+##MidiaDesc
+[X]
+
+##TomasDesc
+[X]
+
+##BoahDesc
+[X]
+
+##MacellanDesc
+[X]
+
+##DolphDesc
+[X]
+
+##HoraceDesc
+[X]
+
+##AstramDesc
+[X]
+
+##BeckDesc
+[X]
+
+##PallaDesc
+[X]
+
+##CatriaDesc
+[X]
+
+##XaneDesc
+[X]
+
+##SamsonDesc
+[X]
+
+##ArranDesc
+[X]
+
+##EtzelDesc
+[X]
+
+##EstDesc
+[X]
+
+##TikiDesc
+[X]
+
+##LorenzDesc
+[X]
+
+##YmirDesc
+[X]
+
+##EliceDesc
+[X]
+
+##NagiDesc
+[X]
+
+##GotohDesc
+[X]

@@ -1,0 +1,17 @@
+# 0x160 Ch1Name
+Ch. 1: Marth Embarks[X]
+
+## Ch2Name
+Ch. 2: The Pirates of Galder[X]
+
+## Ch3Name
+Ch. 3: A Brush in the Teeth[X]
+
+## Ch4Name
+Ch. 4: Battle in the Lea[X]
+
+## Ch5Name
+Ch. 5: Champions of Aurelis[X]
+
+## Ch6Name
+Ch. 6: Fia Emburem[X]

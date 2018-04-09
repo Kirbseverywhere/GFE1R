@@ -1,0 +1,123 @@
+
+EventPointerTable(0x0D,ThisChapter)
+
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [27,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [28,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [30,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [25,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [23,15] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [22,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
+
+
+TurnBasedEvents:
+TurnEventPlayer(0,BeginningScene2,1)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEvent(8,RecruitNavarre,Caeda,Navarre)
+END_MAIN
+
+LocationBasedEvents:
+Seize(27,16)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Units
+LOAD1 0x1 Enemies
+LOAD1 0x1 Recruitables
+Text(Chapter3Intro)
+GotoPrepScreen
+NoFade
+ENDA
+
+BeginningScene2:
+LOAD1 0x1 JulianAndLena
+Text(JulianAndLenaRecruitementText)
+NoFade
+ENDA
+
+EndingScene:
+Text(Chapter3Outro)
+MNC2 3
+NoFade
+ENDA
+
+// Events
+
+RecruitNavarre:
+Text(NavarreRecruitementText)
+CUSA Navarre
+NoFade
+ENDA
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+Enemies:
+UNIT Bone Fighter 0x00 Level(8, Enemy, 1) [4,9] 0x00 0x00 0x0 0x00 [SilverAxe] GuardTileAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [6,8] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [2,8] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [5,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [4,12] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [3,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [20,6] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [20,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [22,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [24,6] 0x00 0x00 0x0 0x00 [IronBow] PursueWithoutHeedAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [6,12] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Thief 0x00 Level(8, Enemy, 1) [21,4] 0x00 0x00 0x0 0x00 [SlimSword] PursueWithoutHeedAI 
+UNIT Galder Thief 0x00 Level(8, Enemy, 1) [20,4] 0x00 0x00 0x0 0x00 [SlimSword] PursueWithoutHeedAI 
+UNIT
+
+Recruitables:
+UNIT Navarre Myrmidon 0x00 Level(8, Enemy, 1) [21,5] 0x00 0x00 0x0 0x00 [SlimSword] PursueWithoutHeedAI 
+UNIT
+
+JulianAndLena:
+UNIT Julian Thief 0x00 Level(4, Ally, 1) [26,5] 0x00 0x00 0x0 0x00 [SlimSword, IronSword, Vulnerary, Lockpick] NoAI 
+UNIT Lena Cleric 0x00 Level(3, Ally, 1) [26,6] 0x00 0x00 0x0 0x00 [Warp] NoAI 
+UNIT
+
+// Shop Data

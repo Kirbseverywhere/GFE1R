@@ -1,0 +1,203 @@
+
+EventPointerTable(0x0A,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+TurnEventPlayer(0x7, spawnReinforcements, 6, 40)
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+DOOR 0x0 Door1 [2, 23] 0x12
+DOOR 0x0 Door2 [18, 21] 0x12
+DOOR 0x0 Door3 [26, 16] 0x12
+DOOR 0x0 Door4 [26, 10] 0x12
+DOOR 0x0 Door5 [5, 15] 0x12
+DOOR 0x0 Door6 [5, 8] 0x12
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+AFEV 0x8 stopReinforcements 0x10 //triggers the stopping of reinforcements
+DefeatBoss(EndingScene)
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 enemies1
+ENUN
+LOAD1 0x1 enemies2
+ENUN
+LOAD1 0x1 gotoh
+ENUN
+LOAD2 0x1 Units
+NoFade
+GotoPrepScreen
+ENDA
+
+EndingScene:
+MNCH 0x38
+ENDA
+
+// Events
+spawnReinforcements:
+CHECK_TURNS
+SETVAL 0x1 2
+SDIV slotsParam(0x2, 0xC, 0x1) //0x2 = 0xC / 2
+SMUL slotsParam(0x1, 0x2) //0x1 = 0x2 * 2
+SSUB slotsParam(0x1, 0xC) //0x1 = 0x1 - 0xC
+BNE 0x0 0x1 0x0
+LoadReinforcements(reinforcements1)
+LoadReinforcements(reinforcements2)
+LoadReinforcements(reinforcements3)
+LABEL 0x0
+ENUF 0x7
+NoFade
+ENDA
+
+stopReinforcements:
+ENUT 0x7
+NoFade
+ENDA
+
+Door1:
+TILECHANGE 0x0
+NoFade
+ENDA
+
+Door2:
+TILECHANGE 0x1
+NoFade
+ENDA
+
+Door3:
+TILECHANGE 0x2
+NoFade
+ENDA
+
+Door4:
+TILECHANGE 0x3
+NoFade
+ENDA
+
+Door5:
+TILECHANGE 0x4
+NoFade
+ENDA
+
+Door6:
+TILECHANGE 0x5
+NoFade
+ENDA
+
+
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+Units:
+UNIT Eirika EphraimLord 0x00 Level(1, Ally, 0) [13,23] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [15,23] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [13,25] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [14,25] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [3,6] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [4,4] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [5,4] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [7,5] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [26,4] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [25,4] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [26,5] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [25,5] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [8,22] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [7,22] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [6,22] 0x00 0x00 0x0 0x00 [0x00] AttackInRangeAI 
+UNIT
+
+enemies1:
+UNIT Fomortiis Manakete_2 0x00 Level(20, Enemy, 0) [16,15] 0x00 0x00 0x0 0x00 [WretchedAir] GuardTileAI 
+UNIT 0x2D Manakete_2_F Fomortiis Level(19, Enemy, 0) [16,14] 0x00 0x00 0x0 0x00 [WretchedAir] GuardTileAI 
+UNIT 0x2D Bishop Fomortiis Level(8, Enemy, 1) [13,14] 0x00 0x00 0x0 0x00 [Fortify] DefaultAI 
+UNIT 0x2D Bishop Fomortiis Level(8, Enemy, 1) [19,14] 0x00 0x00 0x0 0x00 [Physic] DefaultAI 
+UNIT 0x2D Sniper Fomortiis Level(15, Enemy, 1) [14,12] 0x00 0x00 0x0 0x00 [BraveBow] AttackInRangeAI 
+UNIT 0x2D Sniper Fomortiis Level(15, Enemy, 1) [18,12] 0x00 0x00 0x0 0x00 [BraveBow] AttackInRangeAI 
+UNIT 0x2E Swordmaster Fomortiis Level(18, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [WindSword] GuardTileAI 
+UNIT 0x2D Manakete_2_F Fomortiis Level(15, Enemy, 1) [5,14] 0x00 0x00 0x0 0x00 [WretchedAir] GuardTileAI 
+UNIT 0x2D Manakete_2_F Fomortiis Level(15, Enemy, 1) [26,15] 0x00 0x00 0x0 0x00 [WretchedAir] GuardTileAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [27,23] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [28,24] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [27,25] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [28,26] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D WyvernLord Fomortiis Level(11, Enemy, 1) [25,13] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D General Fomortiis Level(11, Enemy, 1) [27,14] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D Bishop Fomortiis Level(8, Enemy, 1) [27,12] 0x00 0x00 0x0 0x00 [Recover] DefaultAI 
+UNIT
+
+gotoh:
+UNIT Saleh Sage 0x00 Level(20, Ally, 0) [14,23] 0x00 0x00 0x0 0x00 [Fimbulvetr, Bolting, Fortify, DoorKey] AttackInRangeAI 
+UNIT
+
+enemies2:
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [15,2] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [19,2] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D WyvernLord Fomortiis Level(15, Enemy, 1) [18,2] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D WyvernLord Fomortiis Level(15, Enemy, 1) [16,2] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D General Fomortiis Level(18, Enemy, 1) [17,2] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D Paladin Fomortiis Level(11, Enemy, 1) [11,12] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D Paladin Fomortiis Level(11, Enemy, 1) [21,18] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D Revenant Fomortiis Level(11, Enemy, 1) [13,18] 0x00 0x00 0x0 0x00 [0x00] GuardTileAI 
+UNIT 0x2D Revenant Fomortiis Level(11, Enemy, 1) [8,13] 0x00 0x00 0x0 0x00 [0x00] GuardTileAI 
+UNIT 0x2D Hero Fomortiis Level(11, Enemy, 1) [6,11] 0x00 0x00 0x0 0x00 [BraveAxe] AttackInRangeAI 
+UNIT 0x2D General Fomortiis Level(11, Enemy, 1) [6,17] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT 0x2D Hero Fomortiis Level(11, Enemy, 1) [3,21] 0x00 0x00 0x0 0x00 [BraveSword] AttackInRangeAI 
+UNIT 0x2D Manakete_2_F Fomortiis Level(11, Enemy, 1) [2,20] 0x00 0x00 0x0 0x00 [WretchedAir] AttackInRangeAI 
+UNIT 0x2D Paladin Fomortiis Level(11, Enemy, 1) [2,18] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Manakete_2_F Fomortiis Level(11, Enemy, 1) [26,18] 0x00 0x00 0x0 0x00 [WretchedAir] PursueWithoutHeedAI 
+UNIT 0x2D Hero Fomortiis Level(11, Enemy, 1) [27,19] 0x00 0x00 0x0 0x00 [BraveAxe] PursueWithoutHeedAI 
+UNIT
+
+reinforcements1:
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [27,23] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [28,24] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [27,25] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [28,26] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT
+
+reinforcements2:
+UNIT 0x2D WyvernLord Fomortiis Level(17, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [4,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT  
+
+reinforcements3:
+UNIT 0x2D WyvernLord Fomortiis Level(17, Enemy, 1) [26,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [25,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT 0x2D Paladin Fomortiis Level(15, Enemy, 1) [27,0] 0x00 0x00 0x0 0x00 [BraveLance] PursueWithoutHeedAI 
+UNIT  
+
+// Shop Data

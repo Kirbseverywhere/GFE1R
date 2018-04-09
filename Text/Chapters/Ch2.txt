@@ -1,0 +1,14 @@
+##Chapter1Intro
+[X]
+
+##OgmaRecruitementText
+[X]
+
+##DarrosRecruitementText
+[X]
+
+##CastorRecruitementText
+[X]
+
+##Chapter1Outro
+[X]

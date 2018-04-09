@@ -1,0 +1,9 @@
+#define BLRange 0x1BB40
+
+PUSH
+ORG BLRange
+POP
+
+#include "Portraits.event"
+#include "Chapter.event"
+#include "Skill System\_MasterHackInstaller.event"

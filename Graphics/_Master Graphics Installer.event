@@ -1,0 +1,49 @@
+
+ALIGN 4
+DonateToKirbBGFX:
+POIN DonateToKirbBGFX + 4
+#incext Png2Dmp "Donate To Kirb.png" --lz77
+
+ALIGN 4
+DonateToKirbBGPal:
+POIN DonateToKirbBGPal + 4
+#incext Png2Dmp "Donate To Kirb.png" --palette-only
+
+#define StandingMapSprite(aId, width, height, gfxPointer) "PUSH; ORG 0x8AF880 + (aId * 8); SHORT height width; POIN gfxPointer; POP"
+#define MovingMapSprite(aId, apPointer, gfxPointer) "PUSH; ORG 0x9A2E00 + ((aId - 1) * 8); POIN gfxPointer apPointer; POP"
+
+
+StandingMapSprite(1, 0, 0, MarfStandingMapSprite)
+MovingMapSprite(2, 0x1C46CC, MarfMovingMapSprite)
+
+ALIGN 4
+MarfStandingMapSprite:
+#incext Png2Dmp "Marth Standing Map Sprite.png" --lz77
+
+ALIGN 4
+MarfMovingMapSprite:
+#incext Png2Dmp "Marth Moving Map Sprite.png" --lz77
+
+ALIGN 4
+
+PUSH
+ORG 0x1AE5B0
+#incext Png2Dmp "Plains Edited Palette.png" --palette-only
+POP
+
+PUSH
+ORG $88638
+POIN NewStatScreen
+ORG $88620
+POIN RemoveGlowy
+ORG $88640
+POIN NewStatScreenPal
+POP
+
+NewStatScreen:
+#incext Png2Dmp "StatScreen.png" --lz77
+NewStatScreenPal:
+#incext Png2Dmp "StatScreen.png" --palette-only
+
+RemoveGlowy:
+#incext Png2Dmp "RemoveGlowy.png" --lz77

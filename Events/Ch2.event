@@ -1,0 +1,129 @@
+
+EventPointerTable(0x0A,ThisChapter)
+
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [20,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [21,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [21,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [22,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [23,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,9] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [23,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [19,10] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [21,8] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [23,11] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
+
+
+TurnBasedEvents:
+TurnEventPlayer(0,BeginningScene2,1)
+END_MAIN
+
+CharacterBasedEvents:
+CharacterEvent(8,RecruitDarros,Marth,Darros)
+CharacterEvent(9,RecruitCastor,Caeda,Castor)
+END_MAIN
+
+LocationBasedEvents:
+Seize(20,9)
+Seize(2,2)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+//DO NOT TOUCH
+WORD $00
+
+Tutorial:
+//DO NOT TOUCH
+WORD $00
+
+TrapData:
+END_MAIN
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Units
+LOAD1 0x1 Enemies
+LOAD1 0x1 Recruitables
+Text(Chapter1Intro)
+GotoPrepScreen
+NoFade
+ENDA
+
+BeginningScene2:
+Text(OgmaRecruitementText)
+LOAD1 0x1 OgmaCrew
+NoFade
+ENDA
+
+EndingScene:
+Text(Chapter1Outro)
+MNC2 2
+ENDA
+
+// Events
+RecruitDarros:
+Text(DarrosRecruitementText)
+CUSA Darros
+NoFade
+ENDA
+
+RecruitCastor:
+Text(CastorRecruitementText)
+CUSA Castor
+NoFade
+ENDA
+// Manual Movement
+
+// Scripted Fights
+
+// Units
+Enemies:
+UNIT Breguet Pirate 0x00 Level(6, Enemy, 1) [2,2] 0x00 0x00 0x0 0x00 [IronAxe] GuardTileAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [3,3] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [5,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [4,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [7,10] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [12,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [24,1] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(3, Enemy, 1) [16,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(3, Enemy, 1) [1,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(3, Enemy, 1) [1,4] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Archer 0x00 Level(3, Enemy, 1) [28,1] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Archer 0x00 Level(3, Enemy, 1) [6,4] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Thief 0x00 Level(3, Enemy, 1) [24,0] 0x00 0x00 0x0 0x00 [SlimSword] AttackInRangeAI 
+UNIT Galder Thief 0x00 Level(3, Enemy, 1) [26,0] 0x00 0x00 0x0 0x00 [SlimSword] AttackInRangeAI 
+UNIT
+
+Recruitables:
+UNIT Castor Archer 0x00 Level(1, Enemy, 0) [6,3] 0x00 0x00 0x0 0x00 [IronBow] NoAI 
+UNIT Darros Pirate 0x00 Level(1, Enemy, 0) [25,1] 0x00 0x00 0x0 0x00 [IronAxe] NoAI 
+UNIT
+
+OgmaCrew:
+UNIT Ogma Mercenary 0x00 Level(1, Ally, 0) [22,6] 0x00 0x00 0x0 0x00 [IronSword] NoAI 
+UNIT Barst Fighter 0x00 Level(1, Ally, 0) [22,7] 0x00 0x00 0x0 0x00 [IronAxe] NoAI 
+UNIT Bord Fighter 0x00 Level(1, Ally, 0) [21,7] 0x00 0x00 0x0 0x00 [IronAxe] NoAI 
+UNIT Cord Fighter 0x00 Level(1, Ally, 0) [23,7] 0x00 0x00 0x0 0x00 [IronAxe] NoAI 
+UNIT
+
+
+// Shop Data

@@ -1,0 +1,12 @@
+[OpenMidRight][LoadPortrait][0x4][0x01]
+[OpenMidLeft][LoadPortrait][0x2][0x01]
+[OpenMidRight][SetName]Jagen
+Hey.[A][NL]
+This is text.[A]
+[OpenMidLeft]
+Nooooooo, Really?[A][NL]
+I thought it was butter.[A]
+[OpenMidLeft][LoadPortrait][0x4][0x01]
+[OpenMidRight][LoadPortrait][0x2][0x01]
+Switch![A][NL]
+Hey, we both work on both sides![A][X]

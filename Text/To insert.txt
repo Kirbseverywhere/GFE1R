@@ -1,0 +1,14 @@
+#Jagen:
+#Prince Marth, Princess Caeda
+#has arrived from Talys castle.
+#Marth:
+#What's wrong, Caeda? [Pause]
+#Has something happened at the castle?
+#Caeda:
+#Prince Marth, I'm so happy to see you. [Pause]
+#The pirates of Galder suddenly attacked us.
+#The castle has been taken and many people 
+#have been killed. [Pause]
+#Please, save my father!
+#Marth:
+#It'll be alright, Caeda

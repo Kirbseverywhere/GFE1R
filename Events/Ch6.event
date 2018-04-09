@@ -1,0 +1,93 @@
+//Made by Camtech075 of SerenesForest
+//Modified by Nintenlord
+
+#include EAstdlib.event
+
+EventPointerTable(0x1E,ThisChapter)
+ThisChapter:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno Dunno Dunno
+POIN Tutorial
+POIN TrapData TrapData
+POIN Units Units
+POIN $0 $0 $0 $0 $0 $0
+POIN BeginningScene EndingScene
+
+Units:
+UNIT Marth EirikaLord 0x0 Level(1,Ally,0) [21,14] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [21,13] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [21,12] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [20,13] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [19,13] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [22,14] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [23,15] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [24,14] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [25,14] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [26,14] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [21,18] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [23,19] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [25,18] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [26,18] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT
+
+Bad: 
+//UNIT Emereus General 0x0 Level(1,Enemy,0) [12,13] 0b 0x0 0x0 0x0 [SilverLance,MasterKey] GuardTileAI
+UNIT
+
+Rickard:
+UNIT Ricard Thief 0x0 Level(1,Enemy,0) [25,9] 0b 0x0 0x0 0x0 [IronSword] DoNothing
+UNIT
+
+TurnBasedEvents:
+END_MAIN
+
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
+CharacterBasedEvents:
+CharacterEvent(8,RicardRecruitment,Marth,Ricard)
+CharacterEvent(9,RicardRecruitment,Julian,Ricard)
+END_MAIN
+
+LocationBasedEvents:
+Seize(12,13)
+Chest(AngelicRobe,4,11)
+Chest(Armorslayer,8,4)
+Chest(KillingEdge,17,1)
+Chest(Physic,10,8)
+ChestMoney(10000,21,8)
+Door(25,12)
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+TrapData:
+ENDTRAP
+
+ALIGN 4
+RicardRecruitment:
+CUSA Ricard
+ENDA
+
+ALIGN 4
+
+BeginningScene:
+LOAD1 0x1 Units
+LOAD1 0x1 Bad
+LOAD1 0x1 Rickard
+GotoPrepScreen
+ENDA
+
+EndingScene:
+MNC2 0x7
+ENDA

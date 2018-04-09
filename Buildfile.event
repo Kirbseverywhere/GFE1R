@@ -1,0 +1,43 @@
+#include "eastdlib.event"
+#include "Extensions\Hack Installation.txt"
+#include "Tools\Tool Helpers.txt"
+#include "Custom Definitions.event"
+ORG 0xE80000
+#include "Essential Fixes.event"
+
+ALIGN 4
+BuildName:
+String("Ch. 6 map in and 4-5-6 rough events drafts in")
+BYTE 0
+
+ALIGN 4
+BuildDate:
+String(09/04/2018 18:02)
+BYTE 0
+
+ALIGN 4
+#include "Text\Install Text Data.event"
+
+ALIGN 4
+#include "Tables\Table Installer.event"
+
+ALIGN 4
+#include "Engine Hacks\src\Lyn Buildfile.event"
+
+ALIGN 4
+#include "Engine Hacks\Asm Hacks\_Master Asm Installer.event"
+
+ALIGN 4
+#include "Graphics\_Master Graphics Installer.event"
+
+ALIGN 4
+#include "Portraits\_Master Portrait Installer.event"
+
+ALIGN 4
+#include "Maps\Master Map Installer.event"
+
+ALIGN 4
+#include "Music\Master Music Installer.event"
+
+ALIGN 4
+#include "Events\Master Event Installer.event"
