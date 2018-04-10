@@ -10,6 +10,7 @@
 #include "MaxHP.event"
 #include "CurHP.event"
 #include "Power.event"
+#include "Magic.event"
 #include "Skill.event"
 #include "Speed.event"
 #include "Defense.event"

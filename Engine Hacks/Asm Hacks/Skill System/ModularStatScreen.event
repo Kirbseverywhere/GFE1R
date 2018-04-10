@@ -97,6 +97,7 @@
   WORD Growth_Options
   POIN Growth_Getter_Table
   POIN Get_Palette_Index
+  POIN prMagGetter
   
   ALIGN 4
   MSS_page2:

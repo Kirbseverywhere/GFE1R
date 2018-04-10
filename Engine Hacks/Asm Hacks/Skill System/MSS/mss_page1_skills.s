@@ -14,6 +14,7 @@
 .set Growth_Getters_Table, Display_Growths_options+4
 .set Get_Palette_Index, Growth_Getters_Table+4
 .equ GetCharge, Get_Palette_Index+4
+.equ MagGetter, GetCharge+4
 
 page_start
 
@@ -39,24 +40,13 @@ mov		r0,#0
 IsPlayerUnit:
 str		r0,[sp,#0x14]
 
-@draw str or mag
-  mov r0, r8
-  blh     MagCheck      @r0 = 1 if mag should show
-  cmp     r0,#0x0       
-  beq     NotMag        
-    @draw Mag at 13, 3. colour defaults to yellow.
-    draw_textID_at 13, 3, textID=0x4ff, growth_func=2
-    b       MagStrDone    
-  NotMag:
-    @draw Str at 13, 3
-    draw_textID_at 13, 3, textID=0x4fe, growth_func=2
-  MagStrDone:
-
+draw_textID_at 13, 3, textID=0x4fe, growth_func=2 @str
 draw_textID_at 13, 5, textID=0x4EC, growth_func=3 @skl
 draw_textID_at 13, 7, textID=0x4ED, growth_func=4 @spd
 draw_textID_at 13, 9, textID=0x4ee, growth_func=5 @luck
 draw_textID_at 13, 11, textID=0x4ef, growth_func=6 @def
 draw_textID_at 13, 13, textID=0x4f0, growth_func=7 @res
+draw_textID_at 13, 17, textID=0x4ff, growth_func=2 @mag
 
 b 	NoRescue
 .ltorg 
@@ -89,6 +79,8 @@ draw_def_bar_at 16, 11
 draw_res_bar_at 16, 13
 draw_textID_at 13, 15, 0x4f6 @move
 draw_move_bar_with_getter_at 16, 15
+draw_bar_at_alt 16, 17, MagGetter, 0x50, 0x8
+draw_number_at_alt 16, 17, MagGetter
 
 b		NextColumn
 .ltorg
@@ -121,8 +113,8 @@ b		NextColumn
 
 NextColumn:
 
-draw_textID_at 13, 17, textID=0x4f7 @con
-draw_con_bar_with_getter_at 16, 17
+draw_textID_at 21, 13, textID=0x4f7 @con
+draw_con_bar_with_getter_at 24, 13
 
 
 draw_textID_at 21, 3, textID=0x4f8 @aid

@@ -1,0 +1,24 @@
+#ifndef MODULAR_GETTER_MAGIC_EVENT
+#define MODULAR_GETTER_MAGIC_EVENT
+
+#include "_Common.event"
+
+pMagicModifiers: // Power
+	POIN prAddUnitMagic //prDebuffStr prAddEquipPower prRallyStr
+WORD 0
+
+prAddUnitMagic:
+	rAdd(rSByteAt(0x47))
+
+/*prAddEquipPower:
+	rAdd(rForUnitEquipped(rCallExternal(prGetItemPowBonus)))
+
+prDebuffStr:
+	#incbin "_asm/DebuffStr.bin"
+	WORD DebuffTable
+
+prRallyStr:
+	#incbin "_asm/RallyStr.bin"
+	WORD DebuffTable*/
+
+#endif // MODULAR_GETTER_POWER_EVENT

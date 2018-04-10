@@ -129,24 +129,20 @@ typedef struct {
 #define sEnemyUnits ((UnitStruct*)0x202CFBC)
 #define sCurrentUnit ((UnitStruct**)0x3004E50)
 
-/*
 //B/W/L Struct
 typedef struct {
-	u8 losses;
-	u8 actionCounter1;
-	u8 actionCounter2; //Unaligned short
-	u8 selectedCounter;
-	u8 statScreenCounter;
-	u8 chapterNumberForLatestDeath:4;
-	u8 turnNumberForLatestDeath:12;
-	u8 unk1:4;
-	u8 expGained:12;
-	u8 wins:10;
-	u8 battles:12;
-	u8 unk2:2;
+	u8 LearnedSkills[4];
+	u8 mag;
+	/*u8 chapterNumberForLatestDeath:4;
+	u16 turnNumberForLatestDeath:12;
+	u16 unk1:4;
+	u32 expGained:12;
+	u32 wins:10;
+	u32 battles:12;
+	u32 unk2:2;
 	u8 mostRecentKiller;
-	u8 padding;
-}*/
+	u8 padding;*/
+} BWLStruct;
 
 //Action Struct
 
