@@ -235,25 +235,6 @@
   draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 2
 .endm
 
-.macro draw_bar_at_alt bar_x, bar_y, getter, offset, bar_id
-  mov r0, r8
-  blh      \getter
-  mov r1, r8  
-  mov     r3, #\offset
-  ldsb    r3,[r1,r3]     
-  str     r0,[sp]     
-  ldr     r0,[r1,#0x4]  @class
-  add     r0, #\offset
-  ldrb    r0,[r0]  @stat cap
-  lsl     r0,r0,#0x18    
-  asr     r0,r0,#0x18    
-  str     r0,[sp,#0x4]    
-  mov     r0,#(\bar_id)     
-  mov     r1,#(\bar_x-11)
-  mov     r2,#(\bar_y-2)
-  blh      DrawBar, r4
-.endm
-
 .macro draw_luck_bar_at, bar_x, bar_y
   mov r0, r8
   blh      LuckGetter
@@ -455,15 +436,6 @@
   mov r0, r8
   blh \routine
   .endif
-  mov r1, #\colour @defaults to blue
-  mov r2, r0
-  ldr r0, =(tile_origin+(0x20*2*\num_y)+(2*\num_x))
-  blh 0x8004b94
-.endm
-
-.macro draw_number_at_alt, num_x, num_y, routine, colour=2 @r0 is number and r1 is colour
-  mov r0, r8
-  blh \routine
   mov r1, #\colour @defaults to blue
   mov r2, r0
   ldr r0, =(tile_origin+(0x20*2*\num_y)+(2*\num_x))
