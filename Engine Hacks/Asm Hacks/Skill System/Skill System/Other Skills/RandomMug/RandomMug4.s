@@ -64,9 +64,9 @@ End:
 pop	{r4}
 
 mov	r1,r0
-mov	r0,#2
+mov	r0,#4
 str	r0,[sp]
-mov	r0,#0
+mov	r0,#1
 mov	r2,#0xB0
 ldr	r3,=#0x8022C02
 mov	lr,r3

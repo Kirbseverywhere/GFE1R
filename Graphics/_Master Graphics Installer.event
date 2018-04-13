@@ -47,3 +47,7 @@ NewStatScreenPal:
 
 RemoveGlowy:
 #incext Png2Dmp "RemoveGlowy.png" --lz77
+
+#include "Item Icons\Item Icons Installer.event"
+
+#include "Menus\Menu Graphics Installer.event"

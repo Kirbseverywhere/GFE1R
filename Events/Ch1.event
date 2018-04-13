@@ -1,3 +1,14 @@
+PUSH
+ORG 0x8B39F0
+POIN RemoveWMap
+POP
+ALIGN 4
+RemoveWMap:
+SKIPWN
+ENDA
+
+//SetSeizeGateObjective(0, 0)
+
 ALIGN 4
 EventPointerTable(0x07,ThisChapter)
 
@@ -15,11 +26,11 @@ POIN BeginningScene EndingScene
 
 Units:
 UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [25,6] 0x00 0x00 0x0 0x00 [Rapier, Vulnerary] NoAI 
-UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,5] 0x00 0x00 0x0 0x00 [SteelSword, SilverAxe, Vulnerary] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,5] 0x00 0x00 0x0 0x00 [SteelSword, SilverLance, Vulnerary] NoAI 
 UNIT Caeda PegasusKnight 0x00 Level(1, Ally, 0) [26,6] 0x00 0x00 0x0 0x00 [SlimLance, Vulnerary] NoAI 
 UNIT Cain Cavalier 0x00 Level(1, Ally, 0) [24,8] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] NoAI 
 UNIT Abel Cavalier 0x00 Level(1, Ally, 0) [25,8] 0x00 0x00 0x0 0x00 [IronSword, Javelin, Vulnerary] NoAI 
-UNIT Gordin Archer 0x00 Level(1, Ally, 0) [25,4] 0x00 0x00 0x0 0x00 [IronBow, Vulnerary] NoAI 
+UNIT Gordin Archer 0x00 Level(1, Ally, 0) [25,4] 0x00 0x00 0x0 0x00 [IronBow, Bowgun, Vulnerary] NoAI 
 UNIT Draug Knight 0x00 Level(1, Ally, 0) [22,3] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
 UNIT
 
@@ -119,7 +130,7 @@ ENDA
 // Units
 
 NorneAndMU:
-UNIT Norne Archer 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
+UNIT Norne Archer_F 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
 UNIT MyUnitMale Knight 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
 UNIT
 

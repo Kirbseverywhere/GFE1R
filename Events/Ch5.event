@@ -1,5 +1,6 @@
 
 EventPointerTable(0x17,ThisChapter)
+//SetSeizeGateObjective(4, 0)
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -14,17 +15,29 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [25,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT Galder EirikaLord 0x00 Level(1, Enemy, 0) [1,1] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Eirika EirikaLord 0x00 Level(1, Ally, 0) [22,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [21,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [20,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [20,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [23,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [24,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [24,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [23,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [21,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Paladin 0x00 Level(1, Ally, 0) [22,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
 
+
 TurnBasedEvents:
+TurnEventPlayer(0,BeginningScene2,1)
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(9,RecruitWendell,Marth,Wendell)
 END_MAIN
 
 LocationBasedEvents:
+Seize(9,7)
 Seize(25,17)
 END_MAIN
 
@@ -47,19 +60,64 @@ ALIGN 4
 
 BeginningScene:
 LOAD1 0x1 Units
+LOAD1 0x1 Enemies
+LOAD1 0x1 RecruitableWendell
+Text(Ch5BeginningText)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch5EndingText)
 MNC2 5
 ENDA
 
 // Events
+
+RecruitWendell:
+Text(WendellRecruitementText)
+CUSA Wendell
+ENDA
+
+BeginningScene2:
+LOAD1 0x1 HardinCrew
+Text(0x29, Ch5BeginningText2)
+ENDA
 
 // Manual Movement
 
 // Scripted Fights
 
 // Units
+
+Enemies:
+UNIT Galder Mage 0x00 Level(10, Enemy, 1) [27,2] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT Galder Mage 0x00 Level(10, Enemy, 1) [28,4] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT Galder Mage 0x00 Level(10, Enemy, 1) [27,4] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT Galder Mage 0x00 Level(10, Enemy, 1) [26,4] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT Galder Mage 0x00 Level(10, Enemy, 1) [25,4] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT Galder WyvernRider 0x00 Level(7, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder WyvernRider 0x00 Level(7, Enemy, 1) [13,4] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder PegasusKnight 0x00 Level(7, Enemy, 1) [14,5] 0x00 0x00 0x0 0x00 [BraveLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(7, Enemy, 1) [5,4] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(7, Enemy, 1) [2,6] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(7, Enemy, 1) [6,7] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Knight 0x00 Level(7, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [IronLance] GuardTileAI 
+UNIT Galder Cavalier_F 0x00 Level(7, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier_F 0x00 Level(7, Enemy, 1) [9,12] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(7, Enemy, 1) [9,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(7, Enemy, 1) [10,12] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT
+
+HardinCrew:
+UNIT Hardin Cavalier 0x00 Level(6, Ally, 1) [10,21] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Sedgar Ranger 0x00 Level(6, Ally, 1) [8,19] 0x00 0x00 0x0 0x00 [SteelBow] NoAI 
+UNIT Wolf Ranger 0x00 Level(6, Ally, 1) [9,19] 0x00 0x00 0x0 0x00 [IronBow, IronSword] NoAI 
+UNIT Vyland Cavalier 0x00 Level(6, Ally, 1) [11,20] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT Roshea Cavalier 0x00 Level(6, Ally, 1) [12,20] 0x00 0x00 0x0 0x00 [SilverSword] NoAI 
+UNIT
+
+RecruitableWendell:
+UNIT Wendell Bishop 0x00 Level(5, Enemy, 1) [27,2] 0x00 0x00 0x0 0x00 [Fire] PursueWithoutHeedAI 
+UNIT
 
 // Shop Data

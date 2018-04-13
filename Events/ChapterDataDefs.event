@@ -1,0 +1,20 @@
+#define ChapterDataTableOffset 0x8B0890
+#define ChapterDataTableSize 148
+#define WriteChapterDataByte(ID, Offset, Byte) "PUSH; ORG (ChapterDataTableOffset + (ID * ChapterDataTableSize))+Offset; BYTE Byte; POP"
+#define WriteChapterDataShort(ID, Offset, Short) "PUSH; ORG (ChapterDataTableOffset + (ID * ChapterDataTableSize))+Offset; SHORT Short; POP"
+#define WriteChapterDataWord(ID, Offset, Word) "PUSH; ORG (ChapterDataTableOffset + (ID * ChapterDataTableSize))+Offset; WORD Word; POP"
+#define WriteChapterDataPointer(ID, Offset, Pointer) "PUSH; ORG (ChapterDataTableOffset + (ID * ChapterDataTableSize))+Offset; POIN Pointer; POP"
+
+#define SetLevelBonuses(ID, EasyModePenalty, HardModeBonus) "WriteChapterDataByte(ID, 0x14, (EasyModePenalty + HardModeBonus << 4))"
+
+#define ObjectiveSeize 0
+#define ObjectiveRout 1
+#define ObjectiveDefend 2
+#define ObjectiveDefeatBoss 3
+#define ObjectiveNone 4
+#define SetObjective(ID, MapTID, StatusTID, Type) "WriteChapterDataShort(ID, 0x88, MapTID); WriteChapterDataShort(ID, 0x8A, StatusTID); WriteChapterDataByte(ID, 0x8C, Type)"
+#define SetSeizeGateObjective(ID, StatusTID) "SetObjective(ID, 0x19F, StatusTID, ObjectiveSeize)"
+#define SetSeizeThroneObjective(ID, StatusTID) "SetObjective(ID, 0x1A1, StatusTID, ObjectiveSeize)"
+#define SetDefeatBossObjective(ID, StatusTID) "SetObjective(ID, 0x19D, StatusTID, ObjectiveDefeatBoss)"
+#define SetDefendObjective(ID, StatusTID, TurnsToDefend) "SetObjective(ID, 0x19C, StatusTID, ObjectiveDefend); WriteChapterDataByte(ID, 0x8D, TurnsToDefend)"
+#define SetDefendObjective(ID, StatusTID, TurnsToDefend, UnitToDefend) "SetObjective(ID, 0x19C, StatusTID, ObjectiveDefend); WriteChapterDataByte(ID, 0x8D, TurnsToDefend); WriteChapterDataByte(ID, 0x8E, UnitToDefend)"

@@ -46,7 +46,7 @@ pop	{r0}
 
 End2:
 mov	r1,r0
-mov	r0,#2
+mov	r0,#4
 str	r0,[sp]
 mov	r0,#2
 ldr	r3,=#0x802D7F9

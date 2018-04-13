@@ -1,5 +1,4 @@
 // #ifdef inBLRange
-/*
 PUSH
 
 //Set Semitransparency
@@ -62,7 +61,7 @@ SHORT 0 0
 ORG $C3ea2
 SHORT 0 0
 
-POP*/
+POP
 
 // SemiTransparency:
 // SHORT $4661 $313c $7008 $4770

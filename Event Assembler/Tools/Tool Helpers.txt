@@ -36,7 +36,7 @@
 
 
 //For use with PortraitFormatter
-#define setMugEntry(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x2624; POIN mugLocation+0x2604; POIN mugLocation+0x2004; WORD 0x00000000; BYTE mouthX mouthY eyeX eyeY; WORD 0x01; POP"
-#define setMugEntry(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, eyeControl) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x2628; POIN mugLocation+0x2608; POIN mugLocation+0x2008; WORD 0x00000000; BYTE mouthX mouthY eyeX eyeY; WORD eyeControl; POP"
+#define setMugEntry(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x2644; POIN mugLocation+0x2604; POIN mugLocation+0x2004; WORD 0x00000000; BYTE mouthX mouthY eyeX eyeY; WORD 0x01; POP"
+#define setMugEntry(mugEntry, mugLocation, mouthX, mouthY, eyeX, eyeY, eyeControl) "PUSH; ORG PortraitTable+mugEntry*0x1C; POIN mugLocation; POIN mugLocation+0x2648; POIN mugLocation+0x2608; POIN mugLocation+0x2008; WORD 0x00000000; BYTE mouthX mouthY eyeX eyeY; WORD eyeControl; POP"
 
 #endif

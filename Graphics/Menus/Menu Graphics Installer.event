@@ -1,0 +1,46 @@
+PUSH
+ORG $4E130
+POIN MenuStyleGraphicsTable
+ORG $4E1B4
+POIN MenuStyleGraphicsTable
+ORG $4E0D0
+POIN MenuStylePaletteTable
+
+//Minimug box, may not be needed for some but shrug
+ORG $8C2EC
+POIN FE11MenuTilesPalette //Ally
+ORG $8C2F4
+POIN FE11MenuTilesPalette+0x20 //Enemy
+ORG $8C2FC
+POIN FE11MenuTilesPalette+0x40 //Green unit
+
+ORG 0x4C464
+POIN FE11FrameTilesGraphics //Fixing Tactician Screen(Note to self: 0x4C3EC may be a fun function to look at later on)
+
+POP
+
+ALIGN 4
+MenuStyleGraphicsTable:
+POIN FE11MenuTilesGraphics
+POIN FE11MenuTilesGraphics
+POIN FE11MenuTilesGraphics
+POIN FE11MenuTilesGraphics
+
+MenuStylePaletteTable:
+POIN FE11MenuTilesPalette
+POIN FE11MenuTilesPalette+0x20
+POIN FE11MenuTilesPalette+0x40
+POIN FE11MenuTilesPalette+0x60
+
+
+FE11MenuTilesGraphics:
+#incext Png2Dmp "FE11_MenuTiles Formatted.png" --lz77
+
+FE11FrameTilesGraphics:
+#incext Png2Dmp "FE11_FrameTiles Formatted.png" --lz77
+
+FE11MenuTilesPalette:
+#incext Png2Dmp "FE11_MenuTiles Formatted.png" --palette-only
+
+
+ALIGN 4

@@ -46,9 +46,11 @@ pop	{r0}
 
 End2:
 mov	r1,r0
-mov	r4,#4
-mov	r0,#3
+@mov	r4,#0
+ldr r4, =-12
+mov	r0,#5
 str	r0,[sp]
+mov r0, #0
 ldr	r3,=#0x802D7E1
 bx	r3
 .ltorg

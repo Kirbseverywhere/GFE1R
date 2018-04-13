@@ -198,3 +198,23 @@ A Grustian Knight. Has been[NL][X]
 
 ##GotohDesc
 [X]
+
+##GazzakDesc
+Cute Pirate Guy.[X]
+
+##GomerDesc
+Almost Scary![X]
+
+##HymanDesc
+Hi, Man. High man?[X]
+
+##BentheonDesc
+Ben 10 tho[X]
+
+##MerachDesc
+Merric's failed brother[X]
+
+##EmereusDesc
+Emedeus? dun dun dunnn[X]
+
+

@@ -14,6 +14,7 @@
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 
+//Characters
 #define Marth 1
 #define Jagen 2
 #define Caeda 3
@@ -76,7 +77,17 @@
 #define Nagi 60
 #define Gotoh 61
 
+#define Gazzak 62
+#define Gomer 63 
+#define Hyman 64
+#define Bentheon 65
+#define Merach 66
+#define Emereus 67
+
 #define Galder 0x80
+
+//Items
+#define Bowgun 0xBC
 
 #define Srank 251
 #define Arank 181

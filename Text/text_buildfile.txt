@@ -41,3 +41,4 @@ Zeke[X]
 
 #include "UnitNames.txt"
 #include "UnitDescs.txt"
+#include "Items.txt"

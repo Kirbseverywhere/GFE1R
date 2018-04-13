@@ -12,6 +12,17 @@ ORG 0x1C136
 BYTE 0x20
 ORG 0x1C184
 BYTE 0x20
+ORG 0x73DD0 //Level up with anims, portrait removed because it broke too much stuff
+SHORT 0 0
+ORG 0x7F2AC //Level up without anims
+WORD 0x1044
+
+ORG 0x2384E
+BYTE 0x1
+ORG 0x2360A
+BYTE 0x4
+ORG 0x2360E
+BYTE 0x1
 
 ORG 0x1C142
 BYTE 0x2
@@ -22,6 +33,30 @@ BYTE 0x2 //All of these are for the debug bootup(yes this is basically useless b
 
 ORG 0x2DB50
 BYTE 0x2 //Fixing backing out of trading
+ORG 0x2D2EA
+BYTE 0x70 //70<<7 = 0x3800
+ORG 0x2D2FE
+BYTE 10 //Palette ID 10 because 8/9 is used by halfbody //Fixing trading
+
+ORG 0x23318
+BYTE 0x1
+ORG 0x4F238
+BYTE 0x1
+ORG 0x23576
+BYTE 0x1 //Fixing item menu overwriting the moving map sprite
+
+ORG 0x23572
+BYTE 0x4 //Fixing Equip with Item
+
+ORG 0x23314
+BYTE 0x4
+
+/*
+ORG 0x2332E
+BYTE 0x0D
+ORG 0x1E7AC
+BYTE 0x12 //Extend the Character stat box for Item.
+*/
 
 ORG 0x56C2
 BYTE 0x40 //Palette size
@@ -73,8 +108,14 @@ POIN RightMugOAM
 ORG 0x5810
 POIN LeftMugOAM
 
-ORG 0x5594
-replaceWithHack(Load6CFACEGraphics)
+ORG 0x5818
+POIN RightMugCutOAM
+
+ORG 0x5820
+POIN LeftMugCutOAM
+
+/*ORG 0x5594
+replaceWithHack(Load6CFACEGraphics)*/
 
 POP
 
@@ -147,6 +188,46 @@ _32x16(16, 112, 1, 0, 0x5C, 0)
 _32x16(240|0x100, 112, 1, 0, 0x9C, 0)
 _32x16(208|0x100, 112, 1, 0, 0xDC, 0)
 _16x16(192|0x100, 112, 1, 0, 0xD0, 0)
+
+RightMugCutOAM:
+SHORT 12
+//Face
+_64x32(224|0x100, 0, 0, 0, 0x0, 0) //all the |0x100 one are negative, it uses the center of the portrait
+_64x32(224|0x100, 32, 0, 0, 0x8, 0)
+_16x16(208|0x100, 0, 0, 0, 0x9A, 0)
+_16x16(32, 0, 0, 0, 0xDA, 0)
+
+//Body 1
+_32x16(224|0x100, 64, 0, 0, 0x10, 0)
+_32x16(0, 64, 0, 0, 0x50, 0)
+
+//Shoulders
+_16x32(208|0x100, 48, 0, 0, 0x14, 0)
+_16x32(32, 48, 0, 0, 0x16, 0)
+_16x32(48, 48, 0, 0, 0x96, 0)
+_16x32(192|0x100, 48, 0, 0, 0x98, 0)
+_16x32(208|0x100, 16, 0, 0, 0x92, 0)
+_16x32(32, 16, 0, 0, 0x94, 0)
+
+LeftMugCutOAM:
+SHORT 12
+//Face
+_64x32(224|0x100, 0, 1, 0, 0x0, 0) //all the |0x100 one are negative, it uses the center of the portrait
+_64x32(224|0x100, 32, 1, 0, 0x8, 0)
+_16x16(32, 0, 1, 0, 0x9A, 0)
+_16x16(208|0x100, 0, 1, 0, 0xDA, 0)
+
+//Body 1
+_32x16(0, 64, 1, 0, 0x10, 0)
+_32x16(224|0x100, 64, 1, 0, 0x50, 0)
+
+//Shoulders
+_16x32(32, 48, 1, 0, 0x14, 0)
+_16x32(208|0x100, 48, 1, 0, 0x16, 0)
+_16x32(192|0x100, 48, 1, 0, 0x96, 0)
+_16x32(48, 48, 1, 0, 0x98, 0)
+_16x32(32, 16, 1, 0, 0x92, 0)
+_16x32(208|0x100, 16, 1, 0, 0x94, 0)
 
 ALIGN 4
 

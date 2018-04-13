@@ -1,5 +1,6 @@
 
 EventPointerTable(0x0A,ThisChapter)
+//SetSeizeGateObjective(1, 0)
 
 ThisChapter:
 POIN TurnBasedEvents

@@ -1,5 +1,6 @@
 
 EventPointerTable(0x0D,ThisChapter)
+//SetSeizeGateObjective(2, 0)
 
 
 ThisChapter:
@@ -40,6 +41,7 @@ CharacterEvent(8,RecruitNavarre,Caeda,Navarre)
 END_MAIN
 
 LocationBasedEvents:
+Seize(4,9)
 Seize(27,16)
 END_MAIN
 

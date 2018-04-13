@@ -1,5 +1,6 @@
 
 EventPointerTable(0x14,ThisChapter)
+//SetSeizeGateObjective(3, 0)
 
 ThisChapter:
 POIN TurnBasedEvents
@@ -14,17 +15,34 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [23,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [24,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [25,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [25,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [23,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [25,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [28,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
 
 TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(9,RecruitMatthis,Lena,Matthis)
 END_MAIN
 
 LocationBasedEvents:
 Seize(23,16)
+Seize(2,4)
+VILL 7 RecruitMerric [11,5] 0x10
+VILL 8 GetGold [11,5] 0x10
 END_MAIN
 
 MiscBasedEvents:
@@ -45,20 +63,68 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
+Text(Ch4BeginningText)
 LOAD1 0x1 Units
+LOAD1 0x1 Enemies
+LOAD1 0x1 RecruitableMatthis
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch4EndingText)
 MNC2 4
 ENDA
 
 // Events
+
+RecruitMatthis:
+Text(MatthisRecruitementText)
+CUSA Matthis
+ENDA
+
+RecruitMerric:
+Text(0x2, MerricRecruitementText)
+LOAD1 0x1 RecruitableMerric
+ENDA
+
+GetGold:
+ENDA
 
 // Manual Movement
 
 // Scripted Fights
 
 // Units
+
+Enemies:
+UNIT Bentheon Cavalier 0x00 Level(8, Enemy, 1) [2,4] 0x00 0x00 0x0 0x00 [Ridersbane] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [5,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [4,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [8,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [9,5] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Knight 0x00 Level(8, Enemy, 1) [3,13] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Knight 0x00 Level(8, Enemy, 1) [4,13] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Knight 0x00 Level(8, Enemy, 1) [5,13] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Thief 0x00 Level(8, Enemy, 1) [19,20] 0x00 0x00 0x0 0x00 [SlimSword] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [20,5] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [28,3] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [27,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [28,8] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [26,6] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [27,6] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [28,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT
+
+RecruitableMatthis:
+UNIT Matthis Cavalier 0x00 Level(8, Enemy, 1) [4,4] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT
+
+RecruitableMerric:
+UNIT Merric Mage 0x00 Level(5, Ally, 1) [2,20] 0x00 0x00 0x0 0x00 [Excalibur] NoAI 
+UNIT
+
 
 // Shop Data

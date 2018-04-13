@@ -1,0 +1,5 @@
+##BowgunName
+Bowgun[X]
+
+##BowgunDesc
+As precise as it is heavy.[X]

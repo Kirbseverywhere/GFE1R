@@ -6,6 +6,14 @@
 .set LevelUpSkillTable, ClassSkillTable+4
 .set BWLTable, 0x203e884
 
+.equ GetUnitEquippedItem, 0x8016B28
+
+.macro blh to, reg=r3
+ldr \reg, =\to
+mov lr, \reg
+.short 0xF800 @bl lr+0
+.endm
+
 push {r4-r7,lr}
 mov r4, r0 @save it
 ldr r5, =SkillsBuffer
@@ -50,7 +58,7 @@ strb r1, [r5]
 add r5, #1
 NextLoop:
 cmp r2, #3
-bge TerminateList
+bge EquippedItemSkill
 add r2, #1
 b LoopStart
 
@@ -64,11 +72,11 @@ lsl r1, #2
 add r1, r2
 ldr r6, [r1] @pointer to list of skills
 cmp r6, #0
-beq TerminateList
+beq EquippedItemSkill
 CheckLoop:
   ldrb r0, [r6]
   cmp r0, #0
-  beq TerminateList
+  beq EquippedItemSkill
   cmp r0, r7
   ble FoundSkill @if the skill is lower/equal level
   cmp r0, #0xFF
@@ -81,6 +89,22 @@ CheckLoop:
   add r5, #1
   add r6, #2
   b CheckLoop
+
+EquippedItemSkill:
+mov r0, r4
+blh GetUnitEquippedItem
+mov r1, #0xFF
+and r0, r1
+mov r1, #36
+mul r0, r1
+ldr r1, =0x8809B10
+add r0, r1
+mov r1, #0x22
+ldrb r0, [r0, r1]
+cmp r0, #0
+beq TerminateList
+strb r0, [r5]
+add r5, #1
 
 TerminateList:
 mov r0, #0

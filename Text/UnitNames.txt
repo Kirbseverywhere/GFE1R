@@ -180,3 +180,21 @@ Nagi[X]
 
 ##GotohName
 Gotoh[X]
+
+##GazzakName
+Gazzak[X]
+
+##GomerName
+Gomer[X]
+
+##HymanName
+Hyman[X]
+
+##BentheonName
+Bentheon[X]
+
+##MerachName
+Merach[X]
+
+##EmereusName
+Emereus[X]
