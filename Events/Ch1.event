@@ -25,34 +25,51 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [25,6] 0x00 0x00 0x0 0x00 [Rapier, Vulnerary] NoAI 
 UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,5] 0x00 0x00 0x0 0x00 [SteelSword, SilverLance, Vulnerary] NoAI 
-UNIT Caeda PegasusKnight 0x00 Level(1, Ally, 0) [26,6] 0x00 0x00 0x0 0x00 [SlimLance, Vulnerary] NoAI 
 UNIT Cain Cavalier 0x00 Level(1, Ally, 0) [24,8] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] NoAI 
 UNIT Abel Cavalier 0x00 Level(1, Ally, 0) [25,8] 0x00 0x00 0x0 0x00 [IronSword, Javelin, Vulnerary] NoAI 
 UNIT Gordin Archer 0x00 Level(1, Ally, 0) [25,4] 0x00 0x00 0x0 0x00 [IronBow, Bowgun, Vulnerary] NoAI 
 UNIT Draug Knight 0x00 Level(1, Ally, 0) [22,3] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
 UNIT
 
+Marf:
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [60,0] 0x00 0x00 0x0 0x00 [Rapier, Vulnerary] NoAI 
+UNIT
+
+WaifuEscape:
+UNIT Caeda PegasusKnight 0x00 Level(1, Ally, 0) [5,1] 0x00 0x00 0x0 0x00 [SlimLance, Vulnerary] NoAI 
+UNIT
+
+GazzakBaddie:
+UNIT Gazzak Pirate 0x00 Level(3, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [IronAxe] GuardTileAI 
+UNIT
+
+GreenUnit:
+UNIT 0x81 Knight 0x00 Level(1, NPC, 1) [5,4] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT
+
 Enemies:
-UNIT ONeill Fighter 0x00 Level(3, Enemy, 1) [5,4] 0x00 0x00 0x0 0x00 [IronAxe] GuardTileAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Cavalier 0x00 Level(1, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
-UNIT Galder Brigand 0x00 Level(1, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Mercenary 0x00 Level(1, Enemy, 1) [16,4] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [8,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Archer 0x00 Level(1, Enemy, 1) [8,8] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
-UNIT Galder Archer 0x00 Level(1, Enemy, 1) [7,7] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
-UNIT Galder Soldier 0x00 Level(1, Enemy, 1) [4,11] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter 0x00 Level(1, Enemy, 1) [6,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Soldier 0x00 Level(1, Enemy, 1) [2,5] 0x00 0x00 0x0 0x00 [Horseslayer] AttackInRangeAI 
-UNIT Galder PegasusKnight 0x00 Level(1, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
-UNIT Galder Pirate 0x00 Level(1, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT Galder Pirate 0x00 Level(1, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
-UNIT Galder Pirate 0x00 Level(1, Enemy, 1) [7,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Cavalier Gazzak Level(1, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Brigand Gazzak Level(1, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Mercenary Gazzak Level(1, Enemy, 1) [16,4] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [8,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Archer Gazzak Level(1, Enemy, 1) [8,8] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Archer Gazzak Level(1, Enemy, 1) [7,7] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Soldier Gazzak Level(1, Enemy, 1) [4,11] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [6,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Soldier Gazzak Level(1, Enemy, 1) [2,5] 0x00 0x00 0x0 0x00 [Horseslayer] AttackInRangeAI 
+UNIT Galder PegasusKnight Gazzak Level(1, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [6,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [7,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT
+
+ThiefDude:
+UNIT Galder Thief 0x00 Level(1, Enemy, 1) [22,10] 0x00 0x00 0x1 ThiefREDA [IronSword] PursueWithoutHeedAI 
 UNIT
 
 
@@ -91,10 +108,38 @@ SetBackground(0x2F)
 Text(TacticianCreationText)
 ASMC CreateTacticianScreen
 MUSC ST_CombatMission
-Text(0x25,PrologueIntro)
+LOAD1 0x1 GazzakBaddie
+LOAD1 0x1 GreenUnit
+ClearBackground
+MOVE 10 Gazzak [5,5]
+ENUN
+DISA 0x81
+SOUN 0xD6
+ENUN
+MOVE 10 Gazzak [5,4]
+ENUN
+LOAD1 0x1 Marf
+LOAD1 0x1 WaifuEscape
+EVBIT_T 9
+MOVE 10 Caeda [25,7]
+ENUN
+SetBackground(0x25)
+Text(PrologueIntro)
+EVBIT_F 9
+MOVE -1 Caeda [26,6]
+MOVE -1 Marth [25,6]
 LOAD1 0x1 Units
 LOAD1 0x1 Enemies
+ClearBackground
+EVBIT_T 9
+LOAD1 0x1 ThiefDude
+ENUN
+EVBIT_F 9 
+SVAL 0xB 0x080015 //[21,08] coordinates of top left corner
+TILECHANGE 0xFFFF
+ENUN
 CAM1 Marth
+ENUN
 NoFade
 ENDA
 
@@ -124,6 +169,9 @@ NoFade
 ENDA
 
 // Manual Movement
+
+ThiefREDA:
+REDA [22, 9] 0x00 0x00 0x00 0x00
 
 // Scripted Fights
 

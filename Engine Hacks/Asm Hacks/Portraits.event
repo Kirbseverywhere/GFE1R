@@ -74,6 +74,18 @@ BYTE 0x12 //Fixing y
 ORG 0x886A2
 BYTE 0x90 
 
+//Fixing prep screen supports
+ORG 0xA233C
+BYTE 0x70
+ORG 0xA2A5E
+BYTE 0x70
+
+//Fixing Prep Screen Trading
+ORG 0x99D5C
+BYTE 0x2
+ORG 0x989E0
+BYTE 0x2
+
 ORG 0x5A0838
 #incbin "bin\NewStatScreenPortraitTsa.bin"
 #incbin "bin\NewStatScreenPortraitTsa.bin"

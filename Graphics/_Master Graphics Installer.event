@@ -51,3 +51,19 @@ RemoveGlowy:
 #include "Item Icons\Item Icons Installer.event"
 
 #include "Menus\Menu Graphics Installer.event"
+
+PUSH
+ORG 0xA8F34
+POIN ExtrasOptionNamesGFX
+ORG 0xA9A60
+POIN ExtrasOptionNamesGFX
+ORG 0xAA010
+POIN ExtrasOptionNamesGFX
+ORG 0xAA450
+POIN ExtrasOptionNamesGFX
+POP 
+
+ALIGN 4
+ExtrasOptionNamesGFX:
+#incext Png2Dmp "ExtrasOptionNames.png" --lz77
+

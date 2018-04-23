@@ -10,8 +10,10 @@ MESSAGE SaveFunctions at CURRENTOFFSET
 #include "Save.event"
 
 ALIGN 4
-MESSAGE CURRENTOFFSET
 #include "Tactician.event"
+
+ALIGN 4
+#include "Credits.event"
 
 //Hooks
 PUSH
@@ -24,6 +26,13 @@ BYTE 9 //max name length
 ORG $482bA
 BYTE 9 //max cursor position
 
+ORG 0xA9CA6
+SHORT $1C20 $4B00 $4718
+POIN CreditsScreenBuilder
+ORG 0xAB90E
+SHORT 0x1C20 0x2120
+BL(0xAB888)
+SHORT 0
 POP
 
 //Stuff
@@ -53,3 +62,5 @@ BYTE Mercenary Cavalier Knight Mage
 
 FemaleClassList:
 BYTE Myrmidon_F PegasusKnight Archer_F Mage_F
+
+#include "External\Credits.event"

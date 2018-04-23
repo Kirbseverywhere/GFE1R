@@ -97,6 +97,8 @@
   WORD Growth_Options
   POIN Growth_Getter_Table
   POIN Get_Palette_Index
+  WORD 0
+  WORD RatingsTID
   
   ALIGN 4
   MSS_page2:

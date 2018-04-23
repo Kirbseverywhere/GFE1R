@@ -35,6 +35,9 @@ Sirius[X]
 ## nameZeke
 Zeke[X]
 
+##RatingsTID
+Rating[X]
+
 #include "skilldesc_text.txt"
 
 #include "ChapterText.txt"

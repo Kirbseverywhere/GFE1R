@@ -1,0 +1,70 @@
+#define Credit(Portrait, xPos, yPos, MakerName, HelperName, LeftCredits, RightCredits) "SHORT Portrait; BYTE xPos yPos; POIN MakerName HelperName LeftCredits RightCredits"
+
+ALIGN 4
+MyCreditsDefs:
+
+MarthCredits:
+Credit(Marth, 180, 32, AddToPool(String(Lenh); BYTE 0), AddToPool(String(--); BYTE 0), EmereusCredits, JagenCredits)
+
+JagenCredits:
+Credit(Jagen, 180, 32, AddToPool(String(BwdYeti); BYTE 0), AddToPool(String(NICKT); BYTE 0), MarthCredits, CaedaCredits)
+
+CaedaCredits:
+Credit(Caeda, 180, 32, AddToPool(String(Blueeyedman24); BYTE 0), AddToPool(String(NICKT); BYTE 0), JagenCredits, CainCredits)
+
+CainCredits:
+Credit(Cain, 180, 32, AddToPool(String(Xenith); BYTE 0), AddToPool(String(NICKT); BYTE 0), CaedaCredits, AbelCredits)
+
+AbelCredits:
+Credit(Abel, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(NICKT); BYTE 0), CainCredits, NorneCredits)
+
+NorneCredits:
+Credit(Norne, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), AbelCredits, OgmaCredits)
+
+OgmaCredits:
+Credit(Ogma, 180, 32, AddToPool(String(Donate To Circles); BYTE 0), AddToPool(String(Donate To Circles); BYTE 0), NorneCredits, BarstCredits)
+
+BarstCredits:
+Credit(Barst, 180, 32, AddToPool(String(Nobody); BYTE 0), AddToPool(String(Glaceo/NICKT); BYTE 0), OgmaCredits, DarrosCredits)
+
+DarrosCredits:
+Credit(Darros, 180, 32, AddToPool(String(Flingleforp); BYTE 0), AddToPool(String(--); BYTE 0), BarstCredits, CastorCredits)
+
+CastorCredits:
+Credit(Castor, 180, 32, AddToPool(String(Flingleforp); BYTE 0), AddToPool(String(--); BYTE 0), DarrosCredits, NavarreCredits)
+
+NavarreCredits:
+Credit(Navarre, 180, 32, AddToPool(String(Xenith); BYTE 0), AddToPool(String(CardCafe-FEier-Blueeyedman24); BYTE 0), CastorCredits, JulianCredits)
+
+JulianCredits:
+Credit(Julian, 180, 32, AddToPool(String(Glucose); BYTE 0), AddToPool(String(--); BYTE 0), NavarreCredits, LenaCredits)
+
+LenaCredits:
+Credit(Lena, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), JulianCredits, WolfCredits)
+
+WolfCredits:
+Credit(Wolf, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(--); BYTE 0), LenaCredits, VylandCredits)
+
+VylandCredits:
+Credit(Vyland, 180, 32, AddToPool(String(Peerless); BYTE 0), AddToPool(String(Blueeyedman24); BYTE 0), WolfCredits, AthenaCredits)
+
+AthenaCredits:
+Credit(Athena, 180, 32, AddToPool(String(Nobody); BYTE 0), AddToPool(String(--); BYTE 0), VylandCredits, MinervaCredits)
+
+MinervaCredits:
+Credit(Minerva, 180, 32, AddToPool(String(Squidorsky); BYTE 0), AddToPool(String(--); BYTE 0), AthenaCredits, LindeCredits)
+
+LindeCredits:
+Credit(Linde, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), MinervaCredits, PallaCredits)
+
+PallaCredits:
+Credit(Palla, 180, 32, AddToPool(String(Backer); BYTE 0), AddToPool(String(--); BYTE 0), LindeCredits, GazzakCredits)
+
+GazzakCredits:
+Credit(Gazzak, 180, 32, AddToPool(String(FEIer); BYTE 0), AddToPool(String(Blueeyedman24); BYTE 0), PallaCredits, EmereusCredits)
+
+EmereusCredits:
+Credit(Emereus, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(NICKT); BYTE 0), GazzakCredits, MarthCredits)
+
+ALIGN 4
+#pool

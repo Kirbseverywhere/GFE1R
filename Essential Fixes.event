@@ -94,6 +94,8 @@ PUSH
   //Fixes the game considering some chapters postgame.
   ORG 0x897C4
   SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
+  ORG 0x206948
+  BYTE 0
 
 #include "Extensions/Hack Installation.txt"
 //Anti-Huffman Patch, by Hextator and Nintenlord
@@ -139,4 +141,13 @@ WORD $8464400
 ORG $464400
 WORD 0x3D046A3D 0x022D682D 0xA5020C28 0x46AE3501 0x47284D01 0x47004801 0x08071991 0x080596CD
 }
+
+ORG 0x002C9E // Somewhere in the Proc Construction routine
+SHORT 0x6129 // str  r1, [r5, #0x10]
+SHORT 0x2026 // mov  r0, #0x26
+SHORT 0x5429 // strb r1, [r5, r0]
+SHORT 0x3002 // add  r0, #2
+SHORT 0x5429 // strb r1, [r5, r0]
+//Proc Name Fix, stan
+
 POP

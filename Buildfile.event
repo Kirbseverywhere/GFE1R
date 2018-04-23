@@ -2,7 +2,7 @@
 #include "Extensions\Hack Installation.txt"
 #include "Tools\Tool Helpers.txt"
 #include "Custom Definitions.event"
-ORG 0xE80000
+ORG FreeSpace
 #include "Essential Fixes.event"
 
 ALIGN 4

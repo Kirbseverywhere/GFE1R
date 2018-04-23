@@ -1,1 +1,2 @@
-[OpenMidLeft][LoadMarth]Please Create a Unit.[A][X]
+Death Blow: +6 Attack[N]
+when initiaing battle.[X]

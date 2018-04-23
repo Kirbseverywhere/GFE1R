@@ -4,6 +4,9 @@
 #define NewProc ((void (*)(u32 *_PROC, u32 Parent))(0x08002C7C+1))
 #define NewBlockingProc ((void (*)(u32 *_PROC, u32 Parent))(0x08002CE0+1))
 #define ClearProcLoop ((void (*)(Proc *_PROC))(0x8002E94+1))
+#define FindProc ((u32 (*)(u32 ProcToFind))(0x08002E9C+1))
+#define DeleteEachProc ((void (*)(u32 _PROC))(0x08003078+1))
+#define DeleteProc ((void (*)(u32 _PROC))(0x08002D6C+1))
 
 //Funcs found in PROC
 #define LockGameLogic 0x8015360+1
@@ -17,6 +20,11 @@
 #define LoadMap 0x80311A8+1
 #define UnlockGameLogic 0x8015370+1
 
+#define NewFadeIn 0x80AE2D0+1 //Call With Arg
+#define FadeInExist 0x80AE2A0+1 //Call with While
+
+#define NewFadeOut 0x80AE2F4+1 //Call With Arg
+#define FadeOutExist 0x80AE2B8+1 //Call with While
 
 //PROC Bytecode
 #define _PROC_END 0, 0, 0
@@ -35,7 +43,7 @@
 #define _PROC_JUMP(apPROCCode) 13,
 #define _PROC_SLEEP(aTime) 14, aTime, 0
 #define _PROC_SET_MARK(aMark) 15,
-#define _PROC_BLOCK 16,
+#define _PROC_BLOCK 16, 0, 0
 #define _PROC_END_IF_DUPLICATE 17,
 #define _PROC_SET_BIT4 18,
 #define _PROC_13 19,

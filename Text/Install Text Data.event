@@ -1419,3 +1419,7 @@ TxtData0xa88:
 #incext ParseFile "_textentries\0xa88.txt"
 setText(0xa88,TxtData0xa88)
 
+TxtData0xa89:
+#incext ParseFile "_textentries\0xa89.txt"
+setText(0xa89,TxtData0xa89)
+

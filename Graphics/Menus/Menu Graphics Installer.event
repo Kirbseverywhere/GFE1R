@@ -17,6 +17,12 @@ POIN FE11MenuTilesPalette+0x40 //Green unit
 ORG 0x4C464
 POIN FE11FrameTilesGraphics //Fixing Tactician Screen(Note to self: 0x4C3EC may be a fun function to look at later on)
 
+ORG 0x95E38
+POIN FE11MenuTilesPalette //Prep Screen
+ORG 0x36D2C
+POIN FE11MenuTilesPalette
+ORG 0x36D34
+POIN FE11MenuTilesPalette+0x20 //Battle Preview
 POP
 
 ALIGN 4
