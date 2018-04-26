@@ -1,0 +1,36 @@
+/*PUSH
+ORG 0x51C20
+SHORT 0 0
+ORG 0x51318
+SHORT 0 0
+ORG 0x53D18
+SHORT 0 0
+ORG 0x53C64
+SHORT 0 0
+ORG 0x51C9C
+SHORT 0 0
+ORG 0x51358
+SHORT 0 0
+ORG 0x513BA
+SHORT 0 0
+ORG 0x51C60
+SHORT 0 0
+ORG 0x51C8C
+SHORT 0 0
+ORG 0x51348
+SHORT 0 0
+ORG 0x51C50
+SHORT 0 0
+ORG 0x513AA
+SHORT 0 0
+POP
+
+ALIGN 4
+BattleScreenGFX:
+#incext Png2Dmp "Battle Frame.png" --lz77
+
+ALIGN 4
+BattleScreenPalette:
+#incext Png2Dmp "Battle Frame.png" --palette-only*/
+
+ALIGN 4

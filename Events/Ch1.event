@@ -83,6 +83,8 @@ END_MAIN
 LocationBasedEvents:
 Seize(5,4)
 Seize(25,7)
+Village(8,TopRightVillage,28,5)
+Village(9,DownLeftVillage,4,9)
 END_MAIN
 
 MiscBasedEvents:
@@ -168,6 +170,18 @@ Text(0x18, NorneAndMURecruitementText)
 NoFade
 ENDA
 
+TopRightVillage:
+Text(0x2, CH1Village1Text)
+GiveMoney(10000)
+NoFade
+ENDA
+
+DownLeftVillage:
+Text(0x2, CH1WrysRecruitmentText)
+LOAD1 0x1 OldMan
+NoFade
+ENDA
+
 // Manual Movement
 
 ThiefREDA:
@@ -184,6 +198,10 @@ UNIT
 
 RandomBoat:
 UNIT 0x45 Fleet 0x00 Level(1, Ally, 0) [14,0] 0x00 0x00 0x0 0x00 [0] NoAI 
+UNIT
+
+OldMan:
+UNIT Wrys Priest 0x00 Level(1, Ally, 0) [4,10] 0x00 0x00 0x0 0x00 [Heal] NoAI 
 UNIT
 
 // Shop Data

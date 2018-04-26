@@ -38,6 +38,9 @@ ALIGN 4
 #incext PFinder "FE8_Clean.gba" 0x5B6BB4 FE11MenuTilesPalette
 
 ALIGN 4
+#include "Animations\Master Animation Installer.event"
+
+ALIGN 4
 #include "Portraits\_Master Portrait Installer.event"
 
 ALIGN 4

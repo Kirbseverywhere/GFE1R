@@ -2,6 +2,16 @@
 
 #include eastdlib.event
 
-SetChapterData(2,1,0,0x38,3,0xB,Map,5,0,0)
+SetChapterData(2,1,0,0x38,3,0xB,Map,5,0,0xC)
+EventPointerTable(0xC, MapChanges)
 Map:
 #incbin "Ch3_data.dmp"
+
+MapChanges:
+TileMap(7,17,12,1,1,Village1Closed)
+TileMapEnd
+
+Village1Closed:
+SHORT 0x80 
+ALIGN 4
+

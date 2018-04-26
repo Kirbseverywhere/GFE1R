@@ -1,13 +1,13 @@
 	
-typedef struct OAM {
+typedef struct {
     u16 oam0;
 	u16 oam1;
 	u16 oam2;
-};
+} OAM;
 
-typedef struct OAMData {
+typedef struct {
     u16 size;
-    struct OAM entries[];
-};
+    OAM entries[];
+} OAMData;
 
 

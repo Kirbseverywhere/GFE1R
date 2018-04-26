@@ -16,10 +16,13 @@ CainCredits:
 Credit(Cain, 180, 32, AddToPool(String(Xenith); BYTE 0), AddToPool(String(NICKT); BYTE 0), CaedaCredits, AbelCredits)
 
 AbelCredits:
-Credit(Abel, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(NICKT); BYTE 0), CainCredits, NorneCredits)
+Credit(Abel, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(NICKT); BYTE 0), CainCredits, DraugCredits)
+
+DraugCredits:
+Credit(Draug, 180, 32, AddToPool(String(Lenh); BYTE 0), AddToPool(String(--); BYTE 0), AbelCredits, NorneCredits)
 
 NorneCredits:
-Credit(Norne, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), AbelCredits, OgmaCredits)
+Credit(Norne, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), DraugCredits, OgmaCredits)
 
 OgmaCredits:
 Credit(Ogma, 180, 32, AddToPool(String(Donate To Circles); BYTE 0), AddToPool(String(Donate To Circles); BYTE 0), NorneCredits, BarstCredits)

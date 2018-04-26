@@ -1,0 +1,21 @@
+#include "Battle Screen.h"
+
+extern u32 BattleScreenGFX[];
+extern u32 BattleScreenPalette[];
+
+void GenerateBGTsaExtra(u16 *MapOffset, u32 NumberOfTiles, u8 PaletteId, u32 baseTile) {
+	for(int i = 0; i < NumberOfTiles; i++) {
+		MapOffset[i] = ((i + baseTile) | (PaletteId << 12));
+	}
+}
+
+void ekrDispBattleScreen() {
+	LZ77UncompVram((u32)BattleScreenGFX, 0x6001C00);
+	MemCopy((u32)BattleScreenPalette, (0x020228A8 + 2 * 0x20), 0x20);
+	GenerateBGTsaExtra((u16 *)BG1Buffer, 0xE0, 2, 128+0x60);
+	GenerateBGTsaExtra((u16 *)BGLoc(BG1Buffer, 0, 14), 0xC0, 2, 0x160+0x60);
+	PrintInline(0, BGLoc(BG0Buffer, 0x17, 1), 0, 0, 12, "Gordin");
+	PrintInline(0, BGLoc(BG0Buffer, 4, 1), 0, 0, 12, "Galder");
+	PrintInline(0, BGLoc(BG0Buffer, 8, 15), 0, 0, 12, "Iron Sword");
+	PrintInline(0, BGLoc(BG0Buffer, 18, 15), 0, 0, 12, "Iron Bow");
+}

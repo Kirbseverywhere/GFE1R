@@ -1,8 +1,8 @@
 #include "Main.h"
 #include "lib.h"
 
-extern u32 DonateToKirbBGFX;
-extern u32 DonateToKirbBGPal;
+extern u32 DonateToKirbBGFX[];
+extern u32 DonateToKirbBGPal[];
 
 u8 EndEffect() {
 	New6C((u32 *)Debug6C, 3);
@@ -19,8 +19,8 @@ void DebugScreenSetup(UnitEditorProc *CurrentProc) {
 	SetupBG(0);
 	
 	//Load the background graphics and palette and tsa(generate it)
-	LZ77UncompVram(DonateToKirbBGFX, 0x6008000);
-	MemCopy(DonateToKirbBGPal, (0x020228A8 + 14 * 0x20), 0x20);
+	LZ77UncompVram((u32)DonateToKirbBGFX, 0x6008000);
+	MemCopy((u32)DonateToKirbBGPal, (0x020228A8 + 14 * 0x20), 0x20);
 	GenerateBGTsa((u16 *)BG3Buffer, 0x280, 14);
 	
 	MemCopy(0x859ED70, (0x020228A8 + 16 * 0x20), 0x20);

@@ -1,1 +1,7 @@
+[OpenMidRight][LoadCurrent][OpenMidLeft][LoadWrys]
+I am Wrys, a humble curate.[A][2NL]
+I cannot fight, but this staff[NL]
+I carry can heal your wounded.[A][NL]
+Take me with you,[NL]
+and you'll be very glad you did.[A]
 [X]

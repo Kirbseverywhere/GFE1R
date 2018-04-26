@@ -3,3 +3,4 @@
 #include "Chapters/Ch3.txt"
 #include "Chapters/Ch4.txt"
 #include "Chapters/Ch5.txt"
+#include "Chapters/Ch6.txt"

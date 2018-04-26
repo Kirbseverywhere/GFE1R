@@ -1,12 +1,10 @@
 
 ALIGN 4
 DonateToKirbBGFX:
-POIN DonateToKirbBGFX + 4
 #incext Png2Dmp "Donate To Kirb.png" --lz77
 
 ALIGN 4
 DonateToKirbBGPal:
-POIN DonateToKirbBGPal + 4
 #incext Png2Dmp "Donate To Kirb.png" --palette-only
 
 #define StandingMapSprite(aId, width, height, gfxPointer) "PUSH; ORG 0x8AF880 + (aId * 8); SHORT height width; POIN gfxPointer; POP"
@@ -51,6 +49,8 @@ RemoveGlowy:
 #include "Item Icons\Item Icons Installer.event"
 
 #include "Menus\Menu Graphics Installer.event"
+
+#include "Battle Frame\Battle Frame Installer.event"
 
 PUSH
 ORG 0xA8F34

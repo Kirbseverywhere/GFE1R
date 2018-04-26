@@ -77,12 +77,12 @@
 #define Nagi 60
 #define Gotoh 61
 
-#define Gazzak 62
-#define Gomer 63 
-#define Hyman 64
-#define Bentheon 65
-#define Merach 66
-#define Emereus 67
+#define Gazzak 70
+#define Gomer 71 
+#define Hyman 72
+#define Bentheon 73
+#define Merach 74
+#define Emereus 75
 
 #define Galder 0x80
 

@@ -69,8 +69,8 @@ END_MAIN
 ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
 
 CharacterBasedEvents:
-CHAR 0x9 RickardRecruitment [Marth,Ricard] 0x0
-CHAR 0x9 RickardRecruitment [Julian,Ricard] 0x0
+CHAR 0x9 MarthRickardRecruitment [Marth,Ricard] 0x0
+CHAR 0x9 JulianRickardRecruitment [Julian,Ricard] 0x0
 END_MAIN
 
 LocationBasedEvents:
@@ -97,8 +97,14 @@ TrapData:
 ENDTRAP
 
 ALIGN 4
-RickardRecruitment:
-CUSA Rickard
+MarthRickardRecruitment:
+Text(Ch6MarthRecruitsRicardText)
+CUSA Ricard
+ENDA
+
+JulianRickardRecruitment:
+Text(Ch6JulianRecruitsRicardText)
+CUSA Ricard
 ENDA
 
 ALIGN 4
@@ -107,9 +113,11 @@ BeginningScene:
 LOAD1 0x1 Units
 LOAD1 0x1 Bad
 LOAD1 0x1 Rickard
+Text(Ch6OpeningText)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch6EndingText)
 MNTS 0
 ENDA

@@ -4,9 +4,11 @@ setMugEntry(Caeda, CaedaPortrait, 3, 6, 3, 4)
 setMugEntry(Abel, AbelPortrait, 3, 5, 3, 3)
 setMugEntry(Cain, CainPortrait, 3, 5, 3, 3)
 setMugEntry(Gordin, GordinPortrait, 4, 6, 4, 4)
+setMugEntry(Draug, DraugPortrait, 3, 5, 3, 3)
 setMugEntry(Norne, NornePortrait, 4, 5, 4, 3)
 setMugEntry(MyUnitMale, MyUnitMalePortrait, 3, 7, 3, 5)
 setMugEntry(MyUnitFemale, LindePortrait, 3, 6, 3, 4)
+setMugEntry(Wrys, WrysPortrait, 2, 5, 2, 3)
 setMugEntry(Ogma, OgmaPortrait, 1, 5, 1, 3)
 setMugEntry(Barst, BarstPortrait, 3, 5, 3, 3)
 setMugEntry(Darros, DarrosPortrait, 3, 4, 3, 2)
@@ -39,11 +41,17 @@ CainPortrait:
 GordinPortrait:
 #incext HalfbodyFormatter "Gordin.png"
 
+DraugPortrait:
+#incext HalfbodyFormatter "Draug.png"
+
 NornePortrait:
 #incext HalfbodyFormatter "Norne.png"
 
 MyUnitMalePortrait:
 #incext HalfbodyFormatter "Joseph.png"
+
+WrysPortrait:
+#incext HalfbodyFormatter "Wrys.png"
 
 OgmaPortrait:
 #incext HalfbodyFormatter "Ogma.png"
