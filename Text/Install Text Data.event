@@ -1459,7 +1459,3 @@ TxtData0xa92:
 #incext ParseFile "_textentries\0xa92.txt"
 setText(0xa92,TxtData0xa92)
 
-TxtData0xa93:
-#incext ParseFile "_textentries\0xa93.txt"
-setText(0xa93,TxtData0xa93)
-

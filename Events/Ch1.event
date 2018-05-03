@@ -25,19 +25,19 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [24,5] 0x00 0x00 0x0 0x00 [SteelSword, SilverLance, Vulnerary] NoAI 
-UNIT Cain Cavalier 0x00 Level(1, Ally, 0) [24,8] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] NoAI 
-UNIT Abel Cavalier 0x00 Level(1, Ally, 0) [25,8] 0x00 0x00 0x0 0x00 [IronSword, Javelin, Vulnerary] NoAI 
-UNIT Gordin Archer 0x00 Level(1, Ally, 0) [25,4] 0x00 0x00 0x0 0x00 [IronBow, Bowgun, Vulnerary] NoAI 
-UNIT Draug Knight 0x00 Level(1, Ally, 0) [22,3] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 1) [24,5] 0x00 0x00 0x0 0x00 [SteelSword, SilverLance, Vulnerary] NoAI 
+UNIT Cain Cavalier 0x00 Level(1, Ally, 1) [24,8] 0x00 0x00 0x0 0x00 [SteelSword, Vulnerary] NoAI 
+UNIT Abel Cavalier 0x00 Level(1, Ally, 1) [25,8] 0x00 0x00 0x0 0x00 [IronSword, Javelin, Vulnerary] NoAI 
+UNIT Gordin Archer 0x00 Level(1, Ally, 1) [25,4] 0x00 0x00 0x0 0x00 [IronBow, Bowgun, Vulnerary] NoAI 
+UNIT Draug Knight 0x00 Level(1, Ally, 1) [22,3] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
 UNIT
 
 Marf:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [60,0] 0x00 0x00 0x0 0x00 [Rapier, Vulnerary] NoAI 
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 1) [60,0] 0x00 0x00 0x0 0x00 [Rapier, Vulnerary] NoAI 
 UNIT
 
 WaifuEscape:
-UNIT Caeda PegasusKnight 0x00 Level(1, Ally, 0) [5,1] 0x00 0x00 0x0 0x00 [SlimLance, Vulnerary] NoAI 
+UNIT Caeda PegasusKnight 0x00 Level(1, Ally, 1) [5,1] 0x00 0x00 0x0 0x00 [SlimLance, Vulnerary] NoAI 
 UNIT
 
 GazzakBaddie:
@@ -192,8 +192,8 @@ REDA [22, 9] 0x00 0x00 0x00 0x00
 // Units
 
 NorneAndMU:
-UNIT Norne Archer_F 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
-UNIT MyUnitMale Knight 0x00 Level(1, Ally, 0) [16,2] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
+UNIT Norne Archer_F 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
+UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
 UNIT
 
 RandomBoat:

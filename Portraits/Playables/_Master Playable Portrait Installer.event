@@ -5,7 +5,7 @@ setMugEntry(Abel, AbelPortrait, 3, 5, 3, 3)
 setMugEntry(Cain, CainPortrait, 3, 5, 3, 3)
 setMugEntry(Gordin, GordinPortrait, 4, 6, 4, 4)
 setMugEntry(Draug, DraugPortrait, 3, 5, 3, 3)
-setMugEntry(Norne, NornePortrait, 40, 5, 40, 3)
+setMugEntry(Norne, NornePortrait, 4, 5, 4, 3)
 setMugEntry(MyUnitMale, MyUnitMalePortrait, 3, 7, 3, 5)
 setMugEntry(MyUnitFemale, LindePortrait, 3, 6, 3, 4)
 setMugEntry(Wrys, WrysPortrait, 2, 5, 2, 3)
@@ -45,7 +45,7 @@ DraugPortrait:
 #incext HalfbodyFormatter "Draug.png"
 
 NornePortrait:
-#incext HalfbodyFormatter "BuffNorne.png"
+#incext HalfbodyFormatter "Norne.png"
 
 MyUnitMalePortrait:
 #incext HalfbodyFormatter "Joseph.png"
