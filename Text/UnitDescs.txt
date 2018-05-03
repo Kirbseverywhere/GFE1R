@@ -3,35 +3,38 @@ The Prince of Altea. Young,[NL]
 and Full of Potential.[X]
 
 ##JagenDesc
-A veteran knight who served Marth's father[NL]
+A veteran knight who served Marth’s father[NL]
 Old and wise.[X]
 
 ##CaedaDesc
-[X]
+The princess of Talys, a island [NL]
+nation. Talented as she is charming.[X]
 
 ##CainDesc
-An Altean knight serving under prince[NL]
+An Altean knight serving under Prince[NL]
 Marth. Loyal, but reckless.[X]
 
 ##AbelDesc
-An Altean knight serving under prince Marth.[NL]
-Secretly wishes for a quiet life.[X]
+An Altean knight serving under Prince[NL]
+Marth. Secretly wishes for a quiet life.[X]
 
 ##GordinDesc
 An untested archer from Altea.[NL]
 Wishes to prove himself useful.[X]
 
 ##DraugDesc
-[X]
+An armored knight from Altea. Though[NL]
+quiet, he’s very reliable and sturdy.[X]
 
 ##MyUnitMaleDesc
-[X]
+A soldier that escaped with Marth.[X]
 
 ##MyUnitFemaleDesc
-[X]
+A soldier who escaped with Marth.[X]
 
 ##FreyDesc
-[X]
+An Altean knight serving under Prince Marth.[NL]
+Fiercely loyal and compassionate.[X]
 
 ##NorneDesc
 A cheerful Altean archer.[NL]
@@ -39,49 +42,60 @@ Reliant on others and inexperienced.[X]
 
 ##WrysDesc
 A humble and kind curate. Learned[NL]
-in the art of healing wounds.[X]
+in the art of healing wounds."[X]
 
 ##OgmaDesc
-[X]
+A mercenary indebted to Talys. Skilled[NL] 
+at fighting and wise in life’s ways.[X]
 
 ##BarstDesc
-[X]
+A mercenary working for Talys. Dislikes[NL]
+warfare and seeks a new life.[X]
 
 ##BordDesc
-[X]
+A mercenary under Ogma’s command. [NL]
+Skilled with an axe.[X]
 
 ##CordDesc
-[X]
+A mercenary under Ogma’s command. [NL] 
+Talks like a bull in a China shop.[X]
 
 ##DarrosDesc
-[X]
+A pirate who wants to change his ways.[NL] 
+Unskilled, but effective in combat.[X]
 
 ##CastorDesc
-[X]
+A poor man needing money for his[NL]
+sick grandmother. A little suspicious.[X]
 
 ##JulianDesc
 Former Soothsire bandit and "Ally of[NL]
 Justice", he left his thieving ways[NL] 
 for Lena.[X]
 
+
 ##LenaDesc
-[X]
+A Macedonian woman dedicated to her[NL]
+religion. Believes in second chances.[X]
 
 ##NavarreDesc
-[X]
+A skilled swordsman training his blade.[NL] 
+He would never turn his sword on a woman.[X]
 
 ##MerricDesc
-[X]
+An Altean noble who learned magic in Khadein.[NL]
+Wields the Excalibur tome.[X]
 
 ##MatthisDesc
-A man who was forced into the Macedonian army[NL]
+A man who was forced into the Macedonian army.[NL]
 Cowardly, but cares deeply for his sister[X]
 
 ##HardinDesc
-[X]
+The brother of King Aurelis.[NL]
+Known as a kind and compassionate leader.[X]
 
 ##SedgarDesc
-Wolf's deputy. Respects his[NL]
+Wolf’s deputy. Respects his[NL]
 comrades and leader greatly.[X]
 
 ##WolfDesc
@@ -89,7 +103,7 @@ An Aurelian knight serving under Hardin.[NL]
 Fiercely loyal to his liege.[X]
 
 ##VylandDesc
-A member of the Wolfguard.[NL]
+A member of Hardin’s elite knights.[NL]
 Proud to a fault.[X]
 
 ##RosheaDesc
@@ -101,7 +115,7 @@ A wise sage who values peace.[NL]
 Fled Khadein as Gharnef took control.[X]
 
 ##RicardDesc
-Julian's apprentice.[NL]
+Julian’s apprentice.[NL]
 A skilled thief with few scruples.[X]
 
 ##AthenaDesc
@@ -109,38 +123,48 @@ A sword wielder from a far-off land.[NL]
 Her sword is as deadly as her accent is strange.[X]
 
 ##BantuDesc
-[X]
+A aloof man who can turn into a dragon. [NL]
+Said to be older than Archanea itself. [X]
 
 ##CaesarDesc
-[X]
+A sellsword and a friend of Radd. 
+[NL] He wants to help his sister.[X]
 
 ##RaddDesc
-A sellsword and Caesar's partner.[NL]
-On a quest for his one true love.[X]
+A sellsword and Caesar’s partner.[NL]
+On a quest for true love.[X]
 
 ##RogerDesc
-A Grustian Knight. Has been[NL][X]
+A Grustian Knight. [NL]
+Is unsure about his situation[X]
+
 
 ##JeorgeDesc
-[X]
+An Archanean sniper who is nobility. [NL]
+Suprisingly hates his lineage[X]
 
 ##MariaDesc
-[X]
+The young princess of Macedon.[NL]
+Loves her family unconditionally.[X]
 
 ##MinervaDesc
-[X]
+The older princess of Macedon. [NL]
+Protective of Maria.[X]
 
 ##LindeDesc
-[X]
+The daughter of Pontifex Miloah. [NL]
+Wields the Aura tome.[X]
 
 ##JakeDesc
-[X]
+Anna’s boyfriend and a Gustian soldier. [NL]
+Not as gold hungry as his sweetheart.[X]
 
 ##MidiaDesc
 [X]
 
 ##TomasDesc
-[X]
+A knight with Archanea. Fascinated [NL] 
+with archery. [X]
 
 ##BoahDesc
 [X]
@@ -155,16 +179,19 @@ A Grustian Knight. Has been[NL][X]
 [X]
 
 ##AstramDesc
-[X]
+An Archanean knight who is [NL]
+fiercely loyal to Nyna. Midia’s fiancee. [X]
 
 ##BeckDesc
 [X]
 
 ##PallaDesc
-[X]
+The eldest Whitewing sister. Gentle,but[NL] 
+reliable in battle.[X]
 
 ##CatriaDesc
-[X]
+The middle Whitewing sister. Cool, calm, [NL]
+and collected.[X]
 
 ##XaneDesc
 [X]
@@ -176,28 +203,31 @@ A Grustian Knight. Has been[NL][X]
 [X]
 
 ##EtzelDesc
-[X]
+A sorcerer from Khadein. His wife died[NL] recently so he fights to live.[X]
 
 ##EstDesc
-[X]
+The youngest Whitewing, very cheerful[NL]
+and inexperienced. Has room to grow.[X]
 
 ##TikiDesc
-[X]
+A young Manakete with a childish[NL]
+personality and great hidden power.[X]
 
 ##LorenzDesc
-[X]
+A Grustian general who is loyal to a fault, [NL]but has started questioning the war.[X]
 
 ##YmirDesc
 [X]
 
 ##EliceDesc
-[X]
+Marth's sister. Selfless and kindhearted. [X]
 
 ##NagiDesc
-[X]
+A manakete from another dimension. [NL] Speculated to be a reincarnation of Naga.[X]
 
 ##GotohDesc
-[X]
+The Legendary White Sage.[NL]
+As powerful as he is mysterious.[X]
 
 ##GazzakDesc
 Cute Pirate Guy.[X]
@@ -216,5 +246,3 @@ Merric's failed brother[X]
 
 ##EmereusDesc
 Emedeus? dun dun dunnn[X]
-
-

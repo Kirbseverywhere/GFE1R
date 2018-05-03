@@ -1,14 +1,14 @@
 typedef struct {
-	u16 nameTextId;
-	u16 descTextId;
-	u8  number;
-	u8  promotion;
-	u8  SMSId;
-	u8  slowWalking;
-	u16 defaultPortraitId;
-	u8  u0A;
+	u16 nameTextId; 
+	u16 descTextId; 
+	u8  number; 
+	u8  promotion; 
+	u8  SMSId; 
+	u8  slowWalking; 
+	u16 defaultPortraitId; 
+	u8  u0A; 
 	
-	u8  baseHP;
+	u8  baseHP; 
 	u8  basePow;
 	u8  baseSkl;
 	u8  baseSpd;
@@ -44,7 +44,8 @@ typedef struct {
 	u8  promotionDef;
 	u8  promotionRes;
 	
-	u32 attributes;
+	u8 pad2a[2];
+	//u32 attributes;
 	
 	u8  ranks[8];
 	

@@ -112,9 +112,13 @@ void ClassButtonEffect(TacticianProc *CurrentProc) {
 }
 
 void ApplyMUDataChange() {
-	((UnitStruct*)0x202C0D4)->classDataPtr = (ClassData *)GetClassOffset(sMU->Class);
-	((UnitStruct2*)0x202C0D4)->stats[sMU->Boon] = (((UnitStruct2*)0x202C0D4)->stats[sMU->Boon]) + 2;
-	((UnitStruct2*)0x202C0D4)->stats[sMU->Bane] = (((UnitStruct2*)0x202C0D4)->stats[sMU->Bane]) - 2;
+	UnitStruct2 *MyUnit = ((UnitStruct2*)0x202C0D4);
+	MyUnit->classDataPtr = (ClassData *)GetClassOffset(sMU->Class);
+	MyUnit->stats[sMU->Boon] += 2;
+	MyUnit->stats[sMU->Bane] -= 2;
+	for(u8 i = 0; i < 8; i++) {
+		MyUnit->ranks[i] = ((ClassData *)GetClassOffset(sMU->Class))->ranks[i];
+	}
 }
 
 void ApplyMUCharacterChange() {
