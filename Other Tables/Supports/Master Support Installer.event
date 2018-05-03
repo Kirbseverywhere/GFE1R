@@ -1,0 +1,9 @@
+PUSH
+ORG 0x84784
+POIN SupportList
+ORG 0x847FC
+POIN SupportList
+POP
+
+SupportList:
+WORD 0 0 0 0 

@@ -28,6 +28,9 @@ ALIGN 4
 #include "Tables\Table Installer.event"
 
 ALIGN 4
+#include "Other Tables\Master Table Installer.event"
+
+ALIGN 4
 #include "Engine Hacks\src\Lyn Buildfile.event"
 
 ALIGN 4

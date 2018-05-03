@@ -1,0 +1,7 @@
+PUSH
+ORG 0x8472C
+POIN BattleQuoteTable
+POP
+
+BattleQuoteTable:
+WORD 0 0 0 0 

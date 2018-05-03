@@ -1,0 +1,3 @@
+#include "Supports\Master Support Installer.event"
+#include "Quotes\Death Quotes.event"
+#include "Quotes\Battle Quotes.event"

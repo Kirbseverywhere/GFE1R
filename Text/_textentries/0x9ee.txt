@@ -26,7 +26,8 @@ and kissed my grams goodbye[NL]
 before coming here.[A]
 
 [OpenFarRight]Well Norne, we could use loyal Alteans[NL]
-like you and [Tact] to help us save King Mostyn.[A][NL]
+like you and [Tact][A][NL]
+to help us save King Mostyn.[A][NL]
 It'll be a pleasure to fight alongside you.[A]
 
 [OpenFarLeft]Tee hee![NL]
