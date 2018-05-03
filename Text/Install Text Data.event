@@ -1443,3 +1443,23 @@ TxtData0xa8e:
 #incext ParseFile "_textentries\0xa8e.txt"
 setText(0xa8e,TxtData0xa8e)
 
+TxtData0xa8f:
+#incext ParseFile "_textentries\0xa8f.txt"
+setText(0xa8f,TxtData0xa8f)
+
+TxtData0xa90:
+#incext ParseFile "_textentries\0xa90.txt"
+setText(0xa90,TxtData0xa90)
+
+TxtData0xa91:
+#incext ParseFile "_textentries\0xa91.txt"
+setText(0xa91,TxtData0xa91)
+
+TxtData0xa92:
+#incext ParseFile "_textentries\0xa92.txt"
+setText(0xa92,TxtData0xa92)
+
+TxtData0xa93:
+#incext ParseFile "_textentries\0xa93.txt"
+setText(0xa93,TxtData0xa93)
+

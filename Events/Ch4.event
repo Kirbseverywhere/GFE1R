@@ -85,9 +85,13 @@ ENDA
 RecruitMerric:
 Text(0x2, MerricRecruitementText)
 LOAD1 0x1 RecruitableMerric
+NoFade
 ENDA
 
 GetGold:
+Text(0x2, CH4VillageText)
+GiveMoney(5000)
+NoFade
 ENDA
 
 // Manual Movement

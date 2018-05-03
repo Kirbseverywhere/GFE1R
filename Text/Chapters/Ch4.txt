@@ -9,3 +9,6 @@
 
 ##MerricRecruitementText
 [X]
+
+##CH4VillageText
+[X]

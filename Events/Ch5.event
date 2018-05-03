@@ -37,6 +37,7 @@ CharacterEvent(9,RecruitWendell,Marth,Wendell)
 END_MAIN
 
 LocationBasedEvents:
+Village(8,TopVillage,22,3)
 Seize(9,7)
 Seize(25,17)
 END_MAIN
@@ -81,6 +82,12 @@ ENDA
 BeginningScene2:
 LOAD1 0x1 HardinCrew
 Text(0x29, Ch5BeginningText2)
+ENDA
+
+TopVillage:
+Text(0x2, CH5VillageText)
+GiveItem(DragonStone)
+NoFade
 ENDA
 
 // Manual Movement

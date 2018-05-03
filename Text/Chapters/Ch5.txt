@@ -9,3 +9,6 @@
 
 ##Ch5EndingText
 [X]
+
+##CH5VillageText
+[X]

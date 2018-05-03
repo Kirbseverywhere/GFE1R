@@ -38,6 +38,7 @@ CharacterEvent(9,RecruitCastor,Caeda,Castor)
 END_MAIN
 
 LocationBasedEvents:
+Village(7,TopLeftVillage,9,1)
 Seize(20,9)
 Seize(2,2)
 END_MAIN
@@ -89,6 +90,12 @@ ENDA
 RecruitCastor:
 Text(CastorRecruitementText)
 CUSA Castor
+NoFade
+ENDA
+
+TopLeftVillage:
+Text(0x2, CH2VillageText)
+GiveMoney(5000)
 NoFade
 ENDA
 // Manual Movement

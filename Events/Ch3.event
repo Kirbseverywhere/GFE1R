@@ -41,6 +41,7 @@ CharacterEvent(8,RecruitNavarre,Caeda,Navarre)
 END_MAIN
 
 LocationBasedEvents:
+Village(7,TopLeftVillage,17,2)
 Seize(4,9)
 Seize(27,16)
 END_MAIN
@@ -88,6 +89,12 @@ ENDA
 RecruitNavarre:
 Text(NavarreRecruitementText)
 CUSA Navarre
+NoFade
+ENDA
+
+TopLeftVillage:
+Text(0x2, CH3VillageText)
+GiveItem(DevilAxe)
 NoFade
 ENDA
 
