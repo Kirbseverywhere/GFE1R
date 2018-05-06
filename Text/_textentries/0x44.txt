@@ -1,1 +1,1 @@
-Buff nearby allies.[X]
+ Rally[X]

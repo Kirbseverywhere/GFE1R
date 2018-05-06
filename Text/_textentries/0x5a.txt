@@ -1,1 +1,1 @@
- Reset SRAM[X]
+ Resume Chapter[X]

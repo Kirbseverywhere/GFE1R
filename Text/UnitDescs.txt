@@ -3,8 +3,8 @@ The Prince of Altea. Young,[NL]
 and Full of Potential.[X]
 
 ##JagenDesc
-A veteran knight who served Marth’s father[NL]
-Old and wise.[X]
+A veteran knight who served Marth's[NL] 
+father. Old and wise.[X]
 
 ##CaedaDesc
 The princess of Talys, a island [NL]
@@ -24,7 +24,7 @@ Wishes to prove himself useful.[X]
 
 ##DraugDesc
 An armored knight from Altea. Though[NL]
-quiet, he’s very reliable and sturdy.[X]
+quiet, he's very reliable and sturdy.[X]
 
 ##MyUnitMaleDesc
 A soldier that escaped with Marth.[X]
@@ -42,22 +42,22 @@ Reliant on others and inexperienced.[X]
 
 ##WrysDesc
 A humble and kind curate. Learned[NL]
-in the art of healing wounds."[X]
+in the art of healing wounds.[X]
 
 ##OgmaDesc
 A mercenary indebted to Talys. Skilled[NL] 
-at fighting and wise in life’s ways.[X]
+at fighting and wise in life's ways.[X]
 
 ##BarstDesc
 A mercenary working for Talys. Dislikes[NL]
 warfare and seeks a new life.[X]
 
 ##BordDesc
-A mercenary under Ogma’s command. [NL]
+A mercenary under Ogma's command. [NL]
 Skilled with an axe.[X]
 
 ##CordDesc
-A mercenary under Ogma’s command. [NL] 
+A mercenary under Ogma's command. [NL] 
 Talks like a bull in a China shop.[X]
 
 ##DarrosDesc
@@ -95,7 +95,7 @@ The brother of King Aurelis.[NL]
 Known as a kind and compassionate leader.[X]
 
 ##SedgarDesc
-Wolf’s deputy. Respects his[NL]
+Wolf's deputy. Respects his[NL]
 comrades and leader greatly.[X]
 
 ##WolfDesc
@@ -103,7 +103,7 @@ An Aurelian knight serving under Hardin.[NL]
 Fiercely loyal to his liege.[X]
 
 ##VylandDesc
-A member of Hardin’s elite knights.[NL]
+A member of Hardin's elite knights.[NL]
 Proud to a fault.[X]
 
 ##RosheaDesc
@@ -115,7 +115,7 @@ A wise sage who values peace.[NL]
 Fled Khadein as Gharnef took control.[X]
 
 ##RicardDesc
-Julian’s apprentice.[NL]
+Julian's apprentice.[NL]
 A skilled thief with few scruples.[X]
 
 ##AthenaDesc
@@ -131,7 +131,7 @@ A sellsword and a friend of Radd.
 [NL] He wants to help his sister.[X]
 
 ##RaddDesc
-A sellsword and Caesar’s partner.[NL]
+A sellsword and Caesar's partner.[NL]
 On a quest for true love.[X]
 
 ##RogerDesc
@@ -156,7 +156,7 @@ The daughter of Pontifex Miloah. [NL]
 Wields the Aura tome.[X]
 
 ##JakeDesc
-Anna’s boyfriend and a Gustian soldier. [NL]
+Anna's boyfriend and a Gustian soldier. [NL]
 Not as gold hungry as his sweetheart.[X]
 
 ##MidiaDesc
@@ -180,7 +180,7 @@ with archery. [X]
 
 ##AstramDesc
 An Archanean knight who is [NL]
-fiercely loyal to Nyna. Midia’s fiancee. [X]
+fiercely loyal to Nyna. Midia's fiancee. [X]
 
 ##BeckDesc
 [X]

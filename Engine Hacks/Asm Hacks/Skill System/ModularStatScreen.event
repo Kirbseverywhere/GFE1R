@@ -302,7 +302,7 @@ ST_Def:
 ST_Res:
   RMenu(ST_Def,ST_Mov,ST_Exp,0,0x66,0x68,0x54c)
 ST_Mov:
-  RMenu(ST_Res,ST_Con,ST_Exp,0,0x66,0x78,0x54d)
+  RMenu(ST_Res,ST_Con,ST_Exp,ST_Rating,0x66,0x78,0x54d)
 ST_Con:
   RMenu(ST_Mov,0,ST_HP,0,0x66,0x88,0x54e)
 POP
@@ -316,7 +316,9 @@ ST_Affin:
 ST_Cond:
   RMenu(ST_Affin,ST_Talk,ST_Luck,0,0xA6,0x48,0x552,ConditionGetter)
 ST_Talk:
-  RMenu(ST_Cond,0,ST_Def,0,0xA6,0x58,SS_TalkRText)
+  RMenu(ST_Cond,ST_Rating,ST_Def,0,0xA6,0x58,SS_TalkRText)
+ST_Rating:
+  RMenu(ST_Talk,0,ST_Res,0,0xA6,0x78,SS_RatingRText)
 #ifdef Display_Growths_Toggle
   PersonalDataRText:
   RMenu(0,ST_Str,0,0,0x76,0x4,PersonalDataDesc1)

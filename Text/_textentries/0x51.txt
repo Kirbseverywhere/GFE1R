@@ -1,1 +1,2 @@
- Pivot[X]
+Push an adjacent unit two[N]
+tiles away.[X]

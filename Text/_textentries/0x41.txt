@@ -1,2 +1,2 @@
-This unit's personal[N]
-stats and skills.[X]
+Press Select to toggle[N]
+between stats and growths.[X]

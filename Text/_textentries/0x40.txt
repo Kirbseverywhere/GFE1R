@@ -1,2 +1,1 @@
-Press Select to toggle[N]
-between stats and growths.[X]
+Sum of the unit's stats.[X]

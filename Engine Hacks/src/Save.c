@@ -1,93 +1,140 @@
 #include "Save.h"
 
 
-void SaveUnit(UnitStruct *CurrentUnit, RevampedSavedUnit *CurrentSaveIndex) {
-	CpuFill16(0, (u32)CurrentSaveIndex, 0x24);
-	CpuFill16(0, (u32)CurrentSaveIndex+1, 0x24);
-	if (CurrentUnit->unitDataPtr != 0) {
-	
-	CurrentUnit->index = (u8)Div(((u32)CurrentUnit - 0x202BE4C), 0x48) + 1;
-		
-	//Setup
-	CurrentSaveIndex->CharIndex = CurrentUnit->unitDataPtr->CharIndex;
-	CurrentSaveIndex->ClassID = CurrentUnit->classDataPtr->number;
-	
-	CurrentSaveIndex->Level = CurrentUnit->level;
-	CurrentSaveIndex->Exp = CurrentUnit->exp;
-	CurrentSaveIndex->xPos = CurrentUnit->xPos;
-	CurrentSaveIndex->yPos = CurrentUnit->yPos;
-	
-	CurrentSaveIndex->Dead = CurrentUnit->stateflags.dead;
-	CurrentSaveIndex->Undeployed = CurrentUnit->stateflags.undeployed;
-	CurrentSaveIndex->SoloAnim1 = CurrentUnit->stateflags.soloAnim1;
-	CurrentSaveIndex->SoloAnim2 = CurrentUnit->stateflags.soloAnim2;
-	CurrentSaveIndex->MetisTome = CurrentUnit->stateflags.metisTome;
-	CurrentSaveIndex->Unk1 = CurrentUnit->stateflags.somethingAboutNotBeingDrawn;
-	CurrentSaveIndex->Unk2 = CurrentUnit->stateflags.unk5;
-	CurrentSaveIndex->UndeployedInPreviousChapter = CurrentUnit->stateflags.undeployedInPreviousChapter;
-	
-	CurrentSaveIndex->MaxHP = CurrentUnit->maxHP;
-	CurrentSaveIndex->Pow = CurrentUnit->pow;
-	CurrentSaveIndex->Skl = CurrentUnit->skl;
-	CurrentSaveIndex->Spd = CurrentUnit->spd;
-	CurrentSaveIndex->Def = CurrentUnit->def;
-	CurrentSaveIndex->Res = CurrentUnit->res;
-	CurrentSaveIndex->Lck = CurrentUnit->lck;
-	CurrentSaveIndex->ConBonus = CurrentUnit->conBonus;
-	CurrentSaveIndex->MovBonus = CurrentUnit->movBonus;
-	
-	CurrentSaveIndex->Item1 = CurrentUnit->items[0];
-	CurrentSaveIndex->Item2 = CurrentUnit->items[1];
-	CurrentSaveIndex->Item3 = CurrentUnit->items[2];
-	CurrentSaveIndex->Item4 = CurrentUnit->items[3];
-	CurrentSaveIndex->Item5 = CurrentUnit->items[4];
-	for (int i = 0; i <= 7; i++) {
-		CurrentSaveIndex->WeaponRanks[i] = CurrentUnit->ranks[i];
+void SaveUnit(UnitStruct *Arg1, RevampedSavedUnit *CurrentSaveIndex) {
+	RevampedSavedUnit BufferedSavedUnit;
+	UnitStruct *CurrentUnit = Arg1;
+	UnitStruct BufferedUnit;
+	if(!CurrentUnit->classDataPtr) {
+		CurrentUnit = &BufferedUnit;
+		ClearUnitStruct(CurrentUnit);
+		BufferedSavedUnit.CharIndex = 0;
+		BufferedSavedUnit.ClassID = 0;
 	}
-	for (int i = 0; i <= 6; i++) {
-		CurrentSaveIndex->WeaponRanks[i] = CurrentUnit->ranks[i];
+	else {
+	BufferedSavedUnit.CharIndex = CurrentUnit->unitDataPtr->CharIndex;
+	BufferedSavedUnit.ClassID = CurrentUnit->classDataPtr->number;
 	}
+	BufferedSavedUnit.Level = CurrentUnit->level;
+	BufferedSavedUnit.Exp = CurrentUnit->exp;
+	BufferedSavedUnit.xPos = CurrentUnit->xPos;
+	BufferedSavedUnit.yPos = CurrentUnit->yPos;
+	BufferedSavedUnit.MaxHP = CurrentUnit->maxHP;
+	BufferedSavedUnit.Pow = CurrentUnit->pow;
+	BufferedSavedUnit.Skl = CurrentUnit->skl;
+	BufferedSavedUnit.Spd = CurrentUnit->spd;
+	BufferedSavedUnit.Def = CurrentUnit->def;
+	BufferedSavedUnit.Res = CurrentUnit->res;
+	BufferedSavedUnit.Lck = CurrentUnit->lck;
+	BufferedSavedUnit.ConBonus = CurrentUnit->conBonus;
+	BufferedSavedUnit.MovBonus = CurrentUnit->movBonus;
+	BufferedSavedUnit.Item1 = CurrentUnit->items[0];
+	BufferedSavedUnit.Item2 = CurrentUnit->items[1];
+	BufferedSavedUnit.Item3 = CurrentUnit->items[2];
+	BufferedSavedUnit.Item4 = CurrentUnit->items[3];
+	BufferedSavedUnit.Item5 = CurrentUnit->items[4];
+	if (CurrentUnit->stateflags.dead != 0) {
+		BufferedSavedUnit.Dead = 1;
 	}
+	if (CurrentUnit->stateflags.undeployed != 0) {
+		BufferedSavedUnit.Undeployed = 1;
+	}
+	if (CurrentUnit->stateflags.soloAnim1 != 0) {
+		BufferedSavedUnit.SoloAnim1 = 1;
+	}
+	if (CurrentUnit->stateflags.soloAnim2 != 0) {
+		BufferedSavedUnit.SoloAnim2 = 1;
+	}
+	if (CurrentUnit->stateflags.metisTome != 0) {
+		BufferedSavedUnit.MetisTome = 1;
+	}
+	if (CurrentUnit->stateflags.somethingAboutNotBeingDrawn != 0) {
+		BufferedSavedUnit.Unk1 = 1;
+	}
+	if (CurrentUnit->stateflags.unk5 != 0) {
+		BufferedSavedUnit.Unk2 = 1;
+	}
+	if (CurrentUnit->stateflags.undeployedInPreviousChapter != 0) {
+		BufferedSavedUnit.UndeployedInPreviousChapter = 1;
+	}
+	for(int i = 0; i < 8; i++) {
+		BufferedSavedUnit.WeaponRanks[i] = CurrentUnit->ranks[i];
+	}
+	for(int i = 0; i < 7; i++) {
+		BufferedSavedUnit.SupportLevels[i] = CurrentUnit->supports[i];
+	}
+	SRAMTransfer_WithCheck(&BufferedSavedUnit, CurrentSaveIndex, sizeof(RevampedSavedUnit));
 }
+	
+#define ReadSramFast ((void (*)(void *org, void *dest, int size))(0x3002B08+1))
 
 void LoadSavedUnit(RevampedSavedUnit *CurrentSaveIndex, UnitStruct *CurrentUnit) {
-	if (CurrentSaveIndex->CharIndex != 0) {
-		CurrentUnit->index = (u8)Div(((u32)CurrentUnit - 0x202BE4C), 0x48) + 1;
-		
-		CurrentUnit->unitDataPtr = (UnitData *)GetCharRomPointer(CurrentSaveIndex->CharIndex);
-		CurrentUnit->classDataPtr = (ClassData *)GetClassOffset(CurrentSaveIndex->ClassID);
-		CurrentUnit->level = CurrentSaveIndex->Level;
-		CurrentUnit->exp = CurrentSaveIndex->Exp;
-		
-		CurrentUnit->stateflags.dead = CurrentSaveIndex->Dead;
-		CurrentUnit->stateflags.undeployed = CurrentSaveIndex->Undeployed;
-		CurrentUnit->stateflags.soloAnim1 = CurrentSaveIndex->SoloAnim1;
-		CurrentUnit->stateflags.soloAnim2 = CurrentSaveIndex->SoloAnim2;
-		CurrentUnit->stateflags.metisTome = CurrentSaveIndex->MetisTome;
-		CurrentUnit->stateflags.somethingAboutNotBeingDrawn = CurrentSaveIndex->Unk1;
-		CurrentUnit->stateflags.unk5 = CurrentSaveIndex->Unk2;
-		CurrentUnit->stateflags.undeployedInPreviousChapter = CurrentSaveIndex->UndeployedInPreviousChapter;
-	
-		CurrentUnit->maxHP = CurrentSaveIndex->MaxHP;
-		CurrentUnit->pow = CurrentSaveIndex->Pow;
-		CurrentUnit->skl = CurrentSaveIndex->Skl;
-		CurrentUnit->spd = CurrentSaveIndex->Spd ;
-		CurrentUnit->def = CurrentSaveIndex->Def;
-		CurrentUnit->res = CurrentSaveIndex->Res;
-		CurrentUnit->lck = CurrentSaveIndex->Lck;
-		CurrentUnit->conBonus = CurrentSaveIndex->ConBonus;
-		CurrentUnit->movBonus = CurrentSaveIndex->MovBonus;
-		
-		CurrentUnit->items[0] = CurrentSaveIndex->Item1;
-		CurrentUnit->items[1] = CurrentSaveIndex->Item2;
-		CurrentUnit->items[2] = CurrentSaveIndex->Item3;
-		CurrentUnit->items[3] = CurrentSaveIndex->Item4;
-		CurrentUnit->items[4] = CurrentSaveIndex->Item5;
-		for (int i = 0; i <= 7; i++) {
-		CurrentUnit->ranks[i] = CurrentSaveIndex->WeaponRanks[i];
-		}
-		for (int i = 0; i <= 6; i++) {
-		CurrentUnit->ranks[i] = CurrentSaveIndex->WeaponRanks[i];
-		}
+	RevampedSavedUnit BufferedSavedUnit;
+	ReadSramFast(CurrentSaveIndex, &BufferedSavedUnit, sizeof(RevampedSavedUnit));
+	CurrentUnit->unitDataPtr = GetROMCharStruct(BufferedSavedUnit.CharIndex);
+	CurrentUnit->classDataPtr = GetROMClassStruct(BufferedSavedUnit.ClassID);
+	CurrentUnit->level = BufferedSavedUnit.Level;
+	CurrentUnit->exp = BufferedSavedUnit.Exp; 
+	CurrentUnit->xPos = BufferedSavedUnit.xPos;
+	CurrentUnit->yPos = BufferedSavedUnit.yPos;
+	CurrentUnit->maxHP = BufferedSavedUnit.MaxHP;
+	CurrentUnit->pow = BufferedSavedUnit.Pow;
+	CurrentUnit->skl = BufferedSavedUnit.Skl;
+	CurrentUnit->spd = BufferedSavedUnit.Spd;
+	CurrentUnit->def = BufferedSavedUnit.Def;
+	CurrentUnit->res = BufferedSavedUnit.Res;
+	CurrentUnit->lck = BufferedSavedUnit.Lck;
+	CurrentUnit->conBonus = BufferedSavedUnit.ConBonus;
+	CurrentUnit->movBonus = BufferedSavedUnit.MovBonus;
+	CurrentUnit->items[0] = BufferedSavedUnit.Item1;
+	CurrentUnit->items[1] = BufferedSavedUnit.Item2;
+	CurrentUnit->items[2] = BufferedSavedUnit.Item3;
+	CurrentUnit->items[3] = BufferedSavedUnit.Item4;
+	CurrentUnit->items[4] = BufferedSavedUnit.Item5;
+	if(BufferedSavedUnit.Exp > 100) {
+		CurrentUnit->exp = -1;
+	}
+	if (BufferedSavedUnit.Dead != 0) {
+		CurrentUnit->stateflags.dead = 1;
+		CurrentUnit->stateflags.notDrawn = 1;
+	}
+	if (BufferedSavedUnit.Undeployed != 0) {
+		CurrentUnit->stateflags.undeployed = 1;
+		CurrentUnit->stateflags.notDrawn = 1;
+	}
+	if (BufferedSavedUnit.SoloAnim1 != 0) {
+		CurrentUnit->stateflags.soloAnim1 = 1;
+	}
+	if (BufferedSavedUnit.SoloAnim2 != 0) {
+		CurrentUnit->stateflags.soloAnim2 = 1;
+	}
+	if (BufferedSavedUnit.MetisTome != 0) {
+		CurrentUnit->stateflags.metisTome = 1;
+	}
+	if (BufferedSavedUnit.Unk1 != 0) {
+		CurrentUnit->stateflags.somethingAboutNotBeingDrawn = 1;
+	}
+	if (BufferedSavedUnit.Unk2 != 0) {
+		CurrentUnit->stateflags.unk5 = 1;
+	}
+	if (BufferedSavedUnit.UndeployedInPreviousChapter != 0) {
+		CurrentUnit->stateflags.undeployedInPreviousChapter = 1;
+	}
+	for(int i = 0; i < 8; i++) {
+		CurrentUnit->ranks[i] = BufferedSavedUnit.WeaponRanks[i];
+	}
+	for(int i = 0; i < 7; i++) {
+		CurrentUnit->supports[i] = BufferedSavedUnit.SupportLevels[i];
+	}
+	SetUnitHP(CurrentUnit, (u8)GetUnitMaxHP(CurrentUnit));
+	CurrentUnit->supportBits = 0;
+	if(CurrentUnit->exp == 0x7F) {
+		CurrentUnit->exp = -1;
+	}
+	if(CurrentUnit->xPos == 0x3F) {
+		CurrentUnit->xPos = -1;
+	}
+	if(CurrentUnit->yPos == 0x3F) {
+		CurrentUnit->yPos = -1;
 	}
 }

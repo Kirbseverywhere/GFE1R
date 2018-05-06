@@ -1,1 +1,2 @@
- Smite[X]
+Push an adjacent unit one[N]
+tile away.[X]

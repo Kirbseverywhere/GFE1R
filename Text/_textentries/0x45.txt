@@ -1,1 +1,1 @@
- Lunge[X]
+Buff nearby allies.[X]

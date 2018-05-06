@@ -39,3 +39,5 @@ typedef struct __attribute__ ((packed)) {
 	u8 WeaponRanks[8];
 	u8 SupportLevels[7];
 } SavedUnit;
+
+#define SRAMTransfer_WithCheck ((void (*)(void *Org, void *Dest, int size))(0x080d184c+1))

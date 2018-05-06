@@ -57,3 +57,4 @@ typedef struct {
 } ClassData;
 
 #define GetClassOffset ((u32 (*)(u32 ID))(0x08019444+1))
+#define GetROMClassStruct ((ClassData *(*)(u32 classID))(0x08019444+1))

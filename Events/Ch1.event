@@ -85,6 +85,7 @@ Seize(5,4)
 Seize(25,7)
 Village(8,TopRightVillage,28,5)
 Village(9,DownLeftVillage,4,9)
+Armory(Ch1Armory, 26, 2)
 END_MAIN
 
 MiscBasedEvents:
@@ -167,6 +168,7 @@ DISA 0x45
 ASMC ApplyMUCharacterChange
 ENUN
 Text(0x18, NorneAndMURecruitementText)
+GiveMoney(500)
 NoFade
 ENDA
 
@@ -193,7 +195,7 @@ REDA [22, 9] 0x00 0x00 0x00 0x00
 
 NorneAndMU:
 UNIT Norne Archer_F 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
-UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [IronLance, Vulnerary] NoAI 
+UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [0] NoAI 
 UNIT
 
 RandomBoat:
@@ -205,3 +207,7 @@ UNIT Wrys Priest 0x00 Level(1, Ally, 0) [4,10] 0x00 0x00 0x0 0x00 [Heal] NoAI
 UNIT
 
 // Shop Data
+
+Ch1Armory:
+SHLI IronSword IronLance IronBow IronAxe Vulnerary
+ALIGN 4

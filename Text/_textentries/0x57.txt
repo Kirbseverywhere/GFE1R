@@ -1,1 +1,2 @@
- Debug[X]
+Swap positions with adjacent[N]
+ally.[X]
