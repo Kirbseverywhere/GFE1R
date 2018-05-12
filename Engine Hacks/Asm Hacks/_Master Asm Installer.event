@@ -7,3 +7,4 @@ POP
 #include "Portraits.event"
 #include "Chapter.event"
 #include "Skill System\_MasterHackInstaller.event"
+#include "ModularMinimugBox\Modular MMB Installer.txt"

@@ -10,6 +10,7 @@ Map:
 MapChanges:
 TileMap(7,2,19,1,1,MerricVillageClosed)
 TileMap(8,11,19,1,1,GoldVillageClosed)
+TileMap(8,11,19,1,1,SnagDestroyed)
 TileMapEnd
 
 MerricVillageClosed:
@@ -18,5 +19,9 @@ ALIGN 4
 
 GoldVillageClosed:
 SHORT 0x80 
+ALIGN 4
+
+SnagDestroyed:
+SHORT 0x110 0x94 0x114 
 ALIGN 4
 

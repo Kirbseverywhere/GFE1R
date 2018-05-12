@@ -5,6 +5,13 @@ extern MenuDefinition MUMenuDefinition;
 extern u16 StatTextIdList[];
 extern u8 MaleClassList[];
 extern u8 FemaleClassList[];
+
+typedef struct {
+	u8 Class;
+	u8 Weapon;
+} ClassWeaponComparisonList;
+
+extern ClassWeaponComparisonList ClassWeaponList[];
 #define Font_ResetAllocation ((void (*)())(0x8003D21))
 #define BaseVarX 8
 #define BaseConstX 3
@@ -116,8 +123,14 @@ void ApplyMUDataChange() {
 	MyUnit->classDataPtr = (ClassData *)GetClassOffset(sMU->Class);
 	MyUnit->stats[sMU->Boon] += 2;
 	MyUnit->stats[sMU->Bane] -= 2;
-	for(u8 i = 0; i < 8; i++) {
+	for(int i = 0; i < 8; i++) {
 		MyUnit->ranks[i] = ((ClassData *)GetClassOffset(sMU->Class))->ranks[i];
+	}
+	for(int i = 0; ClassWeaponList[i].Class != 0; i++) {
+		if(sMU->Class == ClassWeaponList[i].Class) {
+			MyUnit->items[0] = ClassWeaponList[i].Weapon;
+			return;
+		}
 	}
 }
 

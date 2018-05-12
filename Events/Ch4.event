@@ -35,14 +35,16 @@ TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
-CharacterEvent(9,RecruitMatthis,Lena,Matthis)
+CharacterEvent(10,RecruitMatthis,Lena,Matthis)
 END_MAIN
 
 LocationBasedEvents:
 Seize(23,16)
-Seize(2,4)
+Seize(2,5)
 VILL 7 RecruitMerric [11,5] 0x10
 VILL 8 GetGold [11,5] 0x10
+Armory(Ch4Armory, 16, 20)
+Vendor(Ch4Shop, 19, 19)
 END_MAIN
 
 MiscBasedEvents:
@@ -101,7 +103,7 @@ ENDA
 // Units
 
 Enemies:
-UNIT Bentheon Cavalier 0x00 Level(8, Enemy, 1) [2,4] 0x00 0x00 0x0 0x00 [Ridersbane] AttackInRangeAI 
+UNIT Bentheon Cavalier 0x00 Level(8, Enemy, 1) [2,5] 0x00 0x00 0x0 0x00 [Ridersbane] AttackInRangeAI 
 UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [8,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
 UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
 UNIT Galder Cavalier 0x00 Level(8, Enemy, 1) [6,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
@@ -120,6 +122,25 @@ UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [28,8] 0x00 0x00 0x0 0x00 [IronAxe] 
 UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [26,6] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
 UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [27,6] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
 UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [28,7] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [17,14] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [16,15] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Archer 0x00 Level(8, Enemy, 1) [15,16] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
+UNIT Galder Mercenary 0x00 Level(8, Enemy, 1) [16,21] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT Galder Mercenary 0x00 Level(8, Enemy, 1) [10,15] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT Galder Mercenary 0x00 Level(8, Enemy, 1) [7,21] 0x00 0x00 0x0 0x00 [KillingEdge] AttackInRangeAI 
+UNIT Galder Mercenary 0x00 Level(8, Enemy, 1) [10,10] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT Galder Knight 0x00 Level(8, Enemy, 1) [17,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
+UNIT Galder Ranger 0x00 Level(8, Enemy, 1) [0,5] 0x00 0x00 0x0 0x00 [SteelBow] AttackInRangeAI 
+UNIT Galder Ranger 0x00 Level(8, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [IronBow, IronSword] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [12,20] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [11,14] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Fighter 0x00 Level(8, Enemy, 1) [2,15] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Myrmidon 0x00 Level(8, Enemy, 1) [5,9] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
+UNIT Galder Myrmidon 0x00 Level(8, Enemy, 1) [1,11] 0x00 0x00 0x0 0x00 [Lancereaver] AttackInRangeAI 
+UNIT Galder Myrmidon 0x00 Level(8, Enemy, 1) [29,10] 0x00 0x00 0x0 0x00 [KillingEdge] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(8, Enemy, 1) [31,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(8, Enemy, 1) [24,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate 0x00 Level(8, Enemy, 1) [21,4] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
 UNIT
 
 RecruitableMatthis:
@@ -132,3 +153,12 @@ UNIT
 
 
 // Shop Data
+
+Ch4Armory:
+SHLI IronSword
+
+ALIGN 4
+Ch4Shop:
+SHLI Fire
+
+ALIGN 4

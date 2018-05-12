@@ -63,4 +63,15 @@ BYTE Mercenary Cavalier Knight Mage
 FemaleClassList:
 BYTE Myrmidon_F PegasusKnight Archer_F Mage_F
 
+ClassWeaponList:
+BYTE Mercenary IronSword
+BYTE Cavalier IronLance
+BYTE Knight IronLance
+BYTE Mage Fire
+BYTE Myrmidon_F SlimSword
+BYTE PegasusKnight SlimLance
+BYTE Archer_F IronBow
+BYTE Mage_F Fire
+BYTE 0 0
+
 #include "External\Credits.event"

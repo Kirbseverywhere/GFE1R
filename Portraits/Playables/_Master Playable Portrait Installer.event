@@ -5,22 +5,26 @@ setMugEntry(Abel, AbelPortrait, 3, 5, 3, 3)
 setMugEntry(Cain, CainPortrait, 3, 5, 3, 3)
 setMugEntry(Gordin, GordinPortrait, 4, 6, 4, 4)
 setMugEntry(Draug, DraugPortrait, 3, 5, 3, 3)
-setMugEntry(Norne, NornePortrait, 4, 5, 4, 3)
+setMugEntry(Norne, NornePortrait, 2, 5, 2, 3)
 setMugEntry(MyUnitMale, MyUnitMalePortrait, 3, 7, 3, 5)
-setMugEntry(MyUnitFemale, LindePortrait, 3, 6, 3, 4)
+setMugEntry(MyUnitFemale, MyUnitFemalePortrait, 4, 6, 4, 4)
 setMugEntry(Wrys, WrysPortrait, 2, 5, 2, 3)
 setMugEntry(Ogma, OgmaPortrait, 1, 5, 1, 3)
-setMugEntry(Barst, BarstPortrait, 3, 5, 3, 3)
+setMugEntry(Barst, BarstPortrait, 5, 5, 5, 3)
+setMugEntry(Bord, BordPortrait, 3, 5, 3, 4)
 setMugEntry(Darros, DarrosPortrait, 3, 4, 3, 2)
-setMugEntry(Castor, CastorPortrait, 3, 6, 4, 4)
+setMugEntry(Castor, CastorPortrait, 5, 6, 4, 4)
 setMugEntry(Julian, JulianPortrait, 3, 5, 3, 3)
 setMugEntry(Lena, LenaPortrait, 4, 5, 4, 3)
 setMugEntry(Navarre, NavarrePortrait, 4, 5, 4, 3)
-setMugEntry(Wolf, WolfPortrait, 1, 5, 2, 3)
+setMugEntry(Wolf, WolfPortrait, 3, 5, 2, 3)
+setMugEntry(Sedgar, SedgarPortrait, 2, 5, 3, 3)
+setMugEntry(Roshea, RosheaPortrait, 2, 5, 3, 3)
 setMugEntry(Vyland, VylandPortrait, 3, 5, 3, 3)
 setMugEntry(Athena, AthenaPortrait, 3, 5, 3, 3)
 setMugEntry(Minerva, MinervaPortrait, 4, 5, 4, 3)
 setMugEntry(Linde, LindePortrait, 3, 6, 3, 4)
+setMugEntry(Astram, AstramPortrait, 3, 5, 3, 3)
 setMugEntry(Palla, PallaPortrait, 3, 6, 3, 4)
 
 MarfPortrait:
@@ -48,7 +52,10 @@ NornePortrait:
 #incext HalfbodyFormatter "Norne.png"
 
 MyUnitMalePortrait:
-#incext HalfbodyFormatter "Joseph.png"
+#incext HalfbodyFormatter "MaleMU.png"
+
+MyUnitFemalePortrait:
+#incext HalfbodyFormatter "FemaleMU.png"
 
 WrysPortrait:
 #incext HalfbodyFormatter "Wrys.png"
@@ -58,6 +65,9 @@ OgmaPortrait:
 
 BarstPortrait:
 #incext HalfbodyFormatter "Barst.png"
+
+BordPortrait:
+#incext HalfbodyFormatter "Bord.png"
 
 DarrosPortrait:
 #incext HalfbodyFormatter "Darros.png"
@@ -77,6 +87,12 @@ NavarrePortrait:
 WolfPortrait:
 #incext HalfbodyFormatter "Wolf.png"
 
+SedgarPortrait:
+#incext HalfbodyFormatter "Sedgar.png"
+
+RosheaPortrait:
+#incext HalfbodyFormatter "Roshea.png"
+
 VylandPortrait:
 #incext HalfbodyFormatter "Vyland.png"
 
@@ -88,6 +104,9 @@ MinervaPortrait:
 
 LindePortrait:
 #incext HalfbodyFormatter "Linde.png"
+
+AstramPortrait:
+#incext HalfbodyFormatter "Astram.png"
 
 PallaPortrait:
 #incext HalfbodyFormatter "Palla.png"
