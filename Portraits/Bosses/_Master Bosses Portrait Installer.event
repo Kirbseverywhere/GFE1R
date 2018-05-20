@@ -1,4 +1,4 @@
-setMugEntry(Gazzak, GazzakPortrait, 2, 4, 2, 2)
+setMugEntry(Gazzak, GazzakPortrait, 3, 4, 3, 2)
 setMugEntry(Emereus, EmereusPortrait, 2, 5, 2, 3)
 
 GazzakPortrait:

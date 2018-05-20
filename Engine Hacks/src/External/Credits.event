@@ -19,10 +19,13 @@ AbelCredits:
 Credit(Abel, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(NICKT); BYTE 0), CainCredits, DraugCredits)
 
 DraugCredits:
-Credit(Draug, 180, 32, AddToPool(String(Lenh); BYTE 0), AddToPool(String(--); BYTE 0), AbelCredits, NorneCredits)
+Credit(Draug, 180, 32, AddToPool(String(Lenh); BYTE 0), AddToPool(String(--); BYTE 0), AbelCredits, GordinCredits)
+
+GordinCredits:
+Credit(Gordin, 180, 32, AddToPool(String(Lenh); BYTE 0), AddToPool(String(--); BYTE 0), DraugCredits, NorneCredits)
 
 NorneCredits:
-Credit(Norne, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), DraugCredits, MyUnitMaleCredits)
+Credit(Norne, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), GordinCredits, MyUnitMaleCredits)
 
 MyUnitMaleCredits:
 Credit(MyUnitMale, 180, 32, AddToPool(String(Glaceo); BYTE 0), AddToPool(String(Hirohiko Araki); BYTE 0), NorneCredits, MyUnitFemaleCredits)
@@ -52,10 +55,13 @@ JulianCredits:
 Credit(Julian, 180, 32, AddToPool(String(Glucose); BYTE 0), AddToPool(String(--); BYTE 0), NavarreCredits, LenaCredits)
 
 LenaCredits:
-Credit(Lena, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), JulianCredits, WolfCredits)
+Credit(Lena, 180, 32, AddToPool(String(MageKnight404); BYTE 0), AddToPool(String(--); BYTE 0), JulianCredits, HardinCredits)
+
+HardinCredits:
+Credit(Hardin, 180, 32, AddToPool(String(NICKT); BYTE 0), AddToPool(String(--); BYTE 0), LenaCredits, WolfCredits)
 
 WolfCredits:
-Credit(Wolf, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(--); BYTE 0), LenaCredits, SedgarCredits)
+Credit(Wolf, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(--); BYTE 0), HardinCredits, SedgarCredits)
 
 SedgarCredits:
 Credit(Sedgar, 180, 32, AddToPool(String(Der the Vaporeon); BYTE 0), AddToPool(String(--); BYTE 0), WolfCredits, RosheaCredits)
@@ -64,10 +70,13 @@ RosheaCredits:
 Credit(Roshea, 180, 32, AddToPool(String(Alusq/Der the Vaporeon); BYTE 0), AddToPool(String(--); BYTE 0), SedgarCredits, VylandCredits)
 
 VylandCredits:
-Credit(Vyland, 180, 32, AddToPool(String(Peerless); BYTE 0), AddToPool(String(Blueeyedman24); BYTE 0), RosheaCredits, AthenaCredits)
+Credit(Vyland, 180, 32, AddToPool(String(Peerless); BYTE 0), AddToPool(String(Blueeyedman24); BYTE 0), RosheaCredits, RickardCredits)
+
+RickardCredits:
+Credit(Ricard, 180, 32, AddToPool(String(NICKT); BYTE 0), AddToPool(String(--); BYTE 0), VylandCredits, AthenaCredits)
 
 AthenaCredits:
-Credit(Athena, 180, 32, AddToPool(String(Nobody); BYTE 0), AddToPool(String(--); BYTE 0), VylandCredits, MinervaCredits)
+Credit(Athena, 180, 32, AddToPool(String(Nobody); BYTE 0), AddToPool(String(--); BYTE 0), RickardCredits, MinervaCredits)
 
 MinervaCredits:
 Credit(Minerva, 180, 32, AddToPool(String(Zelkami); BYTE 0), AddToPool(String(--); BYTE 0), AthenaCredits, LindeCredits)

@@ -8,3 +8,4 @@ POP
 #include "Chapter.event"
 #include "Skill System\_MasterHackInstaller.event"
 #include "ModularMinimugBox\Modular MMB Installer.txt"
+#include "Suspend.event"

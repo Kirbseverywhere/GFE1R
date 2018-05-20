@@ -15,6 +15,9 @@ ALIGN 4
 ALIGN 4
 #include "Credits.event"
 
+ALIGN 4
+#include "Modifiers.event"
+
 //Hooks
 PUSH
 
@@ -33,6 +36,12 @@ ORG 0xAB90E
 SHORT 0x1C20 0x2120
 BL(0xAB888)
 SHORT 0
+
+/*ORG 0xAC3F0
+POIN ModifierProcCode
+
+ORG 0xAC1B4
+WORD 0*/
 POP
 
 //Stuff
@@ -75,3 +84,4 @@ BYTE Mage_F Fire
 BYTE 0 0
 
 #include "External\Credits.event"
+#include "External\Modifiers.event"

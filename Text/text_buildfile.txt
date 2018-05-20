@@ -38,6 +38,9 @@ Zeke[X]
 ##RatingsTID
 Rating[X]
 
+##RandomizedTID
+Randomized[X]
+
 #include "skilldesc_text.txt"
 
 #include "ChapterText.txt"

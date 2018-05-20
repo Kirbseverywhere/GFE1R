@@ -10,7 +10,7 @@ BYTE $00 $B5 $C0 $46
 
 HPWithStatus(1,5)
 ShowInventory(5*8,1*8)
-Prepstats
+//Prepstats
 AttackGetter(13*8,4*8)
 HitGetter((8*8)-2,5*8)
 CritGetter(13*8,6*8)

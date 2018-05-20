@@ -1,0 +1,14 @@
+#define ModifiersDef(NameID, DescID, Flag, Textcolor, XPos, YPos) "SHORT NameID DescID; BYTE Flag Textcolor XPos YPos"
+
+#define ColorWhite 0x0
+#define ColorGray 0x1
+#define ColorBlue 0x2
+#define ColorOrange 0x3
+#define ColorGreen 0x4
+#define ColorBlack 0x5
+
+ALIGN 4
+MyModifiers:
+ModifiersDef(RandomizedTID, 0, 0x68, ColorOrange, 1, 6)
+
+WORD 0 0

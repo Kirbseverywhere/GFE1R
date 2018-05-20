@@ -10,7 +10,7 @@ Map:
 MapChanges:
 TileMap(7,2,19,1,1,MerricVillageClosed)
 TileMap(8,11,19,1,1,GoldVillageClosed)
-TileMap(8,11,19,1,1,SnagDestroyed)
+TileMap(9,17,3,3,1,SnagDestroyed)
 TileMapEnd
 
 MerricVillageClosed:

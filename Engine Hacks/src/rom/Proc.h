@@ -18,6 +18,7 @@
 #define FixBG3Cam 0x80B2464+1
 #define LoadMapSprites 0x80301B8+1
 #define LoadMap 0x80311A8+1
+#define EnableAllGfxOffset 0x80AE2A0+1
 #define UnlockGameLogic 0x8015370+1
 
 #define NewFadeIn 0x80AE2D0+1 //Call With Arg

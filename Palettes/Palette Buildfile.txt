@@ -1,0 +1,27 @@
+# char{0x3C} "Jagen Paladin" set{Jagen,0x3,Paladin} auto{0}
+54535F53FF6FBD2ED32DFF27D90C910C3D3AF728D020AB1CDC7BD3660C46A514
+auto
+auto
+auto
+auto
+
+# char{0x3} "Caeda Pegasus Knight" set{Caeda,0x1,PegasusKnight} auto{0}
+007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
+auto
+auto
+auto
+auto
+
+# char{0x25} "Caeda Falcoknight" set{Caeda,0x3,FalcoKnight} auto{0}
+007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
+auto
+auto
+auto
+auto
+
+# char{0x2A} "Caeda Wyvern Knight" set{Caeda,0x4,WyvernKnight} auto{0}
+007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
+auto
+auto
+auto
+auto

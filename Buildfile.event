@@ -47,6 +47,9 @@ ALIGN 4
 #include "Portraits\_Master Portrait Installer.event"
 
 ALIGN 4
+#include "Palettes\Palette Setup.event"
+
+ALIGN 4
 #include "Maps\Master Map Installer.event"
 
 ALIGN 4

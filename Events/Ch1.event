@@ -49,18 +49,18 @@ UNIT 0x81 Knight 0x00 Level(1, NPC, 1) [5,4] 0x00 0x00 0x0 0x00 [IronAxe] Attack
 UNIT
 
 Enemies:
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [17,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [16,7] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [16,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [15,9] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
 UNIT Galder Cavalier Gazzak Level(1, Enemy, 1) [14,10] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
 UNIT Galder Brigand Gazzak Level(1, Enemy, 1) [12,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
 UNIT Galder Mercenary Gazzak Level(1, Enemy, 1) [16,4] 0x00 0x00 0x0 0x00 [IronSword] AttackInRangeAI 
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [8,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [8,11] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
 UNIT Galder Archer Gazzak Level(1, Enemy, 1) [8,8] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
 UNIT Galder Archer Gazzak Level(1, Enemy, 1) [7,7] 0x00 0x00 0x0 0x00 [IronBow] AttackInRangeAI 
 UNIT Galder Soldier Gazzak Level(1, Enemy, 1) [4,11] 0x00 0x00 0x0 0x00 [SteelLance] AttackInRangeAI 
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
-UNIT Galder Fighter Gazzak Level(1, Enemy, 1) [6,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [4,6] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
+UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [6,5] 0x00 0x00 0x0 0x00 [IronAxe] AttackInRangeAI 
 UNIT Galder Soldier Gazzak Level(1, Enemy, 1) [2,5] 0x00 0x00 0x0 0x00 [Horseslayer] AttackInRangeAI 
 UNIT Galder PegasusKnight Gazzak Level(1, Enemy, 1) [7,3] 0x00 0x00 0x0 0x00 [IronLance] AttackInRangeAI 
 UNIT Galder Pirate Gazzak Level(1, Enemy, 1) [5,0] 0x00 0x00 0x0 0x00 [IronAxe] PursueWithoutHeedAI 
@@ -160,8 +160,8 @@ MOVE 10 0x45 [16,2]
 ENUN
 LOAD1 0x1 NorneAndMU
 ASMC ApplyMUDataChange
-MOVE 10 Norne [16,3]
-MOVE 10 MyUnitMale [17,3]
+MOVE 10 Norne [17,3]
+MOVE 10 MyUnitMale [18,3]
 MOVE 10 0x45 [14,0]
 ENUN
 DISA 0x45
@@ -194,8 +194,8 @@ REDA [22, 9] 0x00 0x00 0x00 0x00
 // Units
 
 NorneAndMU:
-UNIT Norne Archer_F 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
-UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,2] 0x00 0x00 0x0 0x00 [0] NoAI 
+UNIT Norne Archer_F 0x00 Level(1, Ally, 1) [16,3] 0x00 0x00 0x0 0x00 [ShortBow] NoAI 
+UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,3] 0x00 0x00 0x0 0x00 [0] NoAI 
 UNIT
 
 RandomBoat:

@@ -7,20 +7,7 @@ ALIGN 4
 DonateToKirbBGPal:
 #incext Png2Dmp "Donate To Kirb.png" --palette-only
 
-#define StandingMapSprite(aId, width, height, gfxPointer) "PUSH; ORG 0x8AF880 + (aId * 8); SHORT height width; POIN gfxPointer; POP"
-#define MovingMapSprite(aId, apPointer, gfxPointer) "PUSH; ORG 0x9A2E00 + ((aId - 1) * 8); POIN gfxPointer apPointer; POP"
-
-
-StandingMapSprite(1, 0, 0, MarfStandingMapSprite)
-MovingMapSprite(2, 0x1C46CC, MarfMovingMapSprite)
-
-ALIGN 4
-MarfStandingMapSprite:
-#incext Png2Dmp "Marth Standing Map Sprite.png" --lz77
-
-ALIGN 4
-MarfMovingMapSprite:
-#incext Png2Dmp "Marth Moving Map Sprite.png" --lz77
+#include "Map Sprites\Map Sprites Installer.event"
 
 ALIGN 4
 

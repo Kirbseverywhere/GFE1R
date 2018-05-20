@@ -58,6 +58,7 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	DrawBase(CurrentProc);
 	Font_ResetAllocation();
 	DeleteFaceByIndex(0);
+	EnableAllGfx((u32)CurrentProc);
 	if ((sInput->newPress & InputB) != 0) {
 		ClearProcLoop((Proc *)CurrentProc);
 		PlaySound(0x6B); 

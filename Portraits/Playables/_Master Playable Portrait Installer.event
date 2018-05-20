@@ -3,24 +3,26 @@ setMugEntry(Jagen, JagenPortrait, 3, 5, 3, 2)
 setMugEntry(Caeda, CaedaPortrait, 3, 6, 3, 4)
 setMugEntry(Abel, AbelPortrait, 3, 5, 3, 3)
 setMugEntry(Cain, CainPortrait, 3, 5, 3, 3)
-setMugEntry(Gordin, GordinPortrait, 4, 6, 4, 4)
+setMugEntry(Gordin, GordinPortrait, 2, 7, 2, 5)
 setMugEntry(Draug, DraugPortrait, 3, 5, 3, 3)
-setMugEntry(Norne, NornePortrait, 2, 5, 2, 3)
+setMugEntry(Norne, NornePortrait, 3, 5, 3, 3)
 setMugEntry(MyUnitMale, MyUnitMalePortrait, 3, 7, 3, 5)
-setMugEntry(MyUnitFemale, MyUnitFemalePortrait, 4, 6, 4, 4)
+setMugEntry(MyUnitFemale, MyUnitFemalePortrait, 4, 6, 3, 4)
 setMugEntry(Wrys, WrysPortrait, 2, 5, 2, 3)
 setMugEntry(Ogma, OgmaPortrait, 1, 5, 1, 3)
 setMugEntry(Barst, BarstPortrait, 5, 5, 5, 3)
-setMugEntry(Bord, BordPortrait, 3, 5, 3, 4)
+setMugEntry(Bord, BordPortrait, 3, 6, 3, 3)
 setMugEntry(Darros, DarrosPortrait, 3, 4, 3, 2)
-setMugEntry(Castor, CastorPortrait, 5, 6, 4, 4)
+setMugEntry(Castor, CastorPortrait, 4, 6, 4, 4)
 setMugEntry(Julian, JulianPortrait, 3, 5, 3, 3)
 setMugEntry(Lena, LenaPortrait, 4, 5, 4, 3)
 setMugEntry(Navarre, NavarrePortrait, 4, 5, 4, 3)
-setMugEntry(Wolf, WolfPortrait, 3, 5, 2, 3)
+setMugEntry(Hardin, HardinPortrait, 3, 5, 3, 3)
+setMugEntry(Wolf, WolfPortrait, 2, 5, 2, 3)
 setMugEntry(Sedgar, SedgarPortrait, 2, 5, 3, 3)
-setMugEntry(Roshea, RosheaPortrait, 2, 5, 3, 3)
+setMugEntry(Roshea, RosheaPortrait, 2, 5, 2, 3)
 setMugEntry(Vyland, VylandPortrait, 3, 5, 3, 3)
+setMugEntry(Ricard, RickardPortrait, 3, 6, 3, 4)
 setMugEntry(Athena, AthenaPortrait, 3, 5, 3, 3)
 setMugEntry(Minerva, MinervaPortrait, 4, 5, 4, 3)
 setMugEntry(Linde, LindePortrait, 3, 6, 3, 4)
@@ -84,6 +86,9 @@ LenaPortrait:
 NavarrePortrait:
 #incext HalfbodyFormatter "Navarre.png"
 
+HardinPortrait:
+#incext HalfbodyFormatter "Hardin.png"
+
 WolfPortrait:
 #incext HalfbodyFormatter "Wolf.png"
 
@@ -95,6 +100,9 @@ RosheaPortrait:
 
 VylandPortrait:
 #incext HalfbodyFormatter "Vyland.png"
+
+RickardPortrait:
+#incext HalfbodyFormatter "Rickard.png"
 
 AthenaPortrait:
 #incext HalfbodyFormatter "Athena.png"

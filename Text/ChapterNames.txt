@@ -15,3 +15,75 @@ Ch. 5: Champions of Aurelis[X]
 
 ## Ch6Name
 Ch. 6: Fia Emburem[X]
+
+## Ch6xName
+Ch. 6x[X]
+
+## Ch7Name
+Ch. 7[X]
+
+## Ch8Name
+Ch. 8[X]
+
+## Ch9Name
+Ch. 9[X]
+
+## Ch10Name
+Ch. 10[X]
+
+## Ch11Name
+Ch. 11[X]
+
+## Ch12Name
+Ch. 12[X]
+
+## Ch12xName
+Ch. 12x[X]
+
+## Ch13Name
+Ch. 13[X]
+
+## Ch14Name
+Ch. 14[X]
+
+## Ch15Name
+Ch. 15[X]
+
+## Ch16Name
+Ch. 16[X]
+
+## Ch17Name
+Ch. 17[X]
+
+## Ch17xName
+Ch. 17x[X]
+
+## Ch18Name
+Ch. 18[X]
+
+## Ch19Name
+Ch. 19[X]
+
+## Ch20Name
+Ch. 20[X]
+
+## Ch20xName
+Ch. 20x[X]
+
+## Ch21Name
+Ch. 21[X]
+
+## Ch22Name
+Ch. 22[X]
+
+## Ch23Name
+Ch. 23[X]
+
+## Ch24Name
+Ch. 24[X]
+
+## Ch24xName
+Ch. 24x[X]
+
+## FinalChapterName
+Final Chapter[X]

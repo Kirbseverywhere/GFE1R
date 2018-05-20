@@ -1,0 +1,25 @@
+#define CharacterSupport(Char1, Char2, Char3, Char4, Char5, Char6, Char7) "BYTE Char1 Char2 Char3 Char4 Char5 Char6 Char7"
+#define SupportBases(Char1, Char2, Char3, Char4, Char5, Char6, Char7) "BYTE Char1 Char2 Char3 Char4 Char5 Char6 Char7"
+#define SupportGrowths(Char1, Char2, Char3, Char4, Char5, Char6, Char7) "BYTE Char1 Char2 Char3 Char4 Char5 Char6 Char7"
+
+/*
+Support Thresholds:
+0-80: No Support
+80-176: C Support
+176-240: B Support
+241-255: A Support
+*/
+
+RaddSupport:
+CharacterSupport(Caesar, 0, 0, 0, 0, 0, 0)
+SupportBases(50, 0, 0, 0, 0, 0, 0)
+SupportGrowths(8, 0, 0, 0, 0, 0, 0)
+BYTE 1 //1 Support
+BYTE 0 0 
+
+CaesarSupport:
+CharacterSupport(Radd, 0, 0, 0, 0, 0, 0)
+SupportBases(50, 0, 0, 0, 0, 0, 0)
+SupportGrowths(8, 0, 0, 0, 0, 0, 0)
+BYTE 1 //1 Support
+BYTE 0 0 

@@ -240,7 +240,7 @@ void PrintConstantsPage1() {
 	PrintInline(0, BGLoc(BG0Buffer, 0, 0), 0, 0, 12, "Kirb's debug-o-matic.");
 	PrintInline(0, BGLoc(BG0Buffer, 13, 0), 3, 0, 17, "Press Select to switch pages.");
 	PrintInline(0, BGLoc(BG0Buffer, 0, 18), 4, 0, 9, "Donate To Kirb.");
-	PrintInline(0, BGLoc(BG0Buffer, 9, 18), 4, 0, 20, "https://donorbox.org/donate-to-kirb");
+	PrintInline(0, BGLoc(BG0Buffer, 9, 18), 4, 0, 20, "https://www.patreon.com/Kirb1337");
 	DebugPrint(BGLoc(BG0Buffer, 6, 5), "Power");
 	DebugPrint(BGLoc(BG0Buffer, 6, 6), "Skill");
 	DebugPrint(BGLoc(BG0Buffer, 6, 7), "Speed");
@@ -264,7 +264,7 @@ void PrintConstantsPage2() {
 	PrintInline(0, BGLoc(BG0Buffer, 0, 0), 0, 0, 12, "Kirb's debug-o-matic.");
 	PrintInline(0, BGLoc(BG0Buffer, 13, 0), 3, 0, 16, "Press Select to switch pages.");
 	PrintInline(0, BGLoc(BG0Buffer, 0, 18), 4, 0, 9, "Donate To Kirb.");
-	PrintInline(0, BGLoc(BG0Buffer, 9, 18), 4, 0, 20, "https://donorbox.org/donate-to-kirb");
+	PrintInline(0, BGLoc(BG0Buffer, 9, 18), 4, 0, 20, "https://www.patreon.com/Kirb1337");
 	DebugPrint(BGLoc(BG0Buffer, 6, 5), "Item 1:");
 	DebugPrint(BGLoc(BG0Buffer, 6, 6), "Item 2:");
 	DebugPrint(BGLoc(BG0Buffer, 6, 7), "Item 3:");

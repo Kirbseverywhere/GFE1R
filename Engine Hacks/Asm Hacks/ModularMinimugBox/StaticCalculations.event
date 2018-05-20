@@ -11,7 +11,7 @@ BYTE $00 $B5 $C0 $46
 DrawMinimug(1,1)
 HPWithStatus(1,5)
 CenteredName(5,3,5,5)
-ShowInventory(5,1)
+ShowInventory(5*8,1*8)
 ELabels(10,4)
 Prepstats
 AttackGetter(13*8,4*8)

@@ -1,0 +1,35 @@
+#define StandingMapSprite(aId, width, height, gfxPointer) "PUSH; ORG 0x8AF880 + (aId * 8); SHORT height width; POIN gfxPointer; POP"
+#define MovingMapSprite(aId, apPointer, gfxPointer) "PUSH; ORG 0x9A2E00 + ((aId - 1) * 8); POIN gfxPointer apPointer; POP"
+
+
+StandingMapSprite(1, 0, 0, MarfStandingMapSprite)
+MovingMapSprite(2, 0x1C46CC, MarfMovingMapSprite)
+StandingMapSprite(4, 1, 2, LanceCavStandingMapSprite)
+MovingMapSprite(5, 0x1C692C, LanceCavMovingMapSprite)
+MovingMapSprite(6, 0x1C692C, LanceCavMovingMapSprite)
+StandingMapSprite(0x31, 1, 2, FighterStandingMapSprite)
+MovingMapSprite(0x3F, 0x1E4340, FighterMovingMapSprite)
+
+ALIGN 4
+MarfStandingMapSprite:
+#incext Png2Dmp "Marth Standing Map Sprite.png" --lz77
+
+ALIGN 4
+MarfMovingMapSprite:
+#incext Png2Dmp "Marth Moving Map Sprite.png" --lz77
+
+ALIGN 4
+LanceCavStandingMapSprite:
+#incext Png2Dmp "CavLance.png" --lz77
+
+ALIGN 4
+LanceCavMovingMapSprite:
+#incext Png2Dmp "CavLanceAnim.png" --lz77
+
+ALIGN 4
+FighterStandingMapSprite:
+#incext Png2Dmp "Fighter Standing.png" --lz77
+
+ALIGN 4
+FighterMovingMapSprite:
+#incext Png2Dmp "Fighter Moving.png" --lz77
