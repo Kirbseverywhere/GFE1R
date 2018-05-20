@@ -1,27 +1,120 @@
-# char{0x3C} "Jagen Paladin" set{Jagen,0x3,Paladin} auto{0}
+# char{0x1} "Jagen Paladin" set{Jagen,0x3,Paladin} auto{0}
 54535F53FF6FBD2ED32DFF27D90C910C3D3AF728D020AB1CDC7BD3660C46A514
 auto
 auto
 auto
 auto
 
-# char{0x3} "Caeda Pegasus Knight" set{Caeda,0x1,PegasusKnight} auto{0}
+# char{0x2} "Caeda Pegasus Knight" set{Caeda,0x1,PegasusKnight} auto{0}
 007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
 auto
 auto
 auto
 auto
 
-# char{0x25} "Caeda Falcoknight" set{Caeda,0x3,FalcoKnight} auto{0}
-007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
+# char{0x3} "Cain Cavalier" set{Cain,0x1,Cavalier} auto{0}
+80767F4FFF5BFE3EF4311D29D5148C109A107108DF6FB846383253210A19A514
 auto
 auto
 auto
 auto
 
-# char{0x2A} "Caeda Wyvern Knight" set{Caeda,0x4,WyvernKnight} auto{0}
-007EFF7F70219E36FF6BFF3F44516572881CBD39D8189777116F6B5AF3186310
+# char{0x4} "Abel Cavalier" set{Abel,0x1,Cavalier} auto{0}
+8076DC47FF5BFE3EF43152234D1AA801722B4D1A3259CB34B83AD22D0B15A514
 auto
 auto
 auto
 auto
+
+# char{0x5} "Gordin Archer" set{Gordin,0x1,Archer} auto{0}
+007EFF7FFF6B1F4B0B2DD53BEB22C71DDC7FB76A9763D4570E4328264619A514
+auto
+auto
+auto
+auto
+
+# char{0x6} "Draug Knight" set{Draug,0x1,Knight} auto{0}
+007EC9284959351D2A765C26707FE51735577F2FB226280DEC11DE47DD43A514
+auto
+auto
+auto
+auto
+
+# char{0x7} "Frey Cavalier Unused But Just In Case" set{Frey,0x1,Cavalier} auto{0}
+80767F4FFF5BFE3EF4313967524AAD35CC4D4A29DF6FB8469842B0250A19A514
+auto
+auto
+auto
+auto
+
+# char{0x8} "Norne Archer" set{Norne,0x1,Archer} auto{0}
+007EFF7FFF6B1F4BAC1CBF569C45162DDE49D93C777FBF5F5F535D4E1529A514
+auto
+auto
+auto
+auto
+
+# char{0x9} "Wrys Priest" set{Wrys,0x1,Priest} auto{0}
+007EFF7FFF6B1F4BAC1CBF569C45162DDE49D93C777FBF5F5F535D4E1529A514
+auto
+auto
+auto
+auto
+
+# char{0xA} "Ogma Mercenary" set{Ogma,0x1,Mercenary} auto{0}
+007EFF73EE18D2212939376B5D1756167152B82A9F5F95257011BB3E0B15A514
+auto
+auto
+auto
+auto
+
+# char{0xB} "Barst Fighter" set{Barst,0x1,Fighter} auto{0}
+0002FF6B1F4B182A2E194E764761C438BF5FFA4E363E4C25EE5D2841C62CA514
+auto
+auto
+auto
+auto
+
+# char{0xC} "Bord Fighter" set{Bord,0x1,Fighter} auto{0}
+0002FF6B1F4B182A2E19792E9225EC18FF7F7973935AAC3D192F331E6D19A514
+auto
+auto
+auto
+auto
+
+# char{0xD} "Cord Fighter" set{Cord,0x1,Fighter} auto{0}
+0002FF6B1F4B182A2E19F8215115CB143B5B564E8C41E828F73252266C1DA514
+auto
+auto
+auto
+auto
+
+# char{0xE} "Darros Pirate" set{Darros,0x1,Pirate} auto{0}
+5553FF7FFF6B5F4FBC3EF5294F219E16186B5252CE419C73DE7BF75E1042A514
+auto
+auto
+auto
+auto
+
+# char{0xF} "Castor Archer" set{Castor,0x1,Archer} auto{0}
+5553FF7FFF6B5F4FBC3EF5294F219E16186B5252CE419C73DE7BF75E1042A514
+auto
+auto
+auto
+auto
+
+# char{0x10} "Julian Thief" set{Julian,0x1,Thief} auto{0}
+007EFF6FFF6BFF420D115C19B6146F105C33151A5215F325D8329C0E5515A514
+auto
+auto
+auto
+auto
+
+# char{0x11} "Lena Cleric" set{Lena,0x1,Cleric} auto{0}
+007EFE7FFF6B1F4B2E19FD30B920B210FB3E352AD26A3A7F7372CC492835A514
+auto
+auto
+auto
+auto
+
+

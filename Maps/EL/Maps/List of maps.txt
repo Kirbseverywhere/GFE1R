@@ -1,0 +1,132 @@
+Ch1[Finished]
+Overworld(Chapter design overhaul)
+23x15
+
+Ch1 Cutscene Room[Finished]
+Castle
+15x10
+
+Ch2[Unused]
+Overworld
+24x16
+
+Ch3[Finished]
+Plains(Chapter design overhaul)
+18x25
+
+Ch4[Finished]
+Overworld(Somewhat design overhaul)
+22x15
+
+Ch5[Finished]
+Castle
+27x20
+
+Ch6[Finished]
+Plains
+18x28
+
+Ch7[Finished]
+Mountains and Shrines
+22x26
+
+Ch7x[Finished]
+Western Isles
+25x25
+
+Ch8[Finished]
+Fort Tileset(Chapter design overhaul)
+22x22
+
+Ch9[Finished]
+Village Tileset
+21x16
+
+Ch10[Finished]
+Castle Tileset
+32x30
+
+Ch10x[Finished]
+Overworld
+21x27
+
+Ch11a
+Snow(Chapter design overhaul)
+30x23(Subject to change)
+
+Ch11b
+Snowy Overworld[Tracking](Subject to change)
+BSFE-2 Compacted with more villages
+SMALLER THAN THE ORIGINAL
+
+Ch12a
+Snowy Bern
+30x29(Subject to change)
+
+Ch12b
+Snowy Overworld(Subject to change)
+No information
+
+Ch13
+Desert
+30x30(Subject to change)
+
+Ch14
+Snowy Overworld(Subject to change)
+Freaking huge(Subject to change)
+
+Ch15
+Castle(Subject to change)
+Still damn big(Subject to change)
+
+Ch15x
+Fort
+26x26(Subject to change)
+
+Ch16
+Black Temple(Subject to change)
+16x28(Subject to change)
+
+Ch17a
+Bridgeland
+32x32(Subject to change)
+
+Ch18a
+Bern(Subject to change)
+Pretty damn big(Subject to change)
+
+Ch17b
+(Redesign)No information
+No information
+
+Ch18b
+Bern(Redesign)
+No information
+
+Ch18bx
+No Information
+No information
+
+Ch19
+Desert
+No information
+
+Ch20
+Valni
+Don't feel like checking size
+
+Ch20x
+No information
+No information
+
+Ch21
+Fields(Subject to Change)
+Don't feel like checking size
+
+Ch21x
+No information
+No information
+
+Ch22(F)
+Bern Keep
+Don't feel like counting

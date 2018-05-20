@@ -7,9 +7,48 @@ Jagen_Paladin:
 Caeda_Pegasus_Knight:
 	#incbin "./_palettes/Caeda_Pegasus_Knight.lzpal" 
 
-Caeda_Falcoknight:
-	#incbin "./_palettes/Caeda_Falcoknight.lzpal" 
+Cain_Cavalier:
+	#incbin "./_palettes/Cain_Cavalier.lzpal" 
 
-Caeda_Wyvern_Knight:
-	#incbin "./_palettes/Caeda_Wyvern_Knight.lzpal" 
+Abel_Cavalier:
+	#incbin "./_palettes/Abel_Cavalier.lzpal" 
+
+Gordin_Archer:
+	#incbin "./_palettes/Gordin_Archer.lzpal" 
+
+Draug_Knight:
+	#incbin "./_palettes/Draug_Knight.lzpal" 
+
+Frey_Cavalier_Unused_But_Just_In_Case:
+	#incbin "./_palettes/Frey_Cavalier_Unused_But_Just_In_Case.lzpal" 
+
+Norne_Archer:
+	#incbin "./_palettes/Norne_Archer.lzpal" 
+
+Wrys_Priest:
+	#incbin "./_palettes/Wrys_Priest.lzpal" 
+
+Ogma_Mercenary:
+	#incbin "./_palettes/Ogma_Mercenary.lzpal" 
+
+Barst_Fighter:
+	#incbin "./_palettes/Barst_Fighter.lzpal" 
+
+Bord_Fighter:
+	#incbin "./_palettes/Bord_Fighter.lzpal" 
+
+Cord_Fighter:
+	#incbin "./_palettes/Cord_Fighter.lzpal" 
+
+Darros_Pirate:
+	#incbin "./_palettes/Darros_Pirate.lzpal" 
+
+Castor_Archer:
+	#incbin "./_palettes/Castor_Archer.lzpal" 
+
+Julian_Thief:
+	#incbin "./_palettes/Julian_Thief.lzpal" 
+
+Lena_Cleric:
+	#incbin "./_palettes/Lena_Cleric.lzpal" 
 

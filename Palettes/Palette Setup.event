@@ -5,17 +5,69 @@
 #include "Palette Installer.event"
 
 // Jagen_Paladin
-	setPalette(0x3C,Jagen_Paladin)
-	setCBSP(0x3C,Jagen,0x3,Paladin)
+	setPalette(0x1,Jagen_Paladin)
+	setCBSP(0x1,Jagen,0x3,Paladin)
 
 // Caeda_Pegasus_Knight
-	setPalette(0x3,Caeda_Pegasus_Knight)
-	setCBSP(0x3,Caeda,0x1,PegasusKnight)
+	setPalette(0x2,Caeda_Pegasus_Knight)
+	setCBSP(0x2,Caeda,0x1,PegasusKnight)
 
-// Caeda_Falcoknight
-	setPalette(0x25,Caeda_Falcoknight)
-	setCBSP(0x25,Caeda,0x3,FalcoKnight)
+// Cain_Cavalier
+	setPalette(0x3,Cain_Cavalier)
+	setCBSP(0x3,Cain,0x1,Cavalier)
 
-// Caeda_Wyvern_Knight
-	setPalette(0x2A,Caeda_Wyvern_Knight)
-	setCBSP(0x2A,Caeda,0x4,WyvernKnight)
+// Abel_Cavalier
+	setPalette(0x4,Abel_Cavalier)
+	setCBSP(0x4,Abel,0x1,Cavalier)
+
+// Gordin_Archer
+	setPalette(0x5,Gordin_Archer)
+	setCBSP(0x5,Gordin,0x1,Archer)
+
+// Draug_Knight
+	setPalette(0x6,Draug_Knight)
+	setCBSP(0x6,Draug,0x1,Knight)
+
+// Frey_Cavalier_Unused_But_Just_In_Case
+	setPalette(0x7,Frey_Cavalier_Unused_But_Just_In_Case)
+	setCBSP(0x7,Frey,0x1,Cavalier)
+
+// Norne_Archer
+	setPalette(0x8,Norne_Archer)
+	setCBSP(0x8,Norne,0x1,Archer)
+
+// Wrys_Priest
+	setPalette(0x9,Wrys_Priest)
+	setCBSP(0x9,Wrys,0x1,Priest)
+
+// Ogma_Mercenary
+	setPalette(0xA,Ogma_Mercenary)
+	setCBSP(0xA,Ogma,0x1,Mercenary)
+
+// Barst_Fighter
+	setPalette(0xB,Barst_Fighter)
+	setCBSP(0xB,Barst,0x1,Fighter)
+
+// Bord_Fighter
+	setPalette(0xC,Bord_Fighter)
+	setCBSP(0xC,Bord,0x1,Fighter)
+
+// Cord_Fighter
+	setPalette(0xD,Cord_Fighter)
+	setCBSP(0xD,Cord,0x1,Fighter)
+
+// Darros_Pirate
+	setPalette(0xE,Darros_Pirate)
+	setCBSP(0xE,Darros,0x1,Pirate)
+
+// Castor_Archer
+	setPalette(0xF,Castor_Archer)
+	setCBSP(0xF,Castor,0x1,Archer)
+
+// Julian_Thief
+	setPalette(0x10,Julian_Thief)
+	setCBSP(0x10,Julian,0x1,Thief)
+
+// Lena_Cleric
+	setPalette(0x11,Lena_Cleric)
+	setCBSP(0x11,Lena,0x1,Cleric)
