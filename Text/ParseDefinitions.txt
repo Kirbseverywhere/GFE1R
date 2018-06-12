@@ -107,3 +107,6 @@
 [LoadMidia] = [LoadFace][0x29][0x1]
 [LoadTomas] = [LoadFace][0x2A][0x1]
 [LoadBoah] = [LoadFace][0x2B][0x1]
+
+
+[LoadCamus] = [LoadFace][0x5C][0x1]

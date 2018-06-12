@@ -1,0 +1,257 @@
+INLINE MagCharTable,Base Magic,Magic Growth
+None,0,100
+Marth,0,25
+Jagen,0,10
+Caeda,0,35
+Cain,0,45
+Abel,0,40
+Gordin,0,20
+Draug,0,5
+MyUnitMale,0,100
+MyUnitFemale,0,100
+Frey,0,100
+Norne,0,100
+Wrys,0,100
+Ogma,0,100
+Barst,0,100
+Bord,0,100
+Cord,0,100
+Darros,0,100
+Castor,0,100
+Julian,0,100
+Lena,0,100
+Navarre,0,100
+Merric,0,100
+Matthis,0,100
+Hardin,0,100
+Sedgar,0,100
+Wolf,0,100
+Vyland,0,100
+Roshea,0,100
+Wendell,0,100
+Ricard,0,100
+Athena,0,100
+Bantu,0,100
+Caesar,0,100
+Radd,0,100
+Roger,0,100
+Jeorge,0,100
+Maria,0,100
+Minerva,0,100
+Linde,0,100
+Jake,0,100
+Midia,0,100
+Tomas,0,100
+Boah,0,100
+Macellan,0,100
+Dolph,0,100
+Horace,0,100
+Astram,0,100
+Beck,0,100
+Palla,0,100
+Catria,0,100
+Xane,0,100
+Samson,0,100
+Arran,0,100
+Etzel,0,100
+Est,0,100
+Tiki,0,100
+Lorenz,0,100
+Ymir,0,100
+Elice,0,100
+Nagi,0,100
+Gotoh,0,100
+efef,0,100
+httfg,0,100
+jythr,0,100
+yjvr,0,100
+yhhg,0,100
+rghhy,0,100
+Ignore,0,100
+I dun Fuck Up,0,100
+Gazzak,0,100
+Gomer,0,100
+Hyman,0,100
+Bentheon,0,100
+Merach,0,100
+Emereus,0,100
+Bathys,0,100
+Harmein,0,100
+Kannival,0,100
+Mannu,0,100
+Zharov,0,100
+Khozen,0,100
+Volzhin,0,100
+Heimler,0,100
+Dejanira,0,100
+Grigas,0,100
+Jiol,0,100
+Gharnef,0,100
+Hollstadt,0,100
+Morzas,0,100
+Dactyl,0,100
+Sternlin,0,100
+Camus,0,100
+Larissa,0,100
+Orridyon,0,100
+Michalis,0,100
+Xemcel,0,100
+Medeus,0,100
+0,0,100
+0,0,100
+Hunter (Ch 16),0,100
+0,0,100
+Brigand,0,100
+0,0,100
+O'Neill (Prologue),0,100
+Glen (Cutscene),0,100
+Zonta (Ch 5x),0,100
+Vigarde (Ch 14B),0,100
+Lyon (Ch Final),0,100
+Orson (Ch 16),0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+Grado Soldier (Special),0,100
+Grado Soldier 1 (Normal),0,100
+Grado Soldier 2,0,100
+Grado Soldier 3,0,100
+Grado Soldier 4,0,100
+Grado Soldier 5,0,100
+Grado Soldier 6,0,100
+Grado Soldier 7,0,100
+Grado Soldier 8,0,100
+Grado Soldier 9,0,100
+Grado Soldier 10 (Duessel's),0,100
+Grado Soldier 11 (Duessel's),0,100
+Grado Soldier 12 (Duessel's),0,100
+Grado Soldier 13,0,100
+Grado Remnant 1 (Main),0,100
+Cutthroat,0,100
+Grado Remnant 2 (Cutscene and C16 only?),0,100
+Grado Remnant 3 (C16 only?),0,100
+Grado Remnant 4 (C16 only?),0,100
+Wraith (Sage),0,100
+Wraith (Swords),0,100
+Wraith (Axes),0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+Mercenary (C9A),0,100
+Mercenary (C10A),0,100
+Merc Remnant (C13A),0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Monster,0,100
+Demon King,0,100
+0,0,100
+Frelian,0,100
+Frelian,0,100
+0,0,100
+0,0,100
+0,0,100
+Fado (Renais),0,100
+0,0,100
+Hayden (Frelia),0,100
+Mansel (Rausten),0,100
+Klimt (Carcino),0,100
+Dara (Caer Pelyn),0,100
+Ismaire (Jehanna),0,100
+Pegasus Messenger,0,100
+Rausten Knight,0,100
+Rausten Knight,0,100
+(Untested Beyond this point),0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100
+0,0,100

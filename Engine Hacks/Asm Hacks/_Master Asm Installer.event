@@ -9,3 +9,5 @@ POP
 #include "Skill System\_MasterHackInstaller.event"
 #include "ModularMinimugBox\Modular MMB Installer.txt"
 #include "Suspend.event"
+#include "PointerList.event"
+#include "Str Mag Split\Installer.event"

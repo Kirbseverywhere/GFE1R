@@ -11,6 +11,7 @@
 .equ MagCheck, 0x8018A58
 .equ AidCheck, 0x80189B8
 .equ StrGetter, 0x80191b0
+.equ MagGetter, 0x80191b8
 .equ SklGetter, 0x80191d0
 .equ SpdGetter, 0x8019210
 .equ LuckGetter, 0x8019298
@@ -196,6 +197,25 @@
   blh      DrawBar, r4
 .endm
 
+.macro draw_bar_at_with_cap_getter bar_x, bar_y, statgetter, capgetter, offset, bar_id  
+  mov r0, r8
+  blh      \statgetter
+  mov r1, r8  
+  mov     r3, #\offset
+  ldsb    r3,[r1,r3]     
+  str     r0,[sp]     
+  ldr     r0,[r1,#0x4]  @class
+  ldrb    r0,[r0,#0x4]  @class id
+  blh		\capgetter
+  lsl     r0,r0,#0x18    
+  asr     r0,r0,#0x18    
+  str     r0,[sp,#0x4]    
+  mov     r0,#(\bar_id)     
+  mov     r1,#(\bar_x-11)
+  mov     r2,#(\bar_y-2)
+  blh      DrawBar, r4
+.endm
+
 .macro draw_halved_bar_at bar_x, bar_y, getter, offset, bar_id
   mov r0, r8
   blh      \getter
@@ -219,20 +239,35 @@
   draw_bar_at \bar_x, \bar_y, StrGetter, 0x14, 0
 .endm
 
+.macro draw_mag_bar_at, bar_x, bar_y 
+  mov r0, r8
+  blh      MagGetter
+  mov r1, r8  
+  mov     r3, #0x3A
+  ldsb    r3,[r1,r3]     
+  str     r0,[sp]     
+  mov r0, #20  @cap is always 20 for now
+  str     r0,[sp,#0x4]
+  mov     r0,#0x1  
+  mov     r1,#(\bar_x-11)
+  mov     r2,#(\bar_y-2)
+  blh      DrawBar, r4
+.endm
+
 .macro draw_skl_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 1
+  draw_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
 .endm
 
 .macro draw_skl_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SklGetter, 0x15, 1
+  draw_halved_bar_at \bar_x, \bar_y, SklGetter, 0x15, 2
 .endm
 
 .macro draw_spd_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 2
+  draw_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
 .endm
 
 .macro draw_spd_reduced_bar_at, bar_x, bar_y @for rescuing
-  draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 2
+  draw_halved_bar_at \bar_x, \bar_y, SpdGetter, 0x16, 3
 .endm
 
 .macro draw_luck_bar_at, bar_x, bar_y
@@ -244,18 +279,18 @@
   str     r0,[sp]     
   mov r0, #0x1e  @cap is always 30
   str     r0,[sp,#0x4]    
-  mov     r0,#0x5     
+  mov     r0,#0x6   
   mov     r1,#(\bar_x-11)
   mov     r2,#(\bar_y-2)
   blh      DrawBar, r4
 .endm
 
 .macro draw_def_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, DefGetter, 0x17, 3
+  draw_bar_at \bar_x, \bar_y, DefGetter, 0x17, 4
 .endm
 
 .macro draw_res_bar_at, bar_x, bar_y
-  draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 4
+  draw_bar_at \bar_x, \bar_y, ResGetter, 0x18, 5
 .endm
 
 .macro draw_growth_at, bar_x, bar_y

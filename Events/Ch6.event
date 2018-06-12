@@ -74,6 +74,7 @@ CHAR 0x9 JulianRickardRecruitment [Julian,Ricard] 0x0
 END_MAIN
 
 LocationBasedEvents:
+Seize(21,14)
 Seize(12,13)
 Chest(AngelicRobe,4,11)
 Chest(Armorslayer,8,4)
@@ -119,5 +120,5 @@ ENDA
 
 EndingScene:
 Text(Ch6EndingText)
-MNTS 0
+MNC2 6
 ENDA

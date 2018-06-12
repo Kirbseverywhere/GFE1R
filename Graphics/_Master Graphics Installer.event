@@ -22,7 +22,7 @@ POIN NewStatScreen
 ORG $88620
 POIN RemoveGlowy
 ORG $88640
-POIN NewStatScreenPal
+POIN NewStatScreenPal 
 POP
 
 NewStatScreen:
@@ -53,4 +53,39 @@ POP
 ALIGN 4
 ExtrasOptionNamesGFX:
 #incext Png2Dmp "ExtrasOptionNames.png" --lz77
+
+PUSH
+ORG $c5830
+POIN NewTitleScroll
+ORG 0xAADBC8
+#incext Png2Dmp "TitleScroll.png" --palette-only
+ORG $aac5ac
+#incext Png2Dmp "FE_Title.png" --lz77
+ORG 0xAADBA8
+#incext Png2Dmp "FE_Title.png" --palette-only
+ORG 0x0C57E4
+POIN DragonGfx
+ORG 0x0C57EC
+POIN DragonTsa
+ORG 0x0C57F4
+POIN DragonPal
+POP
+
+ALIGN 4
+NewTitleScroll:
+#incext Png2Dmp "TitleScroll.png" --lz77
+
+ALIGN 4
+DragonGfx:
+#incext Png2Dmp "DragonCompressed.png" --lz77
+
+ALIGN 4
+DragonPal:
+#incext Png2Dmp "DragonCompressed.png" --palette-only
+
+ALIGN 4
+DragonTsa:
+#incbin "DragonTsa.bin"
+
+
 

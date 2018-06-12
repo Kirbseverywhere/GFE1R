@@ -1,0 +1,155 @@
+#define StatLocation(xPos, yPos) "SHORT (xPos & 0x1F) + (yPos << 5)"
+
+PUSH
+	//Change stats at 2020108 from shorts to bytes
+	//WRITES
+	ORG $7369A
+	#incbin "Write Promo to RAM.dmp"
+	SHORT 0xE012
+	
+	//LOADS
+	ORG $737D8
+	SHORT 0x1838 0x7801
+	ORG $738DA
+	SHORT 0x46C0 0x1820 0x7801 //nop; add r0,r4,r0; ldrb r1,[r0]
+	ORG $741F6
+	SHORT 0x46C0 0x19C3 0x781A //nop; add r3,r0,r7; ldrb r2,[r3]
+	ORG $74200
+	SHORT 0x7800 //ldrb r0,[r0]
+	ORG $7420C
+	SHORT 0x7018 //strb r0,[r3]
+	ORG $74264
+	SHORT 0x46C0 0x19C0 0x7800 //nop; add r0,r0,r7; ldrb r0,[r0]
+
+	//Move everything upwards
+	ORG $73D98
+	WORD 0x20236A8
+	
+	//Change max counter from 8 to 0xA
+	ORG $737AE
+	BYTE 0x9
+	ORG $737F6
+	BYTE 0x9
+	ORG $741EC
+	BYTE 0xA
+	ORG $7429A
+	BYTE 0xA
+	ORG $742A2
+	BYTE 0xA
+	
+	//Change placement of stats
+	ORG $73898
+	POIN StatLocationTable
+	ORG $73908
+	POIN StatLocationTable
+	ORG $74280
+	POIN StatLocationTable
+	
+	//Remove the flipping effect
+	ORG $74890
+	SHORT 0x46C0
+	ORG $748A6
+	SHORT 0x46C0
+	
+	//Get original class name in right place
+	ORG $7381A
+	BYTE 0xA0
+	//Get 'LV' in right place
+	ORG $73848
+	BYTE 0xA8
+	//Get new level number in right place
+	ORG $73878
+	BYTE 0xAB
+	
+	//Make sure class and level changes occur in the right place
+	ORG $7393C
+	WORD 0x20176F0
+	ORG $7397C
+	WORD 0x2017700
+	ORG $737FC
+	BYTE 0x50
+	
+	//Add new stat numbers (I hope)
+	ORG $7F1E0 //increase counter
+	BYTE 0x0A
+	ORG $7ED4E //jump table to retrieve original stats counter
+	BYTE 0x0A
+	ORG $7ED60
+	POIN Original_Stats_Jump_Table
+	
+	//When stats go up
+	ORG $7EC0C //jump table entry count
+	BYTE 0x0A
+	ORG $7EC1C
+	POIN New_Stats_Jump_Table
+	ORG $7F3C0
+	BYTE 0xA
+	
+	//##### Growths: Animations on #####
+	
+	//Repoint TSA Graphics: 8035B0 (1054) Palette 803B10 TSA 8039E8 32x15
+	ORG $73D90
+	POIN NewLevelUpTsa
+	
+	//Shift the background upwards
+	ORG $73D98
+	WORD 0x20235A8
+	
+	ORG $73588
+	#incbin "Write Growth to Ram Anim On.dmp"
+	SHORT 0xE096
+	
+	//Change list of stat text IDS
+	ORG $7373A
+	SHORT 0x46C0 0x46C0
+	ORG $7375C
+	POIN Promo_Stat_Name_Table
+POP
+
+ALIGN 4
+StatLocationTable:
+StatLocation(2, 9) //Hp
+StatLocation(2, 11) //Str
+StatLocation(2, 13) //Mag
+StatLocation(2, 15) //Skl
+StatLocation(2, 17) //Spd
+StatLocation(10, 9) //Lck
+StatLocation(10, 11) //Def
+StatLocation(10, 13) //Res
+StatLocation(10, 15) //Con
+StatLocation(10, 17)  //Mov
+
+ALIGN 4
+NewLevelUpTsa:
+#incext compress "New Levelup Tsa Decomp.dmp"
+
+ALIGN 4
+Original_Stats_Jump_Table:
+POIN 0x7ED88 0x7EDA4 0x7EDAA Get_Original_Magic 0x7EDB0 0x7EDB6 0x7EDBC 0x7EDC2 0x7EDC8 Get_Original_Con Get_Original_Mov
+	
+ALIGN 4
+Get_Original_Magic:
+SHORT 0x2047 0x5610 0xBC30 0xBC02 0x4708 //mov r0,0x47; ldsb r0,[r2,r0]; pop r4-r5; pop r1; bx r1
+	
+ALIGN 4
+Get_Original_Con:
+SHORT 0x6810 0x2113 0x5640 0x211A 0x5651 0x1840 0x6852 0x2111 0x5651 0x1840 0xBC30 0xBC02 0x4708
+	
+ALIGN 4
+Get_Original_Mov:
+SHORT 0x6850 0x7C80 0x211D 0x5651 0x1840 0xBC30 0xBC02 0x4708
+	
+ALIGN 4
+New_Stats_Jump_Table:
+POIN 0x7EC44 0x7EC48 0x7EC64 0x7ED0C 0x7EC80 0x7EC9C 0x7ECB8 0x7ECD4 0x7ECF0 0x7ED28 0x7ED28 //con and mov don't go up
+
+ALIGN 4
+Promo_Stat_Name_Table:
+#incbin "Promo Stat Name Table.dmp"
+POIN Mov_Text_ID_Pointer
+
+ALIGN 4
+Mov_Text_ID_Pointer:
+WORD Mov_Text_ID
+
+ALIGN 4

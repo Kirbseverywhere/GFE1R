@@ -1,7 +1,11 @@
 PUSH
-ORG 0x8472C
+ORG 0x846AC
 POIN BattleQuoteTable
 POP
 
+#define BattleQuote(Attacker, Defender, Map, Flag, TID) "SHORT Attacker Defender; BYTE Map 0; SHORT Flag TID; SHORT 0 0 0"
+
 BattleQuoteTable:
+BattleQuote(0, Camus, 0x16, 1, CamusBossConvo)
+BattleQuote(Camus, 0, 0x16, 1, CamusBossConvo)
 WORD 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF 0xFFFFFFFF

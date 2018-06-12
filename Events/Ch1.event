@@ -110,6 +110,9 @@ Write_Word(0x7369724B, 0x202bd10)
 SetBackground(0x2F)
 Text(TacticianCreationText)
 ASMC CreateTacticianScreen
+MUSC 0x2B
+SetBackground(0x10)
+Text(PrologueIntro1)
 MUSC ST_CombatMission
 LOAD1 0x1 GazzakBaddie
 LOAD1 0x1 GreenUnit
@@ -127,7 +130,7 @@ EVBIT_T 9
 MOVE 10 Caeda [25,7]
 ENUN
 SetBackground(0x25)
-Text(PrologueIntro)
+Text(PrologueIntro2)
 EVBIT_F 9
 MOVE -1 Caeda [26,6]
 MOVE -1 Marth [25,6]

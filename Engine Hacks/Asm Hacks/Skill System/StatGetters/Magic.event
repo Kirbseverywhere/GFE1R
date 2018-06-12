@@ -1,0 +1,17 @@
+#ifndef MODULAR_GETTER_MAGIC_EVENT
+#define MODULAR_GETTER_MAGIC_EVENT
+
+#include "_Common.event"
+
+pMagicModifiers: // Magic
+	POIN prAddUnitMagic
+WORD 0
+
+prAddUnitMagic:
+	rAdd(rSByteAt(0x3A))
+/*
+prAddEquipPower:
+	rAdd(rForUnitEquipped(rCallExternal(prGetItemPowBonus)))
+*/
+
+#endif // MODULAR_GETTER_MAGIC_EVENT

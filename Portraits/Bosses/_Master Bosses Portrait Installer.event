@@ -1,8 +1,12 @@
 setMugEntry(Gazzak, GazzakPortrait, 3, 4, 3, 2)
 setMugEntry(Emereus, EmereusPortrait, 2, 5, 2, 3)
+setMugEntry(Camus, CamusPortrait, 3, 5, 2, 3)
 
 GazzakPortrait:
 #incext HalfbodyFormatter "Gazzak.png"
 
 EmereusPortrait:
 #incext HalfbodyFormatter "Emereus.png"
+
+CamusPortrait:
+#incext HalfbodyFormatter "Camus.png"

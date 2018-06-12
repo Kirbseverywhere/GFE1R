@@ -33,7 +33,8 @@ A soldier that escaped with Marth.[X]
 A soldier who escaped with Marth.[X]
 
 ##FreyDesc
-An Altean knight serving under Prince Marth.[NL]
+An Altean knight serving under[NL]
+Prince Marth.[NL]
 Fiercely loyal and compassionate.[X]
 
 ##NorneDesc
@@ -80,19 +81,22 @@ religion. Believes in second chances.[X]
 
 ##NavarreDesc
 A skilled swordsman training his blade.[NL] 
-He would never turn his sword on a woman.[X]
+He would never turn his blade[NL]
+on a woman.[X]
 
 ##MerricDesc
-An Altean noble who learned magic in Khadein.[NL]
+An Altean noble who learned magic[NL]
+in Khadein.[NL]
 Wields the Excalibur tome.[X]
 
 ##MatthisDesc
-A man who was forced into the Macedonian army.[NL]
+A man who was forced into the[NL]
+Macedonian army.[NL]
 Cowardly, but cares deeply for his sister[X]
 
 ##HardinDesc
 The brother of King Aurelis.[NL]
-Known as a kind and compassionate leader.[X]
+A kind and compassionate leader.[X]
 
 ##SedgarDesc
 Wolf's deputy. Respects his[NL]
@@ -120,7 +124,8 @@ A skilled thief with few scruples.[X]
 
 ##AthenaDesc
 A sword wielder from a far-off land.[NL]
-Her sword is as deadly as her accent is strange.[X]
+Her sword is as deadly as her accent[NL]
+is strange.[X]
 
 ##BantuDesc
 A aloof man who can turn into a dragon. [NL]
@@ -214,7 +219,9 @@ A young Manakete with a childish[NL]
 personality and great hidden power.[X]
 
 ##LorenzDesc
-A Grustian general who is loyal to a fault, [NL]but has started questioning the war.[X]
+A Grustian general who is loyal to a[NL]
+fault, but has started questioning[NL]
+the war.[X]
 
 ##YmirDesc
 [X]
@@ -223,7 +230,9 @@ A Grustian general who is loyal to a fault, [NL]but has started questioning the 
 Marth's sister. Selfless and kindhearted. [X]
 
 ##NagiDesc
-A manakete from another dimension. [NL] Speculated to be a reincarnation of Naga.[X]
+A manakete from another dimension. [NL]
+Speculated to be a reincarnation of[NL]
+Naga.[X]
 
 ##GotohDesc
 The Legendary White Sage.[NL]
@@ -246,3 +255,69 @@ Merric's failed brother[X]
 
 ##EmereusDesc
 Emedeus? dun dun dunnn[X]
+
+##BathysDesc
+[X]
+
+##HarmeinDesc
+[X]
+
+##KannivalDesc
+[X]
+
+##MannuDesc
+[X]
+
+##ZharovDesc
+[X]
+
+##KhozenDesc
+[X]
+
+##VolzhinDesc
+[X]
+
+##HeimlerDesc
+[X]
+
+##DejaniraDesc
+[X]
+
+##GrigasDesc
+[X]
+
+##JiolDesc
+[X]
+
+##GharnefDesc
+[X]
+
+##HollstadtDesc
+[X]
+
+##MorzasDesc
+[X]
+
+##DactylDesc
+[X]
+
+##SternlinDesc
+[X]
+
+##CamusDesc
+[X]
+
+##LarissaDesc
+[X]
+
+##OrridyonDesc
+[X]
+
+##MichalisDesc
+[X]
+
+##XemcelDesc
+[X]
+
+##MedeusDesc
+[X]

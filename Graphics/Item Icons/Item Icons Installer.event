@@ -6,3 +6,10 @@ SetItemIcon(0xAE)
 #incext Png2Dmp "Bowgun.png"
 
 POP
+
+/*
+< Rapier, Broadsword (Ogma), Mercurius, Falchion, Wing Spear, Gradivus, Parthia, Excalibur, Aura, Imhullu 
+(Based on the old TCG art, the FE World art minus the lock binding the tome, and the FE World art with the lock added on, respectively), 
+Starlight (Based on the old TCG art and the FE World art, respectively)
+< (Aum when it's finished), Firestone, Earthstone, Magestone, Divinestone, Fire Emblem, Lightsphere, Starsphere, Geosphere
+*/

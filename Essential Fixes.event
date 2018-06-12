@@ -96,6 +96,12 @@ PUSH
   SHORT 0x200E 0x5620 //mov r0, #0x0E; ldsb r0, [r4, r0]
   ORG 0x206948
   BYTE 0
+  
+//Makes Eirika always the lord
+  ORG 0x37B8A 
+  BYTE Eirika
+  ORG 0x37B96
+  BYTE Eirika
 
 #include "Extensions/Hack Installation.txt"
 //Anti-Huffman Patch, by Hextator and Nintenlord

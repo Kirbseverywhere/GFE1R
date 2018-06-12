@@ -40,24 +40,14 @@ mov		r0,#0
 IsPlayerUnit:
 str		r0,[sp,#0x14]
 
-@draw str or mag
-  mov r0, r8
-  blh     MagCheck      @r0 = 1 if mag should show
-  cmp     r0,#0x0       
-  beq     NotMag        
-    @draw Mag at 13, 3. colour defaults to yellow.
-    draw_textID_at 13, 3, textID=0x4ff, growth_func=2
-    b       MagStrDone    
-  NotMag:
-    @draw Str at 13, 3
-    draw_textID_at 13, 3, textID=0x4fe, growth_func=2
-  MagStrDone:
 
-draw_textID_at 13, 5, textID=0x4EC, growth_func=3 @skl
-draw_textID_at 13, 7, textID=0x4ED, growth_func=4 @spd
-draw_textID_at 13, 9, textID=0x4ee, growth_func=5 @luck
-draw_textID_at 13, 11, textID=0x4ef, growth_func=6 @def
-draw_textID_at 13, 13, textID=0x4f0, growth_func=7 @res
+draw_textID_at 13, 3, textID=0x4fe, growth_func=2 @str
+draw_textID_at 13, 5, textID=0x4ff, growth_func=3 @mag
+draw_textID_at 13, 7, textID=0x4EC, growth_func=4 @skl
+draw_textID_at 13, 9, textID=0x4ED, growth_func=5 @spd
+draw_textID_at 13, 11, textID=0x4ee, growth_func=6 @luck
+draw_textID_at 13, 13, textID=0x4ef, growth_func=7 @def
+draw_textID_at 13, 15, textID=0x4f0, growth_func=8 @res
 
 b 	NoRescue
 .ltorg 
@@ -83,47 +73,48 @@ b		ShowGrowths
 
 ShowStats:
 draw_str_bar_at 16, 3
-draw_skl_bar_at 16, 5
-draw_spd_bar_at 16, 7
-draw_luck_bar_at 16, 9
-draw_def_bar_at 16, 11
-draw_res_bar_at 16, 13
-draw_textID_at 13, 15, 0x4f6 @move
-draw_move_bar_with_getter_at 16, 15
+draw_mag_bar_at 16, 5
+draw_skl_bar_at 16, 7
+draw_spd_bar_at 16, 9
+draw_luck_bar_at 16, 11
+draw_def_bar_at 16, 13
+draw_res_bar_at 16, 15
+draw_textID_at 13, 17, 0x4f6 @move
+draw_move_bar_with_getter_at 16, 17
 
 b		NextColumn
 .ltorg
 
 ShowGrowths:
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0x4]		@str growth getter
+ldr		r0,[r0,#4]		@str growth getter
 draw_growth_at 17, 3
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0x8]		@skl growth getter
+ldr		r0,[r0,#8]		@mag growth getter
 draw_growth_at 17, 5
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0xC]		@spd growth getter
+ldr		r0,[r0,#12]		@skl growth getter
 draw_growth_at 17, 7
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0x10]		@luk growth getter
+ldr		r0,[r0,#16]		@spd growth getter
 draw_growth_at 17, 9
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0x14]		@def growth getter
+ldr		r0,[r0,#20]		@luk growth getter
 draw_growth_at 17, 11
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0,#0x18]		@res growth getter
+ldr		r0,[r0,#24]		@def growth getter
 draw_growth_at 17, 13
 ldr		r0,[sp,#0xC]
-ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
+ldr		r0,[r0,#28]		@res growth getter
 draw_growth_at 17, 15
-draw_textID_at 13, 15, textID=0x4E9, growth_func=1 @hp name
+ldr		r0,[sp,#0xC]
+ldr		r0,[r0]			@hp growth getter (not displaying because there's no room atm)
+draw_growth_at 17, 17
+draw_textID_at 13, 17, textID=0x4E9, growth_func=1 @hp name
 b		NextColumn
 .ltorg
 
 NextColumn:
-
-draw_textID_at 13, 17, textID=0x4f7 @con
-draw_con_bar_with_getter_at 16, 17
 
 
 draw_textID_at 21, 3, textID=0x4f8 @aid
@@ -158,9 +149,15 @@ add r0, r1
 add r3, #1
 cmp r3, #0x1B
 bne RatingLoop
-ldrb r1, [r2, #0x1D]
+ldrb r1, [r2, #0x1D] @ mov
+add r0, r1
+add r2, #0x3A @ mag
+ldrb r1, [r2]
 add r0, r1
 draw_number_at 27, 13 @Unit Rating
+
+draw_textID_at 21, 15, textID=0x4f7 @con
+draw_con_bar_with_getter_at 24, 15
 
 Nexty:
 

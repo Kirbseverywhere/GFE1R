@@ -38,6 +38,9 @@ Zeke[X]
 ##RatingsTID
 Rating[X]
 
+##Mov_Text_ID
+Mov[X]
+
 ##RandomizedTID
 Randomized[X]
 

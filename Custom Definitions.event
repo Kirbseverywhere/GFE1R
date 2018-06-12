@@ -83,6 +83,28 @@
 #define Bentheon 73
 #define Merach 74
 #define Emereus 75
+#define Bathys 76
+#define Harmein 77
+#define Kannival 78
+#define Mannu 79
+#define Zharov 80
+#define Khozen 81 
+#define Volzhin 82 
+#define Heimler 83
+#define Dejanira 84
+#define Grigas 85
+#define Jiol 86
+#define Gharnef 87
+#define Hollstadt 88
+#define Morzas 89
+#define Dactyl 90
+#define Sternlin 91
+#define Camus 92
+#define Larissa 93
+#define Orridyon 94
+#define Michalis 95
+#define Xemcel 96
+#define Medeus  97
 
 #define Galder 0x80
 

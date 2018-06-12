@@ -46,22 +46,22 @@ POP
 
 //Stuff
 
-#define KirbMenuDefinition(type,cx,cy,onPress,onUpdate,upDef,rightDef,leftDef,downDef) "SHORT type 0 cx-4 cy; POIN onPress onUpdate upDef rightDef leftDef downDef; WORD 0 0 0 0"
+#define MenuDefinition(type,cx,cy,onPress,onUpdate,upDef,rightDef,leftDef,downDef) "SHORT type 0 cx-4 cy; POIN onPress onUpdate upDef rightDef leftDef downDef; WORD 0 0 0 0"
 MUMenuDefinition:
 NameDef:
-KirbMenuDefinition(0, 8*8, 8*8, 0x48281, 0, ClassDef, 0, 0, GenderDef)
+MenuDefinition(0, 8*8, 8*8, 0x48281, 0, ClassDef, 0, 0, GenderDef)
 
 GenderDef:
-KirbMenuDefinition(0, 8*8, 10*8, GenderButtonEffect, 0, NameDef, 0, 0, BoonDef)
+MenuDefinition(0, 8*8, 10*8, GenderButtonEffect, 0, NameDef, 0, 0, BoonDef)
 
 BoonDef:
-KirbMenuDefinition(0, 8*8, 12*8, BoonButtonEffect, 0, GenderDef, 0, 0, BaneDef)
+MenuDefinition(0, 8*8, 12*8, BoonButtonEffect, 0, GenderDef, 0, 0, BaneDef)
 
 BaneDef:
-KirbMenuDefinition(0, 8*8, 14*8, BaneButtonEffect, 0, BoonDef, 0, 0, ClassDef)
+MenuDefinition(0, 8*8, 14*8, BaneButtonEffect, 0, BoonDef, 0, 0, ClassDef)
 
 ClassDef:
-KirbMenuDefinition(0, 8*8, 16*8, ClassButtonEffect, 0, BaneDef, 0, 0, NameDef)
+MenuDefinition(0, 8*8, 16*8, ClassButtonEffect, 0, BaneDef, 0, 0, NameDef)
 
 StatTextIdList:
 SHORT 0x4EB 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x00 //0 Terminating not needed but why not
