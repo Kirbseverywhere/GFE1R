@@ -14,17 +14,35 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [0,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [28,22] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [28,23] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [27,23] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [29,25] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [29,26] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [28,26] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [26,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [27,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [29,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [28,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [29,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [28,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [26,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Seth Cavalier 0x00 Level(1, Ally, 0) [26,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
 UNIT
+
 
 TurnBasedEvents:
 END_MAIN
 
 CharacterBasedEvents:
+CharacterEvent(0x7,mariaRecruitment,Marth,Maria)
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
+DOOR 0x0 [16, 11] 0x12
+DOOR 0x0 [18, 8] 0x12
+Seize(2,3)
+Seize(28,22)
 END_MAIN
 
 MiscBasedEvents:
@@ -45,9 +63,11 @@ END_MAIN
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 Units
 LOAD1 0x1 Enemies
-GotoPrepScreen
+LOAD1 0x1 MinervaUnit
+LOAD1 0x1 MariaUnit
+LOAD1 0x1 Enemies2
+LOAD2 0x1 Units
 ENDA
 
 EndingScene:
@@ -55,15 +75,63 @@ MNC2 11
 ENDA
 
 // Events
+Door1:
+TILECHANGE 0x0
+NoFade
+ENDA
+
+Door2:
+TILECHANGE 0x1
+NoFade
+ENDA
+
+mariaRecruitment:
+CUSA Maria
+CALL minervaMovement
+CUSA Minerva
+ENUT 0x7
+ENDA
 
 // Manual Movement
+minervaMovement:
+MOVEONTO 10 Minerva Maria
+MOVE_1STEP 10 Maria Down
+ENDA
 
 // Scripted Fights
 
 // Units
+MariaUnit:
+UNIT Maria Troubadour 0x00 Level(1, NPC, 0) [15,13] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT
 
 Enemies:
-UNIT Gazzak EirikaLord 0x00 Level(1, Enemy, 0) [1,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Gheb General 0x00 Level(4, Enemy, 0) [2,3] 0x00 0x00 0x0 0x00 [SilverLance, Javelin] GuardTileAI 
+UNIT Galder Archer Gheb Level(10, Enemy, 0) [11,13] 0x00 0x00 0x0 0x00 [SteelBow] ChaseOnceApproachedAI 
+UNIT Galder Sniper Gheb Level(10, Enemy, 0) [10,13] 0x00 0x00 0x0 0x00 [SilverBow] ChaseOnceApproachedAI 
+UNIT Galder Archer Gheb Level(10, Enemy, 0) [12,13] 0x00 0x00 0x0 0x00 [SteelBow] ChaseOnceApproachedAI 
+UNIT Galder Cavalier Gheb Level(10, Enemy, 0) [8,25] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI 
+UNIT Galder Cavalier Gheb Level(10, Enemy, 0) [10,23] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI 
+UNIT Galder Cavalier Gheb Level(10, Enemy, 0) [10,25] 0x00 0x00 0x0 0x00 [SteelSword] PursueWithoutHeedAI 
+UNIT Galder Cavalier Gheb Level(15, Enemy, 0) [8,23] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Galder Thief Gheb Level(1, Enemy, 0) [12,27] 0x00 0x00 0x0 0x00 [IronSword] StealingThiefAI 
+UNIT Galder Knight Gheb Level(15, Enemy, 0) [19,17] 0x00 0x00 0x0 0x00 [SteelLance, Vulnerary, ChestKey] AttackInRangeAI 
+UNIT Galder Knight Gheb Level(10, Enemy, 0) [16,19] 0x00 0x00 0x0 0x00 [Javelin] AttackInRangeAI 
+UNIT Galder Knight Gheb Level(10, Enemy, 0) [12,15] 0x00 0x00 0x0 0x00 [SteelLance, Javelin] GuardTileAI 
+UNIT Galder Hero Gheb Level(2, Enemy, 0) [16,6] 0x00 0x00 0x0 0x00 [SilverSword, HandAxe] AttackInRangeAI 
+UNIT Galder PegasusKnight Gheb Level(15, Enemy, 0) [3,5] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Galder PegasusKnight Gheb Level(10, Enemy, 0) [4,4] 0x00 0x00 0x0 0x00 [SteelLance] PursueWithoutHeedAI 
+UNIT Galder Priest Gheb Level(5, Enemy, 0) [3,3] 0x2 0x00 0x0 0x00 [Physic, RedGem] DefaultAI 
 UNIT
+
+MinervaUnit:
+UNIT Minerva WyvernLord_F Gheb Level(1, Enemy, 0) [0,0] 0x00 0x00 0x0 0x00 [DragonSpear] PursueWithoutHeedAI 
+UNIT
+
+Enemies2:
+UNIT Galder WyvernKnight Gheb Level(1, Enemy, 0) [1,0] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT Galder WyvernKnight Gheb Level(1, Enemy, 0) [0,1] 0x00 0x00 0x0 0x00 [SilverLance] PursueWithoutHeedAI 
+UNIT
+
 
 // Shop Data

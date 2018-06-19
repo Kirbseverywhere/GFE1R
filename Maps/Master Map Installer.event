@@ -51,3 +51,6 @@
 {
 #include "Ch8.event"
 }
+{
+#include "FinalChapter.event"
+}

@@ -366,7 +366,7 @@
   str r0, [sp] @final
   mov r6, #0xF
   str r6, [sp, #4]
-  mov     r0,#0x6      
+  mov     r0,#0x8    
   mov     r1,#(\bar_x-11)
   mov     r2,#(\bar_y-2)      
   blh DrawBar, r4

@@ -14,17 +14,84 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [0,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Marth EirikaLord 0x0 Level(1,Ally,0) [7,21] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [10,23] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [10,24] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [9,24] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [6,21] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [5,21] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [6,20] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [7,20] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [8,20] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [5,19] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [6,19] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [7,19] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
+UNIT Jagen Paladin 0x0 Level(1,Ally,0) [6,18] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] NoAI
 UNIT
+
+Bad: 
+UNIT Kannival General 0x0 Level(2,Enemy,0) [12,13] 0b 0x0 0x0 0x0 [SilverLance] NeverMoveAI
+//Right Forts
+UNIT 0x80 Archer Kannival Level(10,Enemy,1) [12,2] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT 0x80 Archer Kannival Level(10,Enemy,1) [13,3] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI
+UNIT 0x80 Archer Kannival Level(10,Enemy,1) [14,3] 0b 0x0 0x0 0x0 [IronBow,Vulnerary] AttackInRangeAI
+UNIT 0x80 Archer Kannival Level(10,Enemy,1) [15,2] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
+UNIT 0x80 Knight Kannival Level(10,Enemy,1) [12,5] 0b 0x0 0x0 0x0 [IronLance,Javelin] AttackInRangeAI
+UNIT 0x80 Knight Kannival Level(10,Enemy,1) [14,6] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT 0x80 Knight Kannival Level(10,Enemy,1) [15,5] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+//Left Forts
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [5,3] 0b 0x0 0x0 0x0 [IronLance] AttackInRangeAI
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [5,4] 0b 0x0 0x0 0x0 [SteelSword] AttackInRangeAI
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [4,4] 0b 0x0 0x0 0x0 [IronAxe,HandAxe] AttackInRangeAI
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [4,5] 0b 0x0 0x0 0x0 [SteelLance] AttackInRangeAI
+UNIT 0x80 Archer Kannival Level(10,Enemy,1) [2,2] 0x2 0x0 0x0 0x0 [SilverBow,WhiteGem] AttackInRangeAI
+//Wyverns
+UNIT 0x80 WyvernRider Kannival Level(10,Enemy,1) [1,8] 0b 0x0 0x0 0x0 [IronLance,Javelin] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Kannival Level(10,Enemy,1) [0,9] 0b 0x0 0x0 0x0 [IronLance] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Kannival Level(10,Enemy,1) [10,13] 0b 0x0 0x0 0x0 [Axereaver,Javelin] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Kannival Level(10,Enemy,1) [10,4] 0b 0x0 0x0 0x0 [SteelLance] PursueWithoutHeedAI
+UNIT 0x80 WyvernRider Kannival Level(10,Enemy,1) [20,14] 0b 0x0 0x0 0x0 [Horseslayer] PursueWithoutHeedAI
+//Pirates
+UNIT 0x80 Pirate Kannival Level(10,Enemy,1) [15,20] 0b 0x0 0x0 0x0 [IronAxe] PursueWithoutHeedAI
+UNIT 0x80 Pirate Kannival Level(10,Enemy,1) [17,15] 0b 0x0 0x0 0x0 [Swordreaver] PursueWithoutHeedAI
+UNIT 0x80 Pirate Kannival Level(10,Enemy,1) [14,16] 0b 0x0 0x0 0x0 [IronAxe,Vulnerary] PursueWithoutHeedAI
+UNIT 0x80 Pirate Kannival Level(10,Enemy,1) [19,9] 0b 0x0 0x0 0x0 [SteelAxe] PursueWithoutHeedAI
+UNIT 0x80 Pirate Kannival Level(10,Enemy,1) [27,5] 0b 0x0 0x0 0x0 [IronAxe] PursueWithoutHeedAI
+//Island
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [30,13] 0b 0x0 0x0 0x0 [ShortSpear] AttackInRangeAI
+UNIT 0x80 Cavalier Kannival Level(10,Enemy,1) [27,8] 0b 0x0 0x0 0x0 [ShortSpear] AttackInRangeAI
+UNIT 0x80 Myrmidon Kannival Level(10,Enemy,1) [26,14] 0b 0x0 0x0 0x0 [KillingEdge] AttackInRangeAI
+UNIT 0x80 Priest Kannival Level(10,Enemy,1) [30,7] 0b 0x0 0x0 0x0 [Physic] HealUnits
+UNIT
+
+RogerUnit:
+UNIT Roger Knight Kannival Level(8,Enemy,0) [13,6] 0b 0x0 0x0 0x0 [SteelLance,Vulnerary] AttackInRangeAI
+UNIT
+
+Recruits:
+UNIT Caesar Mercenary 0x0 Level(7,Ally,0) [13,24] 0b 0x0 0x0 0x0 [SteelSword] NoAI
+UNIT Radd Myrmidon 0x0 Level(7,Ally,0) [12,25] 0b 0x0 0x0 0x0 [KillingEdge,Vulnerary] NoAI
+UNIT 
 
 TurnBasedEvents:
 END_MAIN
 
+ALIGN 32 //For some reason, CharacterBasedEvents have to be 32-Aligned?
+
 CharacterBasedEvents:
+CharacterEventBothWays(0x0D,RogerRecruitment,Caeda,Roger)
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
+Armory(Ch8Armory,17,24)
+Vendor(Ch8Vendor,15,25)
+House(0x07,RapierHouse,15,24)
+House(0x08,House1,16,24)
+House(0x09,WingspearHouse,17,25)
+House(0x0A,House2,3,9)
+House(0x0B,House3,5,9)
+Seize(0x0C,EndingScene,26,11)
+Seize(7,21)
 END_MAIN
 
 MiscBasedEvents:
@@ -32,38 +99,86 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Dunno:
-//DO NOT TOUCH
-WORD $00
+END_MAIN
 
 Tutorial:
-//DO NOT TOUCH
-WORD $00
+END_MAIN
 
 TrapData:
-END_MAIN
+ENDTRAP
+
+//////////////////LOCATION EVENTS
+Ch8Armory:
+SHLI IronSword SteelSword SilverSword IronLance SteelLance SilverLance Javelin IronAxe SteelAxe HandAxe IronBow SteelBow
+
+Ch8Vendor:
+SHLI Fire Thunder Fimbulvetr Heal Vulnerary
+
+ALIGN 4
+RapierHouse:
+VillageEventItem(0x1,0x1,Rapier) //needs text and bg
+REMA
+ENDA
+
+House1:
+//text here
+//REMA
+ENDA
+
+WingspearHouse:
+VillageEventItem(0x1,0x1,0) //needs text and bg
+REMA
+ENDA
+
+House2:
+//text here
+//REMA
+ENDA
+
+House3:
+//text here
+//REMA
+ENDA
+
+//////////////////CHARACTER EVENTS
+RogerRecruitment:
+//text here
+//REMA
+CUSA Roger
+ENDA
 
 ALIGN 4
 
 BeginningScene:
-LOAD1 0x1 Units
-LOAD1 0x1 Enemies
+LOAD2 0x1 Units
+ENUN
+LOAD1 0x1 Bad
+ENUN
+LOAD1 0x1 Recruits
+ENUN
+LOAD1 0x1 RogerUnit
+ENUN
+//////DIALOGUE
+//marth text
+//REMA
+//caesar and radd approach marth as green units
+//ENUN
+//talk here
+//REMA
+//CUSA Caesar
+//CUSA Radd
+//ENUN?
+//they move back to the houses while camera is still on marth
+//ENUN
+//camera goes to kannival
+//kannival text
+//REMA
+//back to marth
 GotoPrepScreen
 ENDA
 
 EndingScene:
+//text here
+REMA
 MNC2 9
 ENDA
-
-// Events
-
-// Manual Movement
-
-// Scripted Fights
-
-// Units
-
-Enemies:
-UNIT Gazzak EirikaLord 0x00 Level(1, Enemy, 0) [1,0] 0x00 0x00 0x0 0x00 [0x00] NoAI 
-UNIT
-
-// Shop Data
