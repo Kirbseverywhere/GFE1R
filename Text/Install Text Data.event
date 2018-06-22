@@ -1751,3 +1751,15 @@ TxtData0xac2:
 #incext ParseFile "_textentries\0xac2.txt"
 setText(0xac2,TxtData0xac2)
 
+TxtData0xac3:
+#incext ParseFile "_textentries\0xac3.txt"
+setText(0xac3,TxtData0xac3)
+
+TxtData0xac4:
+#incext ParseFile "_textentries\0xac4.txt"
+setText(0xac4,TxtData0xac4)
+
+TxtData0xac5:
+#incext ParseFile "_textentries\0xac5.txt"
+setText(0xac5,TxtData0xac5)
+

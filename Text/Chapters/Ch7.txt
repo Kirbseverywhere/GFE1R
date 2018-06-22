@@ -1,0 +1,8 @@
+##CH7OpeningText
+[X]
+
+##CH7EndingText
+[X]
+
+##CH7BantuRecruitmentText
+[X]

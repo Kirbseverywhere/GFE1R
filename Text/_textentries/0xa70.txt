@@ -1,1 +1,2 @@
-A soldier who escaped with Marth.[X]
+An untested archer from Altea.[NL]
+Wishes to prove himself useful.[X]
