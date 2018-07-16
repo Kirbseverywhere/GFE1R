@@ -1,3 +1,9 @@
+# 0x0581
+DEVELOPPER NOTE:[NL]
+Prep Screen Saving[NL]
+Is broken for now.[NL]
+So you can't use it.[X]
+
 # 0x0094
 HP Bars[.][X]
 

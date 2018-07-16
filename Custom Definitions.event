@@ -120,4 +120,4 @@
 
 #include "Engine Hacks/Asm Hacks/Skill System/Skill System/skill_definitions.event"
 
-// #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+#define DEBUG // Uncomment to get the Debug startup menu :p

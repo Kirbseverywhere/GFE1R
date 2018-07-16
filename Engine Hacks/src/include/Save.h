@@ -45,3 +45,18 @@ typedef struct __attribute__ ((packed)) {
 	u8 WeaponRanks[8];
 	u8 SupportLevels[7];
 } RevampedSavedUnit;
+
+
+enum SaveIndices {SaveSlot1, SaveSlot2, SaveSlot3, SuspendBackup, Suspend, LinkArena, SaveEmpty};
+
+#define SaveSlotSize		0xD8C
+#define	SaveSlot1Offset		(u8 *)(SuspendOffset + SuspendSize)
+#define	SaveSlot2Offset		(u8 *)(SaveSlot1Offset + SaveSlotSize)
+#define	SaveSlot3Offset		(u8 *)(SaveSlot2Offset + SaveSlotSize)
+
+#define SuspendSize			0x3E58
+#define	SuspendOffset		(u8 *)0xE0000D4 
+#define	SuspendBackupOffset	(u8 *)0xE0000D4 //Made the same by colorz' hack
+
+#define LinkArenaSize		0x870
+#define	LinkArenaOffset		(u8 *)(SaveSlot3Offset + SaveSlotSize)

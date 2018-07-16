@@ -1,1 +1,14 @@
-[X]
+[OpenFarLeft][LoadHardin][OpenFarRight][LoadNyna]
+[OpenFarLeft]Princess Nyna, I've spotted them![A][NL] The Altean army is on the[NL]far side of the river.[A]
+[OpenFarRight]They're here?[A]At last! Prince Marth[NL]has come for us![A]
+[OpenFarLeft]So it seems.[NL]Now, what say you we turn this battle around?[A][NL] I'm going to take my men east[NL]to join our might with Marth's.[A][NL]Together we will retake the castle.[A][NL]Stay here, my lady,[NL]and wait for the good news.[A]
+[ClearFace]
+[OpenFarRight]Oh Hardin,please do take care![A]That man...He's just as brave as Camus...
+[ClearFace]
+[OpenFarLeft][LoadMarth][OpenFarRight][LoadMalledus][OpenMidLeft][LoadJagen]
+[OpenFarLeft]So we're quickly approaching Princess Nyna's location, correct?[A]
+[OpenMidLeft]Aye milord, we should be able to[NL]cross the rivers with ease.[A]
+[ClearFace]
+[OpenFarRight]Lord Marth if I may,[NL]we must hurry now.[A][NL]Who knows what kind of danger[NL]Lord Hardin and Princess Nyna are in.
+[ClearFace]
+[OpenFarLeft]You're right Malledus.[A] Everyone, rally to me! We[NL]ride to save Princess Nyna![A][X]

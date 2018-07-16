@@ -21,8 +21,18 @@ ALIGN 4
 //Hooks
 PUSH
 
+#ifdef DEBUG
 ORG 0x000AD8
 BL(0x01C090)
+#endif
+
+//Saving units
+ORG $A5060
+BYTE UnitDataTableSize
+
+//Loading Units 
+ORG $A5182
+BYTE UnitDataTableSize
 
 ORG $44800
 BYTE 9 //max name length
@@ -42,6 +52,9 @@ POIN ModifierProcCode
 
 ORG 0xAC1B4
 WORD 0*/
+
+ORG 0x955B8
+SHORT 0x2201
 POP
 
 //Stuff

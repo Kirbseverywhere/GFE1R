@@ -70,8 +70,8 @@ NoFade
 ENDA
 
 BeginningScene2:
-Text(OgmaRecruitementText)
 LOAD1 0x1 OgmaCrew
+Text(OgmaRecruitementText)
 NoFade
 ENDA
 

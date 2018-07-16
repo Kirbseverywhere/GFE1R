@@ -237,7 +237,9 @@ MainMenuTable:
   MM_Unit
   MM_EveryOtherOneTooLazy
   MM_Suspend
+  #ifdef DEBUG
   MenuCommand(UM_Debug, 0, GreenText, 0x4F449, EndEffect)
+  #endif
   MM_End
   MM_Separator
   

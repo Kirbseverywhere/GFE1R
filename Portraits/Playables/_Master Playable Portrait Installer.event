@@ -28,6 +28,7 @@ setMugEntry(Minerva, MinervaPortrait, 4, 5, 4, 3)
 setMugEntry(Linde, LindePortrait, 3, 6, 3, 4)
 setMugEntry(Astram, AstramPortrait, 3, 5, 3, 3)
 setMugEntry(Palla, PallaPortrait, 3, 6, 3, 4)
+setMugEntry(0x69, NynaPortrait, 1, 5, 1, 3)
 
 MarfPortrait:
 #incext HalfbodyFormatter "Marf.png"
@@ -118,3 +119,6 @@ AstramPortrait:
 
 PallaPortrait:
 #incext HalfbodyFormatter "Palla.png"
+
+NynaPortrait:
+#incext HalfbodyFormatter "Nyna.png"

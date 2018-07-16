@@ -2,6 +2,7 @@
 
 PUSH
 ORG BLRange
+#include "StatBarFix.event"
 POP
 
 #include "Portraits.event"

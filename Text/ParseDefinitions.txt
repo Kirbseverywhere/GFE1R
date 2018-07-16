@@ -110,3 +110,6 @@
 
 
 [LoadCamus] = [LoadFace][0x5C][0x1]
+
+
+[LoadNyna] = [LoadFace][0x69][0x1]

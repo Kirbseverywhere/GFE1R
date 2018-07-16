@@ -1,5 +1,39 @@
 #include "Save.h"
 
+u8 *GetSaveDataLocation(enum SaveIndices SaveSlotIndex)
+{
+	u8 *pSaveSlot;
+
+	switch(SaveSlotIndex)
+	{
+		case SaveSlot1:
+			pSaveSlot = SaveSlot1Offset;
+			break;
+		case SaveSlot2:
+			pSaveSlot = SaveSlot2Offset;
+			break;
+		case SaveSlot3:
+			pSaveSlot = SaveSlot3Offset;
+			break;
+		case SuspendBackup:
+			pSaveSlot = SuspendBackupOffset;
+			break;
+		case Suspend:
+			pSaveSlot = SuspendOffset;
+			break;
+		case LinkArena:
+			pSaveSlot = LinkArenaOffset;
+			break;
+		case SaveEmpty:
+			pSaveSlot = (u8 *)0xE008000; //Maybe Saved Debug Data, Useless now, so putting at unnaccessible sram
+			break;
+		default:
+			pSaveSlot = 0;
+	}
+
+	return pSaveSlot;
+}
+
 
 void SaveUnit(UnitStruct *Arg1, RevampedSavedUnit *CurrentSaveIndex) {
 	RevampedSavedUnit BufferedSavedUnit;
