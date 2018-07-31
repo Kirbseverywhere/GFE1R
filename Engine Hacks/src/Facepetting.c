@@ -1,32 +1,21 @@
 #include "Facepetting.h" 
 
 extern void GenerateBGTsa(u16 *MapOffset, u32 NumberOfTiles, u8 PaletteId);
-extern MenuDefinition MUMenuDefinition;
-extern u16 StatTextIdList[];
-extern u8 MaleClassList[];
-extern u8 FemaleClassList[];
-
-typedef struct {
-	u8 Class;
-	u8 Weapon;
-} ClassWeaponComparisonList;
-
-extern ClassWeaponComparisonList ClassWeaponList[];
 #define Font_ResetAllocation ((void (*)())(0x8003D21))
 #define BaseVarX 8
 #define BaseConstX 3
 
-void CreateTacticianScreen(u32 EventEngine) {
-	NewBlockingProc((u32 *)TacticianProcCode, EventEngine);
+void CreateFacepettingScreen(u32 EventEngine) {
+	NewBlockingProc((u32 *)FacepettingProcCode, EventEngine);
 }
 
-void TacticianScreenSetup(TacticianProc *CurrentProc) {
+void FacepettingScreenSetup(FacepettingProc *CurrentProc) {
 	CurrentProc->CursorXCoord = 240/2;
 	CurrentProc->CursorYCoord = 160/2;
-	DrawBase(CurrentProc);
+	DrawFacepetBase(CurrentProc);
 }
 
-void DrawBase(TacticianProc *CurrentProc) {
+void DrawFacepetBase(FacepettingProc *CurrentProc) {
 	
 	//Make it so the bg buffers update
 	SetupBG(0);
@@ -41,13 +30,13 @@ void DrawBase(TacticianProc *CurrentProc) {
 	InitText(0, 0);
 }
 
-void PrintConstantsTacticianScreen() {
-	PrintInline(0, BGLoc(BG0Buffer, 8, (160-24)/8), 0, 0, 10, "Ooooooh Yeah...");
+void PrintConstantsFacepettingScreen() {
+	PrintInline(0, BGLoc(BG0Buffer, 0, (160-24)/8), 0, 0, 30, "Use your divine lightning to pierce my sky, baby...");
 }
 
-void TacticianScreenLoop(TacticianProc *CurrentProc) {
+void FacepettingScreenLoop(FacepettingProc *CurrentProc) {
 	UpdateBG3HOffset();
-	DrawBase(CurrentProc);
+	DrawFacepetBase(CurrentProc);
 	Font_ResetAllocation();
 	DeleteFaceByIndex(0);
 	EnableAllGfx((u32)CurrentProc);
@@ -58,7 +47,7 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	else {
 	MakeUIWindow(0,(160-32)/8,240/8,4,1);
 	MakeUIPalette(-1);
-	PrintConstantsTacticianScreen();
+	PrintConstantsFacepettingScreen();
 	
 	if ((sInput->currentPress & InputUp) != 0) {
 		CurrentProc->CursorYCoord--;
@@ -80,17 +69,17 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	}
 }
 
-const _ProcCode TacticianProcCode[] = {
-	_PROC_SET_NAME("ASMC_KIRB_MU"),
+const _ProcCode FacepettingProcCode[] = {
+	_PROC_SET_NAME("ASMC_KIRB_FACEPET"),
 	_PROC_CALL_ROUTINE(LockGameLogic),
 	_PROC_CALL_ROUTINE_ARG(FadeToBlack, 0x10),
 	_PROC_CALL_ROUTINE(ClearOAM),
 	_PROC_WHILE_ROUTINE(ClearPalette),
 	_PROC_CALL_ROUTINE_ARG(FadeOut, 0x10),
-	_PROC_CALL_ROUTINE(TacticianScreenSetup),
+	_PROC_CALL_ROUTINE(FacepettingScreenSetup),
 	
 	//Main Logic
-	_PROC_LOOP_ROUTINE(TacticianScreenLoop),
+	_PROC_LOOP_ROUTINE(FacepettingScreenLoop),
 	//_PROC_CALL_ROUTINE_2(FixBG3Cam), //Replacing the BG3 Offset where it needs to be
 	_PROC_CALL_ROUTINE(LoadMapSprites),
 	//_PROC_CALL_ROUTINE(LoadMap),

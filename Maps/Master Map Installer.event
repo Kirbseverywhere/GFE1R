@@ -49,6 +49,9 @@
 #include "Ch6.event"
 }
 {
+#include "Ch6x.event"
+}
+{
 #include "Ch7.event"
 }
 {

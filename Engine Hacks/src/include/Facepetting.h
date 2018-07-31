@@ -14,14 +14,14 @@ typedef struct {
 	Proc Header;
 	u16 CursorXCoord;
 	u16 CursorYCoord;
-}TacticianProc;
+}FacepettingProc;
 
 
 
 void CreateTacticianScreen();
-void TacticianScreenSetup(TacticianProc *CurrentProc);
-void TacticianScreenLoop(TacticianProc *CurrentProc);
-const _ProcCode TacticianProcCode[];
-void DrawBase(TacticianProc *CurrentProc);
+void TacticianScreenSetup(FacepettingProc *CurrentProc);
+void TacticianScreenLoop(FacepettingProc *CurrentProc);
+const _ProcCode FacepettingProcCode[];
+void DrawFacepetBase(FacepettingProc *CurrentProc);
 #define DrawFace ((void (*)(u32 Index, u16 Portrait, u32 x, u32 y, u32 State))(0x800563C+1))
 #define DeleteFaceByIndex ((void (*)(u32 Index))(0x8005758+1))

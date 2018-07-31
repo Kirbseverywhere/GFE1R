@@ -9,7 +9,8 @@
 .equ Get_Def_Growth, Class_Level_Cap_Table+20
 .equ Get_Res_Growth, Class_Level_Cap_Table+24
 .equ Get_Luk_Growth, Class_Level_Cap_Table+28
-.equ Growth_Options, Class_Level_Cap_Table+32
+.equ Get_Mag_Growth, Class_Level_Cap_Table+32
+.equ Growth_Options, Class_Level_Cap_Table+36
 
 @jumped here from 2BA28
 @r0=battle struct of person who's levelling up
@@ -162,6 +163,23 @@ mov		r14,r6
 .short	0xF800
 mov		r1,r7
 add		r1,#0x78
+strb	r0,[r1]
+add		r5,r0
+cmp		r4,#0x0
+beq		MagGrowth
+cmp		r5,#0x0
+beq		MagGrowth
+b		CheckCaps
+
+MagGrowth:
+ldr		r0,Get_Mag_Growth
+mov		r14,r0
+mov		r0,r7
+.short	0xF800
+mov		r14,r6
+.short	0xF800
+mov		r1,r7
+add		r1,#0x7A
 strb	r0,[r1]
 add		r5,r0
 cmp		r4,#0x0

@@ -1,4 +1,8 @@
 #define __aeabi_uidiv 0x080d167C+1
+
+#define MaleMUCharID MyUnitMale
+#define FemaleMUCharID MyUnitFemale
+
 ALIGN 4
 #include "Main.event"
 
@@ -11,6 +15,9 @@ MESSAGE SaveFunctions at CURRENTOFFSET
 
 ALIGN 4
 #include "Tactician.event"
+
+ALIGN 4
+#include "Facepetting.event"
 
 ALIGN 4
 #include "Credits.event"
@@ -26,6 +33,7 @@ ORG 0x000AD8
 BL(0x01C090)
 #endif
 
+#define UnitDataTableSize 0x24
 //Saving units
 ORG $A5060
 BYTE UnitDataTableSize
@@ -86,15 +94,19 @@ FemaleClassList:
 BYTE Myrmidon_F PegasusKnight Archer_F Mage_F
 
 ClassWeaponList:
-BYTE Mercenary IronSword
-BYTE Cavalier IronLance
-BYTE Knight IronLance
-BYTE Mage Fire
-BYTE Myrmidon_F SlimSword
-BYTE PegasusKnight SlimLance
-BYTE Archer_F IronBow
-BYTE Mage_F Fire
-BYTE 0 0
+SHORT Mercenary; BYTE IronSword 46
+SHORT Cavalier; BYTE IronLance 45
+SHORT Knight; BYTE IronLance 45
+SHORT Mage; BYTE Fire 40
+SHORT Myrmidon_F; BYTE SlimSword 30
+SHORT PegasusKnight; BYTE SlimLance 30
+SHORT Archer_F; BYTE IronBow 45
+SHORT Mage_F; BYTE Fire 40
+SHORT 0 0
+
+CharIDTable:
+BYTE MyUnitMale
+BYTE MyUnitFemale
 
 #include "External\Credits.event"
 #include "External\Modifiers.event"

@@ -6,9 +6,19 @@ extern u16 StatTextIdList[];
 extern u8 MaleClassList[];
 extern u8 FemaleClassList[];
 
+#pragma long_calls
+
+UnitStruct *GetUnitByCharId(u8 CharID);
+
+#pragma long_calls_off
+
+extern u8 MaleMUCharID[];
+extern u8 FemaleMUCharID[];
+extern u8 CharIDTable[2];
+
 typedef struct {
-	u8 Class;
-	u8 Weapon;
+	u16 Class;
+	u16 Weapon;
 } ClassWeaponComparisonList;
 
 extern ClassWeaponComparisonList ClassWeaponList[];
@@ -120,7 +130,7 @@ void ClassButtonEffect(TacticianProc *CurrentProc) {
 }
 
 void ApplyMUDataChange() {
-	UnitStruct2 *MyUnit = ((UnitStruct2*)0x202C0D4);
+	UnitStruct2 *MyUnit = ((UnitStruct2*)GetUnitByCharId(CharIDTable[0]));
 	MyUnit->classDataPtr = (ClassData *)GetClassOffset(sMU->Class);
 	MyUnit->stats[sMU->Boon] += 2;
 	MyUnit->stats[sMU->Bane] -= 2;
@@ -137,7 +147,7 @@ void ApplyMUDataChange() {
 
 void ApplyMUCharacterChange() {
 	#define GetCharOffset ((u32 (*)(u32 ID))(0x8019464+1))
-	((UnitStruct*)0x202C0D4)->unitDataPtr = (UnitData *)GetCharOffset(8 + (sMU->Gender));
+	((UnitStruct*)GetUnitByCharId(CharIDTable[0]))->unitDataPtr = (UnitData *)GetCharOffset(CharIDTable[sMU->Gender]);
 }
 
 const _ProcCode TacticianProcCode[] = {

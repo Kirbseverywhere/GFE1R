@@ -21,18 +21,18 @@ typedef struct __attribute__ ((packed)) {
 	u32 Unk2:1; //5
 	u32 UndeployedInPreviousChapter:1; //6
 	
-	//u32 Unk3:5; //Maybe Free? //11
+	u32 Mag:5; //Maybe Free? //11
 	
 	//Stats
 	u32 MaxHP:6; //17
-	u32 Pow:6; //22
-	u32 Skl:6; //27
-	u32 Spd:6; //31|0 //0x8
-	u32 Def:6; //5
-	u32 Res:6; //10
-	u32 Lck:6; //15 //All stats used to be 5
+	u32 Pow:5; //22
+	u32 Skl:5; //27
+	u32 Spd:5; //31|0 //0x8
+	u32 Def:5; //5
+	u32 Res:5; //10
+	u32 Lck:5; //15
 	u32 ConBonus:5; //20
-	u32 MovBonus:4; //25 // Used to be 5
+	u32 MovBonus:5; //25
 	
 	//Items
 	u32 Item1:14; //31|7 //0xC

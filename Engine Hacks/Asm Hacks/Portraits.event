@@ -29,7 +29,7 @@ BYTE 0x2
 ORG 0x1C132
 BYTE Marth
 ORG 0x1C1A0
-BYTE 0x2 //All of these are for the debug bootup(yes this is basically useless but fuck you)
+BYTE 0x2 //debug bootup(yes this is basically useless)
 
 ORG 0x2DB50
 BYTE 0x2 //Fixing backing out of trading
@@ -81,10 +81,20 @@ ORG 0xA2A5E
 BYTE 0x70
 
 //Fixing Prep Screen Trading
-ORG 0x99D5C
+/*ORG 0x99D5C
 BYTE 0x2
 ORG 0x989E0
 BYTE 0x2
+ORG 0x99BDE
+BYTE 0x2*/
+ORG 0x205C14
+WORD 0x4000
+ORG 0x205C1C
+WORD 0x6000
+ORG 0x205C44
+WORD 0x4000
+ORG 0x205C4C
+WORD 0x6000
 
 ORG 0x5A0838
 #incbin "bin\NewStatScreenPortraitTsa.bin"

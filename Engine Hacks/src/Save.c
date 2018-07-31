@@ -55,6 +55,7 @@ void SaveUnit(UnitStruct *Arg1, RevampedSavedUnit *CurrentSaveIndex) {
 	BufferedSavedUnit.yPos = CurrentUnit->yPos;
 	BufferedSavedUnit.MaxHP = CurrentUnit->maxHP;
 	BufferedSavedUnit.Pow = CurrentUnit->pow;
+	BufferedSavedUnit.Mag = CurrentUnit->mag;
 	BufferedSavedUnit.Skl = CurrentUnit->skl;
 	BufferedSavedUnit.Spd = CurrentUnit->spd;
 	BufferedSavedUnit.Def = CurrentUnit->def;

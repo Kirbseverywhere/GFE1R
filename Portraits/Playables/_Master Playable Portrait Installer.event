@@ -1,4 +1,5 @@
 setMugEntry(Marth, MarfPortrait, 3, 6, 3, 4)
+//setMugEntry(Marth, MarfPortrait, 4, 11, 4, 9)
 setMugEntry(Jagen, JagenPortrait, 3, 5, 3, 2)
 setMugEntry(Caeda, CaedaPortrait, 3, 6, 3, 4)
 setMugEntry(Abel, AbelPortrait, 3, 5, 3, 3)
@@ -12,16 +13,20 @@ setMugEntry(Wrys, WrysPortrait, 2, 5, 2, 3)
 setMugEntry(Ogma, OgmaPortrait, 1, 5, 1, 3)
 setMugEntry(Barst, BarstPortrait, 5, 5, 5, 3)
 setMugEntry(Bord, BordPortrait, 3, 6, 3, 3)
+setMugEntry(Cord, CordPortrait, 2, 5, 2, 3)
 setMugEntry(Darros, DarrosPortrait, 3, 4, 3, 2)
 setMugEntry(Castor, CastorPortrait, 4, 6, 4, 4)
 setMugEntry(Julian, JulianPortrait, 3, 5, 3, 3)
 setMugEntry(Lena, LenaPortrait, 4, 5, 4, 3)
 setMugEntry(Navarre, NavarrePortrait, 4, 5, 4, 3)
+setMugEntry(Merric, MerricPortrait, 3, 6, 3, 4)
+setMugEntry(Matthis, MatthisPortrait, 3, 6, 3, 4)
 setMugEntry(Hardin, HardinPortrait, 3, 5, 3, 3)
 setMugEntry(Wolf, WolfPortrait, 2, 5, 2, 3)
 setMugEntry(Sedgar, SedgarPortrait, 2, 5, 3, 3)
 setMugEntry(Roshea, RosheaPortrait, 2, 5, 2, 3)
 setMugEntry(Vyland, VylandPortrait, 3, 5, 3, 3)
+setMugEntry(Wendell, WendellPortrait, 3, 6, 3, 4)
 setMugEntry(Ricard, RickardPortrait, 3, 6, 3, 4)
 setMugEntry(Athena, AthenaPortrait, 3, 5, 3, 3)
 setMugEntry(Minerva, MinervaPortrait, 4, 5, 4, 3)
@@ -32,6 +37,7 @@ setMugEntry(0x69, NynaPortrait, 1, 5, 1, 3)
 
 MarfPortrait:
 #incext HalfbodyFormatter "Marf.png"
+//#incext HalfbodyFormatter "Arch.png"
 
 JagenPortrait:
 #incext HalfbodyFormatter "Jagen.png"
@@ -72,6 +78,9 @@ BarstPortrait:
 BordPortrait:
 #incext HalfbodyFormatter "Bord.png"
 
+CordPortrait:
+#incext HalfbodyFormatter "Cord.png"
+
 DarrosPortrait:
 #incext HalfbodyFormatter "Darros.png"
 
@@ -87,6 +96,12 @@ LenaPortrait:
 NavarrePortrait:
 #incext HalfbodyFormatter "Navarre.png"
 
+MerricPortrait:
+#incext HalfbodyFormatter "Merric.png"
+
+MatthisPortrait:
+#incext HalfbodyFormatter "Matthis.png"
+
 HardinPortrait:
 #incext HalfbodyFormatter "Hardin.png"
 
@@ -101,6 +116,9 @@ RosheaPortrait:
 
 VylandPortrait:
 #incext HalfbodyFormatter "Vyland.png"
+
+WendellPortrait:
+#incext HalfbodyFormatter "Wendell.png"
 
 RickardPortrait:
 #incext HalfbodyFormatter "Rickard.png"

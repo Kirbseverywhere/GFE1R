@@ -75,7 +75,7 @@ typedef struct {
     u8 barrierDuration:4;
 	u8 supports[7];
 	u8 supportBits;
-	u8 u3A;
+	u8 mag;
 	u8 u3B;
 	void* BWLPointer;
 	u16 ai3And4;
@@ -124,6 +124,51 @@ typedef struct {
 	u8 u46_saved;
 	u8 u47;
 } UnitStruct2;
+
+typedef struct {
+	UnitStruct unit;
+	u16 weaponAfter;
+	u16 weaponBefore;
+	u32 weaponAttributes;
+	u8  weaponType;
+	u8  weaponSlotIndex;
+	u8  canCounter;
+	s8   WTHitModifier;
+	s8   WTAtkModifier;
+	u8  terrainIndex;
+	u8  terrainDefense;
+	u8  terrainAvoid;
+	u8  terrainResistance;
+	u8  _u59;
+	u16 battleAttack;
+	u16 battleDefense;
+	u16 battleAttackSpeed;
+	u16 battleHit;
+	u16 battleAvoid;
+	u16 battleEffectiveHit;
+	u16 battleCrit;
+	u16 battleDodge;
+	u16 battleEffectiveCrit;
+	u16 battleSilencerRate;
+	u8  expGain;
+	u8  statusOut;
+	u8  levelPrevious;
+	u8  expPrevious;
+	u8  currentHP;
+	s8   changeHP;
+	s8   changePow;
+	s8   changeSkl;
+	s8   changeSpd;
+	s8   changeDef;
+	s8   changeRes;
+	s8   changeLck;
+	s8   changeCon;
+	s8   wexpMultiplier;
+	u8  nonZeroDamage;
+	u8  weaponBroke;
+	u8  _u7E;
+	u8  _u7F;
+}BattleUnitStruct;
 
 #define sPlayerUnits ((UnitStruct*)0x202BE4C)
 #define sEnemyUnits ((UnitStruct*)0x202CFBC)

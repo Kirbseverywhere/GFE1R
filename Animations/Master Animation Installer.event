@@ -12,6 +12,7 @@
 //////////////Installed animations go here:
 
 #include "Marth Installer.event"
+#include "Disarmed Marth Installer.event"
 #include "SwordCav Installer.event"
 #include "LanceCav Installer.event"
 #include "DisarmedCav Installer.event"

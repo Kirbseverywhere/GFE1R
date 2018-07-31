@@ -3,6 +3,10 @@
 #include "Tools/Tool Helpers.txt"
 #include "Text Definitions.event"
 
+TxtData0x0581:
+#incext ParseFile "_textentries\0x0581.txt"
+setText(0x0581,TxtData0x0581)
+
 TxtData0x0094:
 #incext ParseFile "_textentries\0x0094.txt"
 setText(0x0094,TxtData0x0094)
