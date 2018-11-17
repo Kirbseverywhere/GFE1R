@@ -2,7 +2,7 @@
 
 #include eastdlib.event
 
-SetChapterData(0x13,0x18,0,0x57,0x1a,0x58,Map,0,0,0x59)
+SetChapterData(0x13,CastleObjType,0,CastlePalette2,CastleTileConfig,0x14,Map,0,0,0x59)
 EventPointerTable(0x59, MapChanges)
 Map:
 #incbin "Ch17x_data.dmp"

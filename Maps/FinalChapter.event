@@ -2,6 +2,6 @@
 
 #include eastdlib.event
 
-SetChapterData(0x1D,0x18,0,0x57,0x1A,0x49,Map,5,0,0)
+SetChapterData(0x1D,CastleObjType,0,CastlePalette3,CastleTileConfig,0x1E,Map,5,0,0)
 Map:
 #incbin "FinalChapter_data.dmp"

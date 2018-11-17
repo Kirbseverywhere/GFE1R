@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="23" height="30" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="23" height="30" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="1">
  <tileset firstgid="1" name="8800898A" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../../Map/Tilesets/FE8/8800898A.png" width="512" height="512"/>
+  <image source="Tilesets/8800898A.png" width="512" height="512"/>
  </tileset>
- <layer name="Main Map" width="23" height="30">
+ <layer id="1" name="Main Map" width="23" height="30">
   <properties>
    <property name="Anims1" value="0"/>
    <property name="ChapterID" value="0x1C"/>
    <property name="Main" value=""/>
-   <property name="MapID" value="0x45"/>
-   <property name="ObjectType1" value="0x88"/>
-   <property name="PaletteID" value="0x89"/>
-   <property name="TileConfig" value="0x8A"/>
+   <property name="MapID" value="0x1D"/>
+   <property name="ObjectType1" value="TempleObjType"/>
+   <property name="PaletteID" value="TemplePalette1"/>
+   <property name="TileConfig" value="TempleTileConfig"/>
   </properties>
   <data encoding="csv">
 433,307,307,307,434,164,164,164,433,308,308,13,308,308,434,164,164,164,433,307,307,307,434,
@@ -46,7 +46,7 @@
 273,241,273,241,273,241,273,241,273,241,273,241,273,241,273,241,273,241,273,241,273,241,273
 </data>
  </layer>
- <layer name="door open 1" width="23" height="30">
+ <layer id="2" name="door open 1" width="23" height="30">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="7"/>
@@ -88,7 +88,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="door open 2" width="23" height="30">
+ <layer id="3" name="door open 2" width="23" height="30">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="8"/>
@@ -129,7 +129,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="chest open 1" width="23" height="30">
+ <layer id="4" name="chest open 1" width="23" height="30">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="9"/>
@@ -170,7 +170,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="chest open 2" width="23" height="30">
+ <layer id="5" name="chest open 2" width="23" height="30">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="10"/>

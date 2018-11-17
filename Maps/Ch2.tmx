@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="32" height="14" tilewidth="16" tileheight="16" infinite="0" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="32" height="14" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" name="1C1D1E1F" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../Other People's Maps/01000203.png" trans="ffffff" width="512" height="512"/>
+  <image source="Tilesets/Plains FE1 Style.png" trans="ffffff" width="512" height="512"/>
  </tileset>
- <layer name="Tile Layer 1" width="32" height="14">
+ <layer id="1" name="Tile Layer 1" width="32" height="14">
   <properties>
    <property name="Anims1" value="5"/>
    <property name="ChapterID" value="1"/>
    <property name="Main" value=""/>
-   <property name="MapID" value="8"/>
-   <property name="ObjectType1" value="1"/>
-   <property name="PaletteID" value="0x38"/>
-   <property name="TileConfig" value="3"/>
+   <property name="MapID" value="2"/>
+   <property name="ObjectType1" value="FieldsObjType"/>
+   <property name="PaletteID" value="FieldsPalette1"/>
+   <property name="TileConfig" value="FieldsTileConfig"/>
   </properties>
   <data>
    <tile gid="104"/>
@@ -464,7 +464,7 @@
    <tile gid="214"/>
   </data>
  </layer>
- <layer name="Map Change 0" width="32" height="14" visible="0">
+ <layer id="2" name="Map Change 0" width="32" height="14" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="7"/>

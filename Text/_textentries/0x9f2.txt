@@ -1,1 +1,6 @@
+[OpenRight][LoadMarth]
+Free money![A] but wait,[N]
+where are the villagers?[N]
+maybe their portraits aren't[A][N]
+done? weird...[A]
 [X]

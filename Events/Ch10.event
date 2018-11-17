@@ -68,6 +68,7 @@ LOAD1 0x1 MinervaUnit
 LOAD1 0x1 MariaUnit
 LOAD1 0x1 Enemies2
 LOAD2 0x1 Units
+GotoPrepScreen
 ENDA
 
 EndingScene:

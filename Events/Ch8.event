@@ -30,7 +30,7 @@ UNIT Jagen Paladin 0x0 Level(1,Ally,0) [6,18] 0b 0x0 0x0 0x0 [0x0,0x0,0x0,0x0] N
 UNIT
 
 Bad: 
-UNIT Kannival General 0x0 Level(2,Enemy,0) [12,13] 0b 0x0 0x0 0x0 [SilverLance] NeverMoveAI
+UNIT Kannival General 0x0 Level(2,Enemy,0) [26,11] 0b 0x0 0x0 0x0 [SilverLance] NeverMoveAI
 //Right Forts
 UNIT 0x80 Archer Kannival Level(10,Enemy,1) [12,2] 0b 0x0 0x0 0x0 [SteelBow] AttackInRangeAI
 UNIT 0x80 Archer Kannival Level(10,Enemy,1) [13,3] 0b 0x0 0x0 0x0 [IronBow] AttackInRangeAI

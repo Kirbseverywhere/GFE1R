@@ -4,5 +4,7 @@
 #include "Chapters/Ch4.txt"
 #include "Chapters/Ch5.txt"
 #include "Chapters/Ch6.txt"
+#include "Chapters/Ch6x.txt"
 #include "Chapters/Ch7.txt"
+#include "Chapters/Ch11.txt"
 #include "Chapters/Ch20.txt"

@@ -1,6 +1,6 @@
 #define csvmacro012(arg000,arg001) "BYTE arg000 arg001 "
 
-#inctext PFinder "F:\Fehacking\new\ASM\Lyn_C\FE8_clean.gba" 0xd10000 MagCharTable
+#inctext PFinder "C:\Users\ansqu\Desktop\FE Hacking\GFE1R(Old)\FE8_clean.gba" 0xd10000 MagCharTable
 
 ALIGN 4
 MagCharTable:

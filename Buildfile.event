@@ -38,7 +38,6 @@ ALIGN 4
 
 ALIGN 4
 #include "Graphics\_Master Graphics Installer.event"
-#incext PFinder "FE8_Clean.gba" 0x5B6BB4 FE11MenuTilesPalette
 
 ALIGN 4
 #include "Animations\Master Animation Installer.event"
@@ -51,6 +50,9 @@ ALIGN 4
 
 ALIGN 4
 #include "Maps\Master Map Installer.event"
+
+ALIGN 4
+#include "Maps\Tilesets\Master Tileset Installer.event"
 
 ALIGN 4
 #include "Music\Master Music Installer.event"

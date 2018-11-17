@@ -1,3 +1,4 @@
+
 ## TacticianCreationText
 [OpenMidLeft][LoadMarth]Please Create a Unit.[A][X]
 
@@ -27,8 +28,10 @@ into battle, and restore peace to the land.[A]
 [OpenMidLeft]Yes, I've been told this same thing[NL]
 for the past year...[A][NL]
 We've been planning to depart for so long...[A][NL]
-Yet we hide away on Talys, waiting for what?[A][NL]
-Our allies in Aurelis, the last sovereign state...[A][NL]
+Yet we hide away on Talys,[NL]
+waiting for what?[A][NL]
+Our allies in Aurelis,[NL]
+the last sovereign state...[A][NL]
 They're fighting, they fight the Alliance[NL]
 every day![A] We should be there, Jagen,[NL]
 standing by their side!
@@ -40,7 +43,8 @@ standing by their side!
 I grant you that.[A][NL]
 But our men stand, [NL]
 ready to fight by your side![A][NL]
-We stand ready to fight against the darkness,[NL]
+We stand ready to fight,[NL]
+against the darkness,[A][NL]
 to join you in striving,[A][NL]
 to create a better tomorrow.[A][NL]
 We simply await your orders, Prince Marth.[A][NL]
@@ -139,13 +143,16 @@ We won't disappoint, Lord Marth![A][NL]
 I'll go get [Tact] right now.[A][NL]
 From here on out, we're knights of Altea![A][2NL]
 [OpenFarRight][ClearFace][OpenFarLeft]
-Wait... [Tact]... Don't tell me you forgot[NL]
-your weapons again! You dummy![A][NL]
-Ugh, go buy them at the local armory,[NL]
-I guess. Here's some money.[A]
+Oh, by the way, I brought a bit of Money.[A][N]
+I hope that'll help![A]
 [X]
 
 ##CH1Village1Text
+[OpenRight][LoadMarth]
+Free money![A] but wait,[N]
+where are the villagers?[N]
+maybe their portraits aren't[A][N]
+done? weird...[A]
 [X]
 
 ##CH1WrysRecruitmentText
@@ -158,5 +165,4 @@ and you'll be very glad you did.[A]
 [X]
 
 ##PrologueOutro
-
 [X]

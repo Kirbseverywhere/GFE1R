@@ -6,6 +6,7 @@ POIN MenuStyleGraphicsTable
 ORG $4E0D0
 POIN MenuStylePaletteTable
 
+
 //Minimug box, may not be needed for some but shrug
 ORG $8C2EC
 POIN FE11MenuTilesPalette //Ally
@@ -28,25 +29,43 @@ POP
 ALIGN 4
 MenuStyleGraphicsTable:
 POIN FE11MenuTilesGraphics
-POIN FE11MenuTilesGraphics
-POIN FE11MenuTilesGraphics
-POIN FE11MenuTilesGraphics
+POIN FE1MenuTilesGraphics
+POIN FE3MenuTilesGraphics
+POIN FE8MenuTilesGraphics
 
 MenuStylePaletteTable:
 POIN FE11MenuTilesPalette
-POIN FE11MenuTilesPalette+0x20
-POIN FE11MenuTilesPalette+0x40
-POIN FE11MenuTilesPalette+0x60
+POIN FE1MenuTilesPalette
+POIN FE3MenuTilesPalette
+POIN FE8MenuTilesPalette
 
 
 FE11MenuTilesGraphics:
-#incext Png2Dmp "FE11_MenuTiles Formatted.png" --lz77
+#incext Png2Dmp "FE11_MenuTiles.png" --lz77
 
 FE11FrameTilesGraphics:
-#incext Png2Dmp "FE11_FrameTiles Formatted.png" --lz77
+#incext Png2Dmp "FE11_FrameTiles.png" --lz77
 
 FE11MenuTilesPalette:
-#incext Png2Dmp "FE11_MenuTiles Formatted.png" --palette-only
+#incext Png2Dmp "FE11_MenuTiles.png" --palette-only
+
+FE1MenuTilesGraphics:
+#incext Png2Dmp "FE1_MenuTiles.png" --lz77
+
+FE1MenuTilesPalette:
+#incext Png2Dmp "FE1_MenuTiles.png" --palette-only
+
+FE3MenuTilesGraphics:
+#incext Png2Dmp "FE3_MenuTiles.png" --lz77
+
+FE3MenuTilesPalette:
+#incext Png2Dmp "FE3_MenuTiles.png" --palette-only
+
+FE8MenuTilesGraphics:
+#incext Png2Dmp "FE8_MenuTiles.png" --lz77
+
+FE8MenuTilesPalette:
+#incext Png2Dmp "FE8_MenuTiles.png" --palette-only
 
 
 ALIGN 4

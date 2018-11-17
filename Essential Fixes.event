@@ -46,8 +46,10 @@ PUSH
   SHORT 0
 
 //Skip Intro cutscene
-  ORG $C6714
-  SHORT 0
+  /*ORG $C6714
+  SHORT 0*/
+  ORG $AA71C8
+  WORD 0
 
 //Skip New Game text
   ORG $C4928

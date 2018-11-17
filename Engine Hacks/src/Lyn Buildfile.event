@@ -30,7 +30,7 @@ PUSH
 
 #ifdef DEBUG
 ORG 0x000AD8
-BL(0x01C090)
+//BL(0x01C090)
 #endif
 
 #define UnitDataTableSize 0x24
@@ -85,7 +85,7 @@ ClassDef:
 MenuDefinition(0, 8*8, 16*8, ClassButtonEffect, 0, BaneDef, 0, 0, NameDef)
 
 StatTextIdList:
-SHORT 0x4EB 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x00 //0 Terminating not needed but why not
+SHORT 0x4FE 0x4EC 0x4ED 0x4EE 0x4EF 0x4F0 0x00 //0 Terminating not needed but why not
 
 MaleClassList:
 BYTE Mercenary Cavalier Knight Mage

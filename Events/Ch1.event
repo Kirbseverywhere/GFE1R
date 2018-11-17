@@ -84,7 +84,7 @@ LocationBasedEvents:
 Seize(5,4)
 Seize(25,7)
 Village(8,TopRightVillage,28,5)
-Village(9,DownLeftVillage,4,9)
+Village(9,DownLeftVillage,4,10)
 Armory(Ch1Armory, 26, 2)
 END_MAIN
 
@@ -118,17 +118,17 @@ MUSC ST_CombatMission
 LOAD1 0x1 GazzakBaddie
 LOAD1 0x1 GreenUnit
 ClearBackground
-MOVE 10 Gazzak [5,5]
+MOVE 20 Gazzak [5,5]
 ENUN
 DISA 0x81
 SOUN 0xD6
 ENUN
-MOVE 10 Gazzak [5,4]
+MOVE 20 Gazzak [5,4]
 ENUN
 LOAD1 0x1 Marf
 LOAD1 0x1 WaifuEscape
 EVBIT_T 9
-MOVE 10 Caeda [25,7]
+MOVE 20 Caeda [25,7]
 ENUN
 SetBackground(0x25)
 Text(PrologueIntro2)
@@ -203,11 +203,11 @@ UNIT MyUnitMale Knight 0x00 Level(1, Ally, 1) [16,3] 0x00 0x00 0x0 0x00 [0] NoAI
 UNIT
 
 RandomBoat:
-UNIT 0x45 Fleet 0x00 Level(1, Ally, 0) [14,0] 0x00 0x00 0x0 0x00 [0] NoAI 
+UNIT 0x45 Fleet 0x00 Level(1, NPC, 0) [12,0] 0x00 0x00 0x0 0x00 [0] NoAI 
 UNIT
 
 OldMan:
-UNIT Wrys Priest 0x00 Level(1, Ally, 0) [4,10] 0x00 0x00 0x0 0x00 [Heal] NoAI 
+UNIT Wrys Priest 0x00 Level(1, Ally, 0) [4,11] 0x00 0x00 0x0 0x00 [Heal] NoAI 
 UNIT
 
 // Shop Data

@@ -1,0 +1,34 @@
+// Palettes
+
+
+FE1StyleTilesetPal:
+#incext Png2Dmp "Plains FE1 Style.png" --palette-only
+
+/*Ch6TilesetPal:
+#incext Png2Dmp "Chapter 6.png" --palette-only
+
+Ch12TilesetPal:
+*/
+
+Ch182021TilesetPal:
+#incext Png2Dmp "Frigid Test.png" --palette-only
+
+ALIGN 4
+
+MountainsTileConfigData:
+#incext Compress "Mountain + Castle\TileConfig.bin"
+
+MountainsGFX:
+#incext Png2Dmp "Mountain + Castle\Graphics.png" --lz77
+
+ALIGN 4
+DesertTiles:
+#incext compress "Better Desert/BetterDesert.mapchip_config"
+ALIGN 4
+
+DesertObjects:
+#incext Png2Dmp "Better Desert/BetterDesert.png" --lz77
+ALIGN 4
+
+DesertPalette:
+#incbin "Better Desert/BetterDesertPalette.dmp"

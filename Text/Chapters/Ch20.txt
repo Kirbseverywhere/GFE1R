@@ -1,3 +1,9 @@
+##Ch20Opening
+[X]
+
+##Ch20Ending
+[X]
+
 ##CamusBossConvo
 [OpenLeft][LoadCamus]
 With this lance, Gradivus,[NL]

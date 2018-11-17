@@ -90,6 +90,7 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	
 	if ((sInput->newPress & InputUp) != 0) {
 		if (CurrentProc->CurrentDef->UpDef != 0) CurrentProc->CurrentDef = ((MenuDefinition *)CurrentProc->CurrentDef->UpDef);
+		PlaySound(0x66);
 	}
 	
 	if ((sInput->newPress & InputRight) != 0) {
@@ -102,6 +103,7 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 	
 	if ((sInput->newPress & InputDown) != 0) {
 		if (CurrentProc->CurrentDef->DownDef != 0) CurrentProc->CurrentDef = ((MenuDefinition *)CurrentProc->CurrentDef->DownDef);
+		PlaySound(0x66);
 	}
 	
 	if ((sInput->newPress & InputA) != 0) {
@@ -114,19 +116,23 @@ void TacticianScreenLoop(TacticianProc *CurrentProc) {
 }
 
 void GenderButtonEffect() {
+	PlaySound(0x66);
 	sMU->Gender++;
 }
 
 void BoonButtonEffect() {
 	if (sMU->Boon < 5) sMU->Boon++; else sMU->Boon = 0;
+	PlaySound(0x66);
 }
 
 void BaneButtonEffect() {
 	if (sMU->Bane < 5) sMU->Bane++; else sMU->Bane = 0;
+	PlaySound(0x66);
 }
 
 void ClassButtonEffect(TacticianProc *CurrentProc) {
 	if (CurrentProc->ClassIndex < 3) CurrentProc->ClassIndex++; else CurrentProc->ClassIndex = 0;
+	PlaySound(0x66);
 }
 
 void ApplyMUDataChange() {

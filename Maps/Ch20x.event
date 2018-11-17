@@ -2,6 +2,6 @@
 
 #include eastdlib.event
 
-SetChapterData(0x17,0x50,0,0x51,0x52,0x69,Map,0,0,0)
+SetChapterData(0x17,LavaCastleObjType,0,LavaCavePalette1,LavaCaveTileConfig,0x18,Map,0,0,0)
 Map:
 #incbin "Ch20x_data.dmp"

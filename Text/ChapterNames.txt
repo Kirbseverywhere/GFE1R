@@ -17,73 +17,73 @@ Ch. 5: Champions of Aurelis[X]
 Ch. 6: Fia Emburem[X]
 
 ## Ch6xName
-Ch. 6x[X]
+Ch. 6x: In War's Grip[X]
 
 ## Ch7Name
-Ch. 7[X]
+Ch. 7: Lefcandith Gauntlet[X]
 
 ## Ch8Name
-Ch. 8[X]
+Ch. 8: Port Warren[X]
 
 ## Ch9Name
-Ch. 9[X]
+Ch. 9: The Pyrathi Dragon[X]
 
 ## Ch10Name
-Ch. 10[X]
+Ch. 10: Princess Minerva[X]
 
 ## Ch11Name
-Ch. 11[X]
+Ch. 11: Knorda Market[X]
 
 ## Ch12Name
-Ch. 12[X]
+Ch. 12: The Ageless Palace[X]
 
 ## Ch12xName
-Ch. 12x[X]
+Ch. 12x: A Traitor's Worth[X]
 
 ## Ch13Name
-Ch. 13[X]
+Ch. 13: The Wooden Cavalry[X]
 
 ## Ch14Name
-Ch. 14[X]
+Ch. 14: Land of Sorrow[X]
 
 ## Ch15Name
-Ch. 15[X]
+Ch. 15: An Oasis of Magic[X]
 
 ## Ch16Name
-Ch. 16[X]
+Ch. 16: The Battle for Altea[X]
 
 ## Ch17Name
-Ch. 17[X]
+Ch. 17: Star and Savior[X]
 
 ## Ch17xName
-Ch. 17x[X]
+Ch. 17x: Helena Castle[X]
 
 ## Ch18Name
-Ch. 18[X]
+Ch. 18: The Sable Order[X]
 
 ## Ch19Name
-Ch. 19[X]
+Ch. 19: Manakete Princess[X]
 
 ## Ch20Name
-Ch. 20[X]
+Ch. 20: Camus the Sable[X]
 
 ## Ch20xName
-Ch. 20x[X]
+Ch. 20x: The Lair of Fire[X]
 
 ## Ch21Name
-Ch. 21[X]
+Ch. 21: Clash in Macedon[X]
 
 ## Ch22Name
-Ch. 22[X]
+Ch. 22: A Knight-Filled Sky[X]
 
 ## Ch23Name
-Ch. 23[X]
+Ch. 23: Dark Pontifex[X]
 
 ## Ch24Name
-Ch. 24[X]
+Ch. 24: The Dragonkin Realm[X]
 
 ## Ch24xName
-Ch. 24x[X]
+Ch. 24x: The Alterspire[X]
 
 ## FinalChapterName
-Final Chapter[X]
+Final Chapter: Chosen by Fate[X]

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="31" height="29" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="31" height="29" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" name="FE8 - Castle - 1800481a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../../Map/Tilesets/FE8/1800571A.png" trans="ffffff" width="512" height="512"/>
+  <image source="Tilesets/Endgame.png" trans="ffffff" width="512" height="512"/>
  </tileset>
- <layer name="Main" width="31" height="29">
+ <layer id="1" name="Main" width="31" height="29">
   <properties>
    <property name="Anims1" value="5"/>
    <property name="ChapterID" value="0x1D"/>
    <property name="Main" value=""/>
-   <property name="MapID" value="0x49"/>
-   <property name="ObjectType1" value="0x18"/>
-   <property name="PaletteID" value="0x57"/>
-   <property name="TileConfig" value="0x1A"/>
+   <property name="MapID" value="0x1E"/>
+   <property name="ObjectType1" value="CastleObjType"/>
+   <property name="PaletteID" value="CastlePalette3"/>
+   <property name="TileConfig" value="CastleTileConfig"/>
   </properties>
   <data>
    <tile gid="523"/>

@@ -2,13 +2,13 @@
 
 #include eastdlib.event
 
-SetChapterData(11,1,0,0x38,3,0x31,Map,5,0,0x32)
+SetChapterData(11,FieldsObjType,0,FieldsPalette1,FieldsTileConfig,12,Map,5,0,0x32)
 EventPointerTable(0x32, MapChanges)
 Map:
 #incbin "Ch11_data.dmp"
 
 MapChanges:
-TileMap(0,27,21,1,1,Map_Change_0)
+TileMap(7,27,21,1,1,Map_Change_0)
 TileMapEnd
 
 Map_Change_0:

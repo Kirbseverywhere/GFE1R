@@ -110,6 +110,7 @@
 
 //Items
 #define Bowgun 0xBC
+#define Gradivus 0x8E
 
 #define Srank 251
 #define Arank 181

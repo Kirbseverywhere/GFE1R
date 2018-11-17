@@ -12,11 +12,6 @@ DonateToKirbBGPal:
 ALIGN 4
 
 PUSH
-ORG 0x1AE5B0
-#incext Png2Dmp "Plains Edited Palette.png" --palette-only
-POP
-
-PUSH
 ORG $88638
 POIN NewStatScreen
 ORG $88620
@@ -87,5 +82,44 @@ ALIGN 4
 DragonTsa:
 #incbin "DragonTsa.bin"
 
+PUSH
+ORG 0x896A4
+POIN TitleScreenMenuBannerGfx
+ORG 0x895E0
+POIN TitleScreenMenuBannerPal
+ORG 0xA8EDC
+POIN TitleScreenMenuOptionsGfx
+ORG 0xA8EE4
+POIN TitleScreenMenuOptionsPal
+POP
 
+TitleScreenMenuBannerGfx:
+#incext Png2Dmp "Banner.png" --lz77
 
+TitleScreenMenuBannerPal:
+#incext Png2Dmp "Banner.png" --palette-only
+
+TitleScreenMenuOptionsGfx:
+#incext Png2Dmp "Menu Options.png" --lz77
+
+TitleScreenMenuOptionsPal:
+#incext Png2Dmp "Menu Options.png" --palette-only
+
+ALIGN 4
+
+PUSH
+ORG 0xB10630
+#incext Png2Dmp "Disclaimer.png" --lz77
+/*ORG 0xB10ABC
+#incext Png2Dmp "Disclaimer.png" --palette-only*/
+ORG 0xCC0F8
+POIN DisclaimerPal
+ORG 0xCBED4
+POIN DisclaimerTSA
+POP
+
+DisclaimerTSA:
+#incbin "DisclaimerTSA.bin"
+
+DisclaimerPal:
+#incext Png2Dmp "Disclaimer.png" --palette-only

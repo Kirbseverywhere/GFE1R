@@ -1767,3 +1767,35 @@ TxtData0xac5:
 #incext ParseFile "_textentries\0xac5.txt"
 setText(0xac5,TxtData0xac5)
 
+TxtData0xac6:
+#incext ParseFile "_textentries\0xac6.txt"
+setText(0xac6,TxtData0xac6)
+
+TxtData0xac7:
+#incext ParseFile "_textentries\0xac7.txt"
+setText(0xac7,TxtData0xac7)
+
+TxtData0xac8:
+#incext ParseFile "_textentries\0xac8.txt"
+setText(0xac8,TxtData0xac8)
+
+TxtData0xac9:
+#incext ParseFile "_textentries\0xac9.txt"
+setText(0xac9,TxtData0xac9)
+
+TxtData0xaca:
+#incext ParseFile "_textentries\0xaca.txt"
+setText(0xaca,TxtData0xaca)
+
+TxtData0xacb:
+#incext ParseFile "_textentries\0xacb.txt"
+setText(0xacb,TxtData0xacb)
+
+TxtData0xacc:
+#incext ParseFile "_textentries\0xacc.txt"
+setText(0xacc,TxtData0xacc)
+
+TxtData0xacd:
+#incext ParseFile "_textentries\0xacd.txt"
+setText(0xacd,TxtData0xacd)
+

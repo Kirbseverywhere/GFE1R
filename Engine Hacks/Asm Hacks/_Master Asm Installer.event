@@ -8,7 +8,7 @@ POP
 #include "Portraits.event"
 #include "Chapter.event"
 #include "Skill System\_MasterHackInstaller.event"
-#include "ModularMinimugBox\Modular MMB Installer.txt"
+#include "ModularMinimugBox\MMB Installer GFE1R.event"
 #include "Suspend.event"
 #include "PointerList.event"
 #include "Str Mag Split\Installer.event"

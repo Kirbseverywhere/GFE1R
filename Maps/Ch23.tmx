@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
  <tileset firstgid="1" source="Tilesets/SSCASTLE.tsx"/>
- <layer name="Main" width="32" height="32">
+ <layer id="1" name="Main" width="32" height="32">
   <properties>
    <property name="Anims1" value="0"/>
    <property name="ChapterID" value="0x1A"/>
    <property name="Main" value=""/>
-   <property name="MapID" value="0x76"/>
-   <property name="ObjectType1" value="0x18"/>
-   <property name="PaletteID" value="0x48"/>
-   <property name="TileConfig" value="0x1A"/>
+   <property name="MapID" value="0x1B"/>
+   <property name="ObjectType1" value="CastleObjType"/>
+   <property name="PaletteID" value="CastlePalette2"/>
+   <property name="TileConfig" value="CastleTileConfig"/>
   </properties>
   <data encoding="csv">
 725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,725,

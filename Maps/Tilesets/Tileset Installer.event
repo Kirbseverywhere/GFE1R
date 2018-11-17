@@ -1,0 +1,6 @@
+
+ALIGN 4
+
+EventPointerTable(0x42, DesertObjects)
+EventPointerTable(0x43, DesertPalette)
+EventPointerTable(0x44, DesertTiles)

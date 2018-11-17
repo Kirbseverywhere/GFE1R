@@ -1,6 +1,6 @@
 SRCDIR = ../
-SYS_LIB_DIR1 = C:/devkitPro/devkitARM/arm-none-eabi/lib/
-SYS_LIB_DIR2 = C:/devkitPro/devkitARM/lib/gcc/arm-none-eabi/6.3.0/
+SYS_LIB_DIR1 = F:/devkitPro/devkitARM/arm-none-eabi/lib/
+SYS_LIB_DIR2 = F:/devkitPro/devkitARM/lib/gcc/arm-none-eabi/6.3.0/
 INC = ../include/
 ROMDAT = ../rom/
 GFXDIR = ../Data/
@@ -17,7 +17,7 @@ COMPLIANCE_FLAGS = -fomit-frame-pointer -ffast-math -fno-toplevel-reorder -nostd
 WFLAGS = -Wall -Wno-unkown-pragmas
 ARCH   = -mcpu=arm7tdmi -mabi=aapcs -mthumb -mthumb-interwork
 CDEBUG = -g
-CFLAGS = $(ARCH) $(COMPLIANCE_FLAGS) $(CDEBUG) -I. -I$(SRCDIR) -I$(INC) -I$(ROMDAT)
+CFLAGS = $(ARCH) $(COMPLIANCE_FLAGS) -I. -I$(SRCDIR) -I$(INC) -I$(ROMDAT)
 LDFLAGS = -g -T linker.ld -Map output.map
 LD_LINK = -static -L $(SYS_LIB_DIR1) -L $(SYS_LIB_DIR2) $(LIBS)
 PURE_OBJCOPY_FLAGS = -O elf32-littlearm -B arm --rename-section .data=.rom --set-section-flags .rom="r,c,a"
@@ -41,8 +41,6 @@ build:
 	$(CC) $(CFLAGS) -c $(SOURCES) 
 	$(LYNCOMP)
 	
-	
-#$(LYN) $(OFILES) => ..\Main.event
 	
 
 	

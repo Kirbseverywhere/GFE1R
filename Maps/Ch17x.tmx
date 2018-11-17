@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" nextobjectid="1">
+<map version="1.2" tiledversion="1.2.0" orientation="orthogonal" renderorder="right-down" width="26" height="26" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="1">
  <tileset firstgid="1" name="1800571a" tilewidth="16" tileheight="16" tilecount="1024" columns="32">
-  <image source="../../../../Map/Tilesets/FE8/1800571A.png" width="512" height="512"/>
+  <image source="Tilesets/Chapter 6.png" width="512" height="512"/>
  </tileset>
- <layer name="Main" width="26" height="26">
+ <layer id="1" name="Main" width="26" height="26">
   <properties>
    <property name="Anims1" value="0"/>
    <property name="ChapterID" value="0x13"/>
    <property name="Main" value=""/>
    <property name="MapChangesID" value="0x59"/>
-   <property name="MapID" value="0x58"/>
-   <property name="ObjectType" value="0x18"/>
-   <property name="PaletteID" value="0x57"/>
-   <property name="TileConfig" value="0x1a"/>
+   <property name="MapID" value="0x14"/>
+   <property name="ObjectType" value="CastleObjType"/>
+   <property name="PaletteID" value="CastlePalette2"/>
+   <property name="TileConfig" value="CastleTileConfig"/>
   </properties>
   <data encoding="csv">
 722,722,722,491,785,786,786,786,786,786,786,786,786,786,786,786,786,786,786,456,721,722,34,721,722,722,
@@ -43,7 +43,7 @@
 723,722,722,722,722,722,722,722,722,456,785,786,460,721,34,721,723,723,723,723,786,786,786,786,786,786
 </data>
  </layer>
- <layer name="Chest1Open" width="26" height="26" visible="0">
+ <layer id="2" name="Chest1Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="0"/>
@@ -80,7 +80,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Chest2Open" width="26" height="26" visible="0">
+ <layer id="3" name="Chest2Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="1"/>
@@ -117,7 +117,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Chest3Open" width="26" height="26" visible="0">
+ <layer id="4" name="Chest3Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="2"/>
@@ -154,7 +154,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Chest4Open" width="26" height="26" visible="0">
+ <layer id="5" name="Chest4Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="3"/>
@@ -191,7 +191,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Chest5Open" width="26" height="26" visible="0">
+ <layer id="6" name="Chest5Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="4"/>
@@ -228,7 +228,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Door1Open" width="26" height="26" visible="0">
+ <layer id="7" name="Door1Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="2"/>
    <property name="ID" value="5"/>
@@ -265,7 +265,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Door2Open" width="26" height="26" visible="0">
+ <layer id="8" name="Door2Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="2"/>
    <property name="ID" value="8"/>
@@ -302,7 +302,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Door3Open" width="26" height="26" visible="0">
+ <layer id="9" name="Door3Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="2"/>
    <property name="ID" value="6"/>
@@ -339,7 +339,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Door4Open" width="26" height="26" visible="0">
+ <layer id="10" name="Door4Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="2"/>
    <property name="ID" value="7"/>
@@ -376,7 +376,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Door5Open" width="26" height="26" visible="0">
+ <layer id="11" name="Door5Open" width="26" height="26" visible="0">
   <properties>
    <property name="Height" value="1"/>
    <property name="ID" value="9"/>

@@ -14,7 +14,21 @@ POIN $0 $0 $0 $0 $0 $0
 POIN BeginningScene EndingScene
 
 Units:
-UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [18,5] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Marth EirikaLord 0x00 Level(1, Ally, 0) [30,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [31,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [31,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,16] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [29,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [28,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,17] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,18] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [28,20] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,19] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,21] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [27,22] 0x00 0x00 0x0 0x00 [0x00] NoAI 
+UNIT Jagen Paladin 0x00 Level(1, Ally, 0) [26,18] 0x00 0x00 0x0 0x00 [0x00] NoAI
 UNIT
 
 TurnBasedEvents:
@@ -24,7 +38,8 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
-Seize(0,0)
+Seize(13,6)
+Seize(30,17)
 END_MAIN
 
 MiscBasedEvents:
@@ -47,10 +62,12 @@ ALIGN 4
 BeginningScene:
 LOAD1 0x1 Units
 LOAD1 0x1 Enemies
+Text(Ch20Opening)
 GotoPrepScreen
 ENDA
 
 EndingScene:
+Text(Ch20Ending)
 MNC2 23
 ENDA
 
@@ -63,7 +80,57 @@ ENDA
 // Units
 
 Enemies:
-UNIT Camus Paladin 0x00 Level(1, Enemy, 1) [17,5] 0x00 0x00 0x0 0x00 [SilverLance] NoAI 
+UNIT Camus Paladin 0x00 Level(1, Enemy, 1) [15,5] 0x00 0x00 0x0 0x00 [Gradivus] AttackInRangeAI
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [19,13] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [21,13] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [22,14] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [26,3] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [30,3] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [15,8] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [11,10] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [10,16] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [8,21] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [13,23] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Paladin 0x00 Level(7, Enemy, 1) [4,9] 0x00 0x00 0x0 0x00 [IronSword, IronLance] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [22,20] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [24,15] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [29,13] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [29,8] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [15,20] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [10,19] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [1,20] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Hero 0x00 Level(7, Enemy, 1) [10,8] 0x00 0x00 0x0 0x00 [SteelSword] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [24,6] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [20,21] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [15,16] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [21,2] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [7,17] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Berserker 0x00 Level(7, Enemy, 1) [1,13] 0x00 0x00 0x0 0x00 [SilverAxe] AttackInRangeAI 
+UNIT Galder Warrior 0x00 Level(7, Enemy, 1) [18,14] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] AttackInRangeAI 
+UNIT Galder Warrior 0x00 Level(7, Enemy, 1) [16,22] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] AttackInRangeAI 
+UNIT Galder Warrior 0x00 Level(7, Enemy, 1) [31,7] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] AttackInRangeAI 
+UNIT Galder Warrior 0x00 Level(7, Enemy, 1) [27,13] 0x00 0x00 0x0 0x00 [SteelAxe, SteelBow] AttackInRangeAI 
+UNIT Galder Sage 0x00 Level(7, Enemy, 1) [18,8] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI 
+UNIT Galder Sage 0x00 Level(7, Enemy, 1) [10,6] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI 
+UNIT Galder Sage 0x00 Level(7, Enemy, 1) [18,2] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI 
+UNIT Galder Sage 0x00 Level(7, Enemy, 1) [15,3] 0x00 0x00 0x0 0x00 [Fire] AttackInRangeAI 
+UNIT Galder Sniper 0x00 Level(7, Enemy, 1) [31,8] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT Galder Sniper 0x00 Level(7, Enemy, 1) [29,4] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT Galder Sniper 0x00 Level(7, Enemy, 1) [26,14] 0x00 0x00 0x0 0x00 [SilverBow] AttackInRangeAI 
+UNIT Galder General 0x00 Level(7, Enemy, 1) [3,18] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
+UNIT Galder General 0x00 Level(7, Enemy, 1) [24,17] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
+UNIT Galder General 0x00 Level(7, Enemy, 1) [5,10] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
+UNIT Galder Druid 0x00 Level(7, Enemy, 1) [7,10] 0x00 0x00 0x0 0x00 [Flux, Berserk] GuardTileAI 
+UNIT Galder Swordmaster 0x00 Level(7, Enemy, 1) [14,17] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI 
+UNIT Galder Swordmaster 0x00 Level(7, Enemy, 1) [3,15] 0x00 0x00 0x0 0x00 [SilverSword] AttackInRangeAI 
+UNIT Galder FalcoKnight 0x00 Level(7, Enemy, 1) [0,3] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
+UNIT Galder FalcoKnight 0x00 Level(7, Enemy, 1) [2,1] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
+UNIT Galder FalcoKnight 0x00 Level(7, Enemy, 1) [5,1] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
+UNIT Galder FalcoKnight 0x00 Level(7, Enemy, 1) [8,0] 0x00 0x00 0x0 0x00 [SlimLance] PursueWithoutHeedAI 
 UNIT
+
+SplosionMan:
+UNIT Lorenz General 0x00 Level(1, Enemy, 1) [13,6] 0x00 0x00 0x0 0x00 [SilverLance] GuardTileAI 
+UNIT 
 
 // Shop Data

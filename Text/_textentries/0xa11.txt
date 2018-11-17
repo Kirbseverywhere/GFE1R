@@ -1,5 +1,1 @@
-[OpenLeft][LoadCamus]
-With this lance, Gradivus,[NL]
-I am all but invincible.[A][NL]
-A pity, that you had to[NL]
-waste your life.[A][X]
+[X]

@@ -1,5 +1,5 @@
 cd %~dp0
-copy "FE8U.gba" "FE_Hack.gba"
+copy "FE8_clean.gba" "FE_Hack.gba"
 cd %~dp0Engine Hacks\src\Makefile
 make build
 cd "%~dp0Event Assembler"

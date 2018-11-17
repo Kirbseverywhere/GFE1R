@@ -4,12 +4,8 @@
 #define MapMusicGroup 1
 #define SFXGroup 6
 
-//Example song
-//SongTable(99,My_song,MapMusicGroup)
-//#include "My_song.event"
-
 #define ST_CombatMission 0x26
-SongTable(ST_CombatMission,CombatMission,0)
+SongTable(ST_CombatMission,CombatMission,BattleMusicGroup)
 #include "CombatMission.event"
 
 #define ST_UnderThisFlag 0x9
@@ -17,5 +13,5 @@ SongTable(ST_UnderThisFlag,UnderThisFlag,MapMusicGroup)
 #include "UnderThisFlag.event"
 
 #define ST_Battle 0x19
-SongTable(ST_Battle,Battle,0)
+SongTable(ST_Battle,song09,BattleMusicGroup)
 #include "Battle.event"
