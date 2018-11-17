@@ -6,11 +6,11 @@ An FE1 Remake, Built on top of the Fire Emblem 8(U) Engine, with slight modifica
 [**Serenes Forest Thread**](https://serenesforest.net/forums/index.php?/topic/68578-gfe1r-generic-fe1-remake/)
 [**Discord Server**](https://discord.gg/Z8EwVyp)
 
-[img]https://i.imgur.com/JTD6bS1.png[/img][img]https://i.imgur.com/Ay4azBd.gif[/img]
-[img]https://i.imgur.com/tmY29ug.png[/img][img]https://i.imgur.com/oZmoJXc.png[/img]
-[img]https://i.imgur.com/ALZURGd.gif[/img][img]https://i.imgur.com/Lw9AjeS.png[/img]
-[img]https://i.imgur.com/acBumQ4.png[/img][img]https://i.imgur.com/N57iNsv.png[/img]
-[img]https://i.imgur.com/WdrxFNo.png[/img][img]https://i.imgur.com/erzIUmJ.gif[/img]
+https://i.imgur.com/JTD6bS1.png https://i.imgur.com/Ay4azBd.gif
+https://i.imgur.com/tmY29ug.png https://i.imgur.com/oZmoJXc.png
+https://i.imgur.com/ALZURGd.gif https://i.imgur.com/Lw9AjeS.png
+https://i.imgur.com/acBumQ4.png https://i.imgur.com/N57iNsv.png
+https://i.imgur.com/WdrxFNo.png https://i.imgur.com/erzIUmJ.gif
 
 # Engine Additions:
 
